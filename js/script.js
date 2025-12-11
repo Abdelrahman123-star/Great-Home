@@ -395,15 +395,6 @@ document.addEventListener('DOMContentLoaded', initNavbarScroll);
 
     // transition end to fix clones position
     track.addEventListener('transitionend', handleTransitionEnd);
-
-    // pointer events for drag/swipe
-    track.addEventListener('pointerdown', (e) => {
-      // only left button or touch
-      if (e.pointerType === 'mouse' && e.button !== 0) return;
-      track.setPointerCapture(e.pointerId);
-      pointerDown(e);
-    });
-
     // pointer move/up/cancel
     track.addEventListener('pointermove', pointerMove);
     track.addEventListener('pointerup', (e) => { pointerUp(); track.releasePointerCapture(e.pointerId); });

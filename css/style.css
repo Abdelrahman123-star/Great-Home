@@ -872,53 +872,73 @@
 
 
         /* Contact Section */
-        /* Section Styling */
-        #contact {
-            padding: 100px 0;
-        }
+        /* Main Section */
+.contact-section {
+    padding: 100px 0;
+    background: #fff;
+}
 
-        .contact-form {
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-        }
+/* Title */
+.section-title h2 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
 
-        .form-control {
-            padding: 12px 15px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            border: 1px solid #e9ecef;
-            transition: all 0.3s ease;
-        }
+.section-sub {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 40px;
+}
 
-        .form-control:focus {
-            border-color: var(--accent);
-            box-shadow: 0 0 0 0.2rem rgba(128, 90, 213, 0.25);
-        }
+/* Wrapper */
+.contact-wrapper {
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 20px;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 8px 35px rgba(0,0,0,0.05);
+}
 
-        .contact-info {
-            margin-top: 40px;
-        }
+/* Contact Item Card */
+.contact-card {
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 14px;
+    transition: all 0.3s ease;
+}
 
-        .contact-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 25px;
-        }
+.contact-card:hover {
+    transform: translateY(-5px);
+}
 
-        .contact-icon {
-            width: 50px;
-            height: 50px;
-            background-color: var(--accent);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 15px;
-            font-size: 1.2rem;
-            color: white;
-        }
+/* Icon */
+.icon-box {
+    width: 60px;
+    height: 60px;
+    border: 1.8px solid var(--accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px auto;
+    font-size: 1.4rem;
+    color: var(--accent);
+    background: #ffffff;
+}
+
+/* Text */
+.contact-card h5 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.contact-card p {
+    color: #666;
+    margin: 0;
+}
+
 
         /* FOOTER STYLES */
         .custom-footer {
