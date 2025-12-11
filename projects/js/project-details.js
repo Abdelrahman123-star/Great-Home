@@ -32,96 +32,155 @@
     }
     
     // Function to update page content with project data
-    function loadProjectData(projectId) {
-        
-        const project = projectsData[projectId];
-        
-        if (!project) {
-            console.error("Project not found for ID:", projectId);
-            document.getElementById('dynamic-project-title').textContent = "Project Not Found";
-            document.getElementById('dynamic-project-description').textContent = "The requested project could not be found. Please select a valid project.";
-            return;
-        }
-        
-        // Update page title
-        document.title = `${project.name} - Civil Engineering Portfolio`;
-        
-        // Update hero section
-        document.getElementById('dynamic-project-title').textContent = project.name;
-        document.getElementById('dynamic-project-description').textContent = project.description;
-        document.getElementById('dynamic-location').textContent = project.location;
-        document.getElementById('dynamic-dates').textContent = project.dates;
-        document.getElementById('dynamic-size').textContent = project.size;
-        document.getElementById('dynamic-category').textContent = project.category;
-        
-        // Update before/after images
-        const beforeImg = document.getElementById('before-image');
-        const afterImg = document.getElementById('after-image');
-        if (beforeImg && project.beforeImage) {
-            beforeImg.src = project.beforeImage;
-            beforeImg.alt = `${project.name} - Before Construction`;
-        }
-        if (afterImg && project.afterImage) {
-            afterImg.src = project.afterImage;
-            afterImg.alt = `${project.name} - After Construction`;
-        }
-                
-        // Generate gallery
-        generateGallery(project.galleryImages);
+function loadProjectData(projectId) {
+
+    const project = projectsData[projectId];
+
+    if (!project) {
+        console.error("Project not found:", projectId);
+        return;
     }
+
+    /* ---------------------------
+       UPDATE MAIN PROJECT CONTENT
+    --------------------------- */
+    document.title = `${project.name} - Civil Engineering Portfolio`;
+
+    document.getElementById('dynamic-project-title').textContent = project.name;
+    document.getElementById('dynamic-project-description').textContent = project.description;
+    document.getElementById('dynamic-location').textContent = project.location;
+    document.getElementById('dynamic-dates').textContent = project.dates;
+    document.getElementById('dynamic-size').textContent = project.size;
+    document.getElementById('dynamic-category').textContent = project.category;
+
+    /* ---------------------------
+        BEFORE / AFTER SLIDER
+    --------------------------- */
+    const sliderSection = document.getElementById("before-after-section");
+    const sliderContainer = document.getElementById("mainSlider");
+    const beforeImg = document.getElementById("before-image");
+    const afterImg = document.getElementById("after-image");
+
+    // Safety check (prevents total failure)
+    if (!sliderSection || !sliderContainer || !beforeImg || !afterImg) {
+        console.warn("Slider HTML missing — skipping slider.");
+        generateGallery(project.galleryImages);
+        return;
+    }
+
+    // If missing images → hide slider
+    if (!project.beforeImage || !project.afterImage) {
+        sliderSection.style.display = "none";
+        generateGallery(project.galleryImages);
+        return;
+    }
+
+    // Load images
+    sliderSection.style.display = "block";
+    beforeImg.src = project.beforeImage;
+    afterImg.src = project.afterImage;
+
+    // Initialize slider after images load
+    setTimeout(() => {
+        try {
+            new BeforeAfterSlider(sliderContainer);
+        } catch (err) {
+            console.error("Slider failed:", err);
+        }
+    }, 300);
+
+    /* ---------------------------
+       GENERATE GALLERY
+    --------------------------- */
+    generateGallery(project.galleryImages);
+}
+
     
     // Function to generate gallery items
     function generateGallery(images) {
-        const galleryContainer = document.getElementById('dynamic-gallery');
-        if (!galleryContainer || !images) return;
-        
-        galleryContainer.innerHTML = '';
-        
-        images.forEach((image, index) => {
-            const galleryItem = document.createElement('div');
-            galleryItem.className = 'gallery-item';
-            galleryItem.setAttribute('data-img', image.src);
-            galleryItem.setAttribute('data-category', image.category || 'all');
-            
-            galleryItem.innerHTML = `
-                <img src="${image.src}" alt="${image.caption}" loading="lazy">
+    const galleryContainer = document.getElementById('dynamic-gallery');
+    const tabsContainer = document.getElementById('gallery-tabs');
+
+    if (!galleryContainer || !images) return;
+
+    galleryContainer.innerHTML = '';
+    tabsContainer.innerHTML = '';
+
+    // Get unique categories (excluding empty ones)
+    const categories = [...new Set(
+        images
+            .map(img => img.category?.trim())
+            .filter(cat => cat && cat !== "")
+    )];
+
+    // If NO categories or only one → hide tabs
+    if (categories.length <= 1) {
+        tabsContainer.style.display = "none";
+    } else {
+        tabsContainer.style.display = "flex";
+
+        // Add "All" tab
+        tabsContainer.innerHTML += `<button class="gallery-tab active" data-filter="all">All Photos</button>`;
+
+        // Add dynamic category tabs
+        categories.forEach(category => {
+            tabsContainer.innerHTML += `
+                <button class="gallery-tab" data-filter="${category}">${category}</button>
             `;
-            
-            galleryContainer.appendChild(galleryItem);
         });
-        
-        // Re-initialize gallery functionality
-        initializeGallery();
     }
+
+    // Insert gallery images
+    images.forEach((image, index) => {
+        const category = image.category?.trim() || ""; // empty if no category
+
+        const galleryItem = document.createElement('div');
+        galleryItem.className = 'gallery-item';
+        galleryItem.setAttribute('data-img', image.src);
+        galleryItem.setAttribute('data-category', category);
+
+        galleryItem.innerHTML = `
+            <img src="${image.src}" loading="lazy">
+        `;
+
+        galleryContainer.appendChild(galleryItem);
+    });
+
+    initializeGallery();  // Re-init filtering
+    initializeFullscreenViewer(); // Re-init fullscreen
+}
+
     
     // ======================
     // GALLERY FUNCTIONALITY CATEGORYYY
     // ======================
     
     function initializeGallery() {
-        // Gallery tabs filtering
-        const galleryTabs = document.querySelectorAll('.gallery-tab');
-        const galleryItems = document.querySelectorAll('.gallery-item');
-        
-        galleryTabs.forEach(tab => {
-            tab.addEventListener('click', function() {
-                // Remove active class from all tabs
-                galleryTabs.forEach(t => t.classList.remove('active'));
-                // Add active class to clicked tab
-                this.classList.add('active');
-                
-                const filter = this.getAttribute('data-filter');
-                
-                galleryItems.forEach(item => {
-                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
+    const galleryTabs = document.querySelectorAll('.gallery-tab');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    galleryTabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+
+            // Remove active highlight from all tabs
+            galleryTabs.forEach(t => t.classList.remove('active'));
+            this.classList.add('active');
+
+            const filter = this.getAttribute('data-filter');
+
+            galleryItems.forEach(item => {
+                const itemCat = item.getAttribute('data-category');
+
+                if (filter === 'all' || itemCat === filter) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
             });
         });
-    }
+    });
+}
+
  
     
     // ======================

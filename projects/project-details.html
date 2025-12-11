@@ -88,26 +88,28 @@
             
             <!-- Before/After Slider -->
             <div class="row mb-5">
-                <div class="col-lg-10 mx-auto">
-                    <h2 class="section-title">Site Overview</h2>
-                    <div class="slider-container" id="mainSlider">
-                        <div class="before-image">
-                            <img id="before-image" src="" alt="Before Construction">
-                            <div class="before-text">Before</div>
-                        </div>
-                        <div class="after-image">
-                            <img id="after-image" src="" alt="After Construction">
-                            <div class="after-text">After</div>
-                        </div>
-                        <div class="slider-handle"></div>
-                        <div class="slider-line">
-                            <div class="pulse-container">
-                                <svg role="presentation" focusable="false" fill="none" width="50" height="50" viewBox="0 0 50 50">
-                                    <g>
-                                        <rect width="50" height="50" rx="25" fill="#ffffff"></rect>
-                                        <path d="m19.25 19-6 6 6 6m11.5 0 6-6-6-6" stroke="#000000" stroke-width=".75" stroke-linecap="square"></path>
-                                    </g>
-                                </svg>
+                <div class="row mb-5" id="before-after-section">
+                    <div class="col-lg-10 mx-auto">
+                        <h2 class="section-title">Site Overview</h2>
+                        <div class="slider-container" id="mainSlider">
+                            <div class="before-image">
+                                <img id="before-image" src="" alt="Before Construction">
+                                <div class="before-text">Before</div>
+                            </div>
+                            <div class="after-image">
+                                <img id="after-image" src="" alt="After Construction">
+                                <div class="after-text">After</div>
+                            </div>
+                            <div class="slider-handle"></div>
+                            <div class="slider-line">
+                                <div class="pulse-container">
+                                    <svg role="presentation" focusable="false" fill="none" width="50" height="50" viewBox="0 0 50 50">
+                                        <g>
+                                            <rect width="50" height="50" rx="25" fill="#ffffff"></rect>
+                                            <path d="m19.25 19-6 6 6 6m11.5 0 6-6-6-6" stroke="#000000" stroke-width=".75" stroke-linecap="square"></path>
+                                        </g>
+                                    </svg>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -119,12 +121,8 @@
                 <div class="row">
                     <div class="col-lg-10 mx-auto">
                         <h2 class="section-title">Project Gallery</h2>
-                        <div class="gallery-tabs mb-4">
-                            <button class="gallery-tab active" data-filter="all">All Photos</button>
-                            <button class="gallery-tab" data-filter="Planning">Planning</button>
-                            <button class="gallery-tab" data-filter="Construction">Construction</button>
-                            <button class="gallery-tab" data-filter="Completion">Completion</button>
-                        </div>
+                        <div class="gallery-tabs mb-4" id="gallery-tabs"></div>
+
                         <div class="gallery-grid" id="dynamic-gallery">
                             <!-- Gallery items will be inserted here by JavaScript -->
                         </div>

@@ -41,9 +41,10 @@ const projectHtmlPaths = {
 
 // lavista :<>
         "A high-end finishing project for a spacious two-story villa in Ain Sokhna, executed with premium materials and meticulous craftsmanship. The project features elegant wooden parquet flooring and refined detailing throughout, delivering a warm, luxurious, and distinguished living experience by the sea.",
+        "A full interior finishing project for a modern apartment in Nasr City, completed with high-quality materials and precise execution to match the client’s approved design and deliver a comfortable, stylish living space.",
+         
 
-    ];
-
+];
 
     // Locations for variety
     const locations = [
@@ -77,6 +78,7 @@ const projectHtmlPaths = {
 
 
         "La Vista 6 - Ain Sokhna",
+"Nasr City",
 
 
     ];
@@ -114,6 +116,8 @@ const projectHtmlPaths = {
         "2025 - 2025",
 
         "2021 - 2023",
+         "2022 - 2024",
+         
         
     ];
 
@@ -153,6 +157,7 @@ const projectHtmlPaths = {
         "475 Sq ft",
 
 
+"220 Sq ft",
 
     ];
 
@@ -191,6 +196,8 @@ const projectHtmlPaths = {
 // lavista
         "122 La Viesta 6",
 
+          "Mrs. Aliaa Elhadidi",
+
     ];
 
 
@@ -226,6 +233,7 @@ const projectHtmlPaths = {
         "3D_Projects",
         "3D_Projects",
 
+        "Completed_Projects",
 
     ];
 
@@ -235,7 +243,7 @@ const imageIds = [
     "Projects/Completed_Projects/Ashraf/1.jpeg",
     "Projects/Completed_Projects/baba/1.jpg",
     "Projects/Completed_Projects/Dr. Nadia/1.jpg",
-    "Projects/Completed_Projects/East Town (Sodic)/1.jpg",
+    "Projects/Completed_Projects/East Town (Sodic)/1.webp",
     "Projects/Completed_Projects/Eng. Essam/1.jpg",
     "Projects/Completed_Projects/Gegy/1.jpg",
     "Projects/Completed_Projects/Mine/Mine/1.jpg",
@@ -264,6 +272,7 @@ const imageIds = [
 
     "Projects/Completed_Projects/La_Viesta/Site/5.jfif",
 
+    "Projects/Completed_Projects/Mrs_Aliaa_Elhadidi/5.webp",
 
 ];
 
