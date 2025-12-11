@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Portfolio - Engineering Documents</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- PDF.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/project_pdf.css">
+    <link rel="stylesheet" type="text/css" href="../../css/common.css">
+    <link rel="icon" type="image/x-icon" href="../../imgs/logo/GH-Logo-Square.png">
+    
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a href="../../index.html">
+                <img class="logo-nav" src="../../imgs/logo/GH-Logo-Vertical2.png" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../index.html#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../index.html#Experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../index.html#contact">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <a href="mailto:ahmed.hesham.fathy97@gmail.com" class="contact-email">ahmed.hesham.fathy97@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PDF Header -->
+    <section class="pdf-header">
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="luxury-sidebar">
+                    <div class="luxury-number">PDF</div>
+                    <div class="sidebar-line"></div>
+                    <div class="luxury-text">Documents</div>
+                </div>
+                <div class="header-content">
+                    <h1 class="page-title">Mr. Ahmed Gamal <span class="highlight"> 2D-Plan</span></h1>
+                    <p class="pdf-subtitle">A comprehensive 2D design project including all technical drawings: plumbing, electrical layouts, ceiling details, lighting distribution, Air Conditioning planning, and more—delivering a fully coordinated and detailed project package.</p>
+                    <div class="luxury-stats">
+                        <div class="stat-item">
+                            <div class="stat-number" id="total-pages">8</div>
+                            <div class="stat-label">Total Pages</div>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <div class="stat-number" id="file-size">3 MB</div>
+                            <div class="stat-label">File Size</div>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <div class="stat-number">PDF</div>
+                            <div class="stat-label">Format</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Replace this section only -->
+
+<!-- PDF Viewer Section -->
+<section class="pdf-viewer-section">
+    <div class="container">
+        <div class="pdf-viewer-wrapper">
+            <!-- Embed PDF directly -->
+            <iframe 
+                src="Ahmed_Gamal.pdf" 
+                width="100%" 
+                height="900px" 
+                style="border:none; border-radius:20px; box-shadow:0 15px 40px rgba(0,0,0,0.1);" 
+            ></iframe>
+        </div>
+    </div>
+</section>
+
+
+ <!-- Footer -->
+    <footer>
+        <div class="container">
+            <ul class="footer-links">
+                <li><a href="../../index.html#home">Home</a></li>
+                <li><a href="../../index.html#about">About</a></li>
+                <li><a href="../index.html">Projects</a></li>
+                <li><a href="../../index.html#Experience">Experience</a></li>
+                <li><a href="../../index.html#contact">Contact</a></li>
+            </ul>
+            <div class="copyright">
+                <p>&copy; 2025 Ahmed Hesham. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/common.js"></script>
+</body>
+</html>

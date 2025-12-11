@@ -1,0 +1,256 @@
+        /* PDF Viewer Luxury Styles */
+        :root {
+            --gold: #d4af37;
+            --gold-dark: #b8941f;
+            --marble-bg: #f5f5f5;
+            --marble-light: #f0f0f0;
+            --marble-dark: #e5e5e5;
+            --text-dark: #1a1a1a;
+            --text-light: #666666;
+        }
+
+        body {
+            background-color: var(--marble-bg);
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            padding-top: 80px;
+        }
+
+        /* ========== LUXURY PDF HEADER ========== */
+        .pdf-header {
+            background: linear-gradient(135deg, var(--marble-bg) 0%, var(--marble-light) 100%);
+            padding: 150px 0 80px;
+            position: relative;
+            overflow: hidden;
+            min-height: 40vh;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .marble-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" opacity="0.05"><path d="M0,0 L100,0 L100,100 L0,100 Z" fill="none" stroke="%23000" stroke-width="2"/></svg>'),
+                linear-gradient(45deg, transparent 45%, rgba(212, 175, 55, 0.05) 50%, transparent 55%);
+            background-size: 100px 100px, 200px 200px;
+            pointer-events: none;
+        }
+
+        .header-wrapper {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 60px;
+            align-items: start;
+            position: relative;
+            z-index: 2;
+        }
+
+        .luxury-sidebar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            padding-top: 40px;
+        }
+
+        .luxury-number {
+            font-size: 1.8rem;
+            font-weight: 300;
+            color: var(--gold);
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            letter-spacing: 5px;
+        }
+
+        .sidebar-line {
+            width: 1px;
+            height: 80px;
+            background: linear-gradient(to bottom, transparent, #000, transparent);
+        }
+
+        .luxury-text {
+            writing-mode: vertical-rl;
+            font-size: 0.9rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--text-light);
+        }
+
+        .header-content {
+            padding-right: 40px;
+        }
+
+        .page-title {
+            font-size: 4rem;
+            font-weight: 300;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            color: var(--text-dark);
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .highlight {
+            color: var(--gold);
+            font-weight: 400;
+            position: relative;
+            display: inline-block;
+        }
+
+        .highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--gold);
+            opacity: 0.5;
+        }
+
+        .pdf-subtitle {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            color: var(--text-light);
+            margin-bottom: 40px;
+            font-weight: 300;
+            max-width: 700px;
+        }
+
+        .luxury-stats {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 300;
+            color: var(--gold);
+            margin-bottom: 5px;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .stat-divider {
+            width: 1px;
+            height: 40px;
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        /* ========== LUXURY PDF VIEWER ========== */
+        .pdf-viewer-section {
+            padding: 80px 0;
+            background: var(--marble-light);
+            position: relative;
+        }
+
+
+
+        .pdf-viewer-wrapper {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+
+
+        /* ========== RESPONSIVE DESIGN ========== */
+        @media (max-width: 992px) {
+            .header-wrapper {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .luxury-sidebar {
+                flex-direction: row;
+                justify-content: center;
+                padding-top: 0;
+            }
+            
+            .luxury-number {
+                writing-mode: horizontal-tb;
+                transform: none;
+            }
+            
+            .sidebar-line {
+                width: 80px;
+                height: 1px;
+            }
+            
+            .luxury-text {
+                writing-mode: horizontal-tb;
+            }
+            
+            .page-title {
+                font-size: 3.5rem;
+                text-align: center;
+            }
+            
+            .header-content {
+                padding-right: 0;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 2.8rem;
+            }
+            
+     
+
+            .pdf-viewer-wrapper {
+                padding: 20px;
+            }
+            
+
+        }
+
+        @media (max-width: 576px) {
+            .pdf-header {
+                padding: 120px 0 60px;
+                min-height: auto;
+            }
+            
+            .page-title {
+                font-size: 2.3rem;
+            }
+            
+            .pdf-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .luxury-stats {
+                flex-direction: column;
+                gap: 25px;
+            }
+            
+            .stat-divider {
+                width: 100px;
+                height: 1px;
+            }
+            
+            
+        }
+
