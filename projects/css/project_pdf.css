@@ -7,6 +7,9 @@
             --marble-dark: #e5e5e5;
             --text-dark: #1a1a1a;
             --text-light: #666666;
+            --secondary: #4a5568;
+            --accent: #727272;
+
         }
 
         body {
@@ -14,144 +17,6 @@
             font-family: 'Inter', sans-serif;
             color: var(--text-dark);
             padding-top: 80px;
-        }
-
-        /* ========== LUXURY PDF HEADER ========== */
-        .pdf-header {
-            background: linear-gradient(135deg, var(--marble-bg) 0%, var(--marble-light) 100%);
-            padding: 150px 0 80px;
-            position: relative;
-            overflow: hidden;
-            min-height: 40vh;
-            display: flex;
-            align-items: center;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        }
-
-        .marble-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: 
-                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" opacity="0.05"><path d="M0,0 L100,0 L100,100 L0,100 Z" fill="none" stroke="%23000" stroke-width="2"/></svg>'),
-                linear-gradient(45deg, transparent 45%, rgba(212, 175, 55, 0.05) 50%, transparent 55%);
-            background-size: 100px 100px, 200px 200px;
-            pointer-events: none;
-        }
-
-        .header-wrapper {
-            display: grid;
-            grid-template-columns: 100px 1fr;
-            gap: 60px;
-            align-items: start;
-            position: relative;
-            z-index: 2;
-        }
-
-        .luxury-sidebar {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 30px;
-            padding-top: 40px;
-        }
-
-        .luxury-number {
-            font-size: 1.8rem;
-            font-weight: 300;
-            color: var(--gold);
-            writing-mode: vertical-rl;
-            transform: rotate(180deg);
-            letter-spacing: 5px;
-        }
-
-        .sidebar-line {
-            width: 1px;
-            height: 80px;
-            background: linear-gradient(to bottom, transparent, #000, transparent);
-        }
-
-        .luxury-text {
-            writing-mode: vertical-rl;
-            font-size: 0.9rem;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: var(--text-light);
-        }
-
-        .header-content {
-            padding-right: 40px;
-        }
-
-        .page-title {
-            font-size: 4rem;
-            font-weight: 300;
-            line-height: 1.1;
-            margin-bottom: 30px;
-            color: var(--text-dark);
-            font-family: 'Cormorant Garamond', serif;
-        }
-
-        .highlight {
-            color: var(--gold);
-            font-weight: 400;
-            position: relative;
-            display: inline-block;
-        }
-
-        .highlight::after {
-            content: '';
-            position: absolute;
-            bottom: 10px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: var(--gold);
-            opacity: 0.5;
-        }
-
-        .pdf-subtitle {
-            font-size: 1.3rem;
-            line-height: 1.8;
-            color: var(--text-light);
-            margin-bottom: 40px;
-            font-weight: 300;
-            max-width: 700px;
-        }
-
-        .luxury-stats {
-            display: flex;
-            align-items: center;
-            gap: 40px;
-            padding-top: 30px;
-            border-top: 1px solid rgba(0, 0, 0, 0.1);
-        }
-
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 2.2rem;
-            font-weight: 300;
-            color: var(--gold);
-            margin-bottom: 5px;
-            font-family: 'Cormorant Garamond', serif;
-        }
-
-        .stat-label {
-            font-size: 0.8rem;
-            color: var(--text-light);
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .stat-divider {
-            width: 1px;
-            height: 40px;
-            background: rgba(0, 0, 0, 0.1);
         }
 
         /* ========== LUXURY PDF VIEWER ========== */
@@ -181,32 +46,32 @@
                 grid-template-columns: 1fr;
                 gap: 40px;
             }
-            
+
             .luxury-sidebar {
                 flex-direction: row;
                 justify-content: center;
                 padding-top: 0;
             }
-            
+
             .luxury-number {
                 writing-mode: horizontal-tb;
                 transform: none;
             }
-            
+
             .sidebar-line {
                 width: 80px;
                 height: 1px;
             }
-            
+
             .luxury-text {
                 writing-mode: horizontal-tb;
             }
-            
+
             .page-title {
                 font-size: 3.5rem;
                 text-align: center;
             }
-            
+
             .header-content {
                 padding-right: 0;
                 text-align: center;
@@ -217,13 +82,13 @@
             .page-title {
                 font-size: 2.8rem;
             }
-            
-     
+
+
 
             .pdf-viewer-wrapper {
                 padding: 20px;
             }
-            
+
 
         }
 
@@ -232,25 +97,104 @@
                 padding: 120px 0 60px;
                 min-height: auto;
             }
-            
+
             .page-title {
                 font-size: 2.3rem;
             }
-            
+
             .pdf-subtitle {
                 font-size: 1.1rem;
             }
-            
+
             .luxury-stats {
                 flex-direction: column;
                 gap: 25px;
             }
-            
+
             .stat-divider {
                 width: 100px;
                 height: 1px;
             }
-            
-            
+
+
         }
 
+
+
+        /* Hero Section */
+        .project-hero {
+            position: relative;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, rgba(45, 55, 72, 0.9) 0%, rgba(26, 32, 44, 0.8) 100%),
+                url('../../imgs/building/3.jpg') center center / cover no-repeat;
+            color: white;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .project-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .project-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .project-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 20px;
+            border-radius: 30px;
+            backdrop-filter: blur(10px);
+        }
+
+        .meta-item i {
+            color: var(--accent);
+        }
+
+        /* Project Content */
+        .project-content {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            margin-top: 70px;
+            margin-bottom: 70px;
+            position: relative;
+            padding-bottom: 20px;
+            text-align: center;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5rem;
+            font-weight: 300;
+            color: #111;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 150px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent), transparent);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }

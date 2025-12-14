@@ -42,20 +42,18 @@ document.addEventListener('DOMContentLoaded', function () {
     // Locations for variety
     const locations = [
         "Palm Hills - New Cairo",
-
         "La Vista 6 - Ain Sokhna",
         "SODIC - New Cairo",
         "Address East Compound",
         "Madinaty",
         "El-Shorouk City",
         "El-Shorouk City",
-
-        "5th Settlement",
+        "Nasr City",
         "El Shorouk City",
         "Zahraa Nasr City",
-        "Elshorouq City",
+        "El-Shorouq City",
         "El-Shorouk City",
-        "El Shorouk City",
+        "El-Shorouk City",
         "6th October City",
         "El-Shorouk City",
         "5th Settlement",
@@ -144,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Array of all project names
     const projectNames = [
         "707 Palm Hills Katameya",
-        "122 La Viesta 6",
+        "122 La Vista 6",
         "18A7 East Town (Sodic)",
         "306 Adress East",
         "Eng. Ashraf Hamed",
@@ -238,7 +236,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "Projects/3D_Projects/Binotte_Bakery/1.jpg",
         "Projects/3D_Projects/Dr_Reham_Gamal/1.jpeg",
         "Projects/3D_Projects/Eng_Samah_Elkady/1.jpeg",
-        "Projects/3D_Projects/Mr_Amr_Elsayed/2.jpeg",
+        "Projects/3D_Projects/Mr_Amr_Elsayed/2.webp",
         "Projects/3D_Projects/Mr_Mohamed_Elkammah/1.jpg"
     ];
 
@@ -296,7 +294,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         projectCard.innerHTML = `
     <div class="project-image" onclick="window.location.href='${projectLink}'" style="cursor: pointer;">
-        <img src="${imageId}" alt="${name}">
+        <img src="${imageId}" alt="${name}" loading="lazy" decoding="async">
         <div class="project-category">${categoryDisplay}</div>
     </div>
     <div class="project-content">

@@ -41,7 +41,7 @@
             font-weight: 600;
         }
 
-      
+
 
         /* HERO SECTION */
         .hero {
@@ -69,7 +69,7 @@
         }
 
         /* Text container */
-                .hero-content {
+        .hero-content {
             position: absolute;
             bottom: 7rem;
 
@@ -77,7 +77,7 @@
             text-align: left;
             text-align: center;
             /* PC: text on right */
-            margin-bottom:em;
+            margin-bottom: em;
             /* push to right */
 
 
@@ -90,8 +90,8 @@
 
             /* Beautiful gradient fade – goes from transparent to dark */
             background: linear-gradient(to bottom right,
-                rgba(0, 0, 0, 0.0),
-                rgba(0, 0, 0, 0.6));
+                    rgba(0, 0, 0, 0.0),
+                    rgba(0, 0, 0, 0.6));
 
             backdrop-filter: blur(3px);
             /* optional modern effect */
@@ -470,6 +470,8 @@
             transform-origin: center;
             transition: transform 300ms cubic-bezier(.2, .9, .2, 1), box-shadow 300ms;
             user-select: none;
+            content-visibility: auto;
+            contain-intrinsic-size: 350px;
         }
 
         /* 3D depth hover effect */
@@ -873,71 +875,71 @@
 
         /* Contact Section */
         /* Main Section */
-.contact-section {
-    padding: 100px 0;
-    background: #fff;
-}
+        .contact-section {
+            padding: 100px 0;
+            background: #fff;
+        }
 
-/* Title */
-.section-title h2 {
-    font-size: 2.4rem;
-    font-weight: 600;
-    margin-bottom: 8px;
-}
+        /* Title */
+        .section-title h2 {
+            font-size: 2.4rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
 
-.section-sub {
-    font-size: 1rem;
-    color: #777;
-    margin-bottom: 40px;
-}
+        .section-sub {
+            font-size: 1rem;
+            color: #777;
+            margin-bottom: 40px;
+        }
 
-/* Wrapper */
-.contact-wrapper {
-    padding: 40px;
-    background: #ffffff;
-    border-radius: 20px;
-    border: 1px solid #f0f0f0;
-    box-shadow: 0 8px 35px rgba(0,0,0,0.05);
-}
+        /* Wrapper */
+        .contact-wrapper {
+            padding: 40px;
+            background: #ffffff;
+            border-radius: 20px;
+            border: 1px solid #f0f0f0;
+            box-shadow: 0 8px 35px rgba(0, 0, 0, 0.05);
+        }
 
-/* Contact Item Card */
-.contact-card {
-    text-align: center;
-    padding: 30px 20px;
-    border-radius: 14px;
-    transition: all 0.3s ease;
-}
+        /* Contact Item Card */
+        .contact-card {
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 14px;
+            transition: all 0.3s ease;
+        }
 
-.contact-card:hover {
-    transform: translateY(-5px);
-}
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
 
-/* Icon */
-.icon-box {
-    width: 60px;
-    height: 60px;
-    border: 1.8px solid var(--accent);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 15px auto;
-    font-size: 1.4rem;
-    color: var(--accent);
-    background: #ffffff;
-}
+        /* Icon */
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            border: 1.8px solid var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px auto;
+            font-size: 1.4rem;
+            color: var(--accent);
+            background: #ffffff;
+        }
 
-/* Text */
-.contact-card h5 {
-    font-size: 1.1rem;
-    margin-bottom: 5px;
-    font-weight: 600;
-}
+        /* Text */
+        .contact-card h5 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
 
-.contact-card p {
-    color: #666;
-    margin: 0;
-}
+        .contact-card p {
+            color: #666;
+            margin: 0;
+        }
 
 
         /* FOOTER STYLES */
@@ -1277,9 +1279,9 @@
             right: 0;
             bottom: 0;
             background: linear-gradient(to right,
-                rgba(0, 0, 0, 0.2) 30%,
-                rgba(0, 0, 0, 0) 70%,
-                transparent 100%);
+                    rgba(0, 0, 0, 0.2) 30%,
+                    rgba(0, 0, 0, 0) 70%,
+                    transparent 100%);
             z-index: 1;
             border-radius: inherit;
         }
