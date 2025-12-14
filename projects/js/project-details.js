@@ -1,37 +1,41 @@
 
 
-    // ======================
-    // UTILITY FUNCTIONS
-    // ======================
-    
-    // Function to get URL parameter
-    function getUrlParameter() {
-        // Get the full URL
-        const url = window.location.href;
-        
-        // Extract the part after ? (e.g., "1" from "project-details.html?1")
-        const queryString = url.split('?')[1];
-        
-        if (!queryString) return '1'; // Default to project 1 if no query
-        
-        // If there are multiple parameters (e.g., ?id=1&name=test), we only want the first part
-        const projectId = queryString.split('&')[0];
-        
-        // If it's just a number (e.g., "1"), return it
-        if (/^\d+$/.test(projectId)) {
-            return projectId;
-        }
-        
-        // If it's a parameter like "id=1", extract the value
-        if (projectId.includes('=')) {
-            const paramParts = projectId.split('=');
-            return paramParts[1] || '1';
-        }
-        
-        return '1'; // Default to project 1
+// ======================
+// UTILITY FUNCTIONS
+// ======================
+
+// GLOBAL STATE
+let currentIndex = 0;
+let visibleGalleryImages = [];
+
+// Function to get URL parameter
+function getUrlParameter() {
+    // Get the full URL
+    const url = window.location.href;
+
+    // Extract the part after ? (e.g., "1" from "project-details.html?1")
+    const queryString = url.split('?')[1];
+
+    if (!queryString) return '1'; // Default to project 1 if no query
+
+    // If there are multiple parameters (e.g., ?id=1&name=test), we only want the first part
+    const projectId = queryString.split('&')[0];
+
+    // If it's just a number (e.g., "1"), return it
+    if (/^\d+$/.test(projectId)) {
+        return projectId;
     }
-    
-    // Function to update page content with project data
+
+    // If it's a parameter like "id=1", extract the value
+    if (projectId.includes('=')) {
+        const paramParts = projectId.split('=');
+        return paramParts[1] || '1';
+    }
+
+    return '1'; // Default to project 1
+}
+
+// Function to update page content with project data
 function loadProjectData(projectId) {
 
     const project = projectsData[projectId];
@@ -80,6 +84,61 @@ function loadProjectData(projectId) {
     beforeImg.src = project.beforeImage;
     afterImg.src = project.afterImage;
 
+    // Apply custom slider styles (Height)
+    if (project.sliderHeight) {
+        sliderContainer.style.height = project.sliderHeight;
+    } else {
+        sliderContainer.style.height = ''; // Revert to CSS default (500px)
+    }
+
+    // Apply custom slider styles (Width)
+    if (project.sliderWidth) {
+        sliderContainer.style.width = project.sliderWidth;
+        sliderContainer.style.margin = "0 auto 30px"; // Center it
+    } else {
+        sliderContainer.style.width = ''; // Revert to CSS default
+        sliderContainer.style.margin = '';
+    }
+
+    // Apply custom image positioning/fitting
+    beforeImg.style.objectPosition = project.beforeObjectPosition || 'center center';
+    afterImg.style.objectPosition = project.afterObjectPosition || 'center center';
+
+    beforeImg.style.objectFit = project.beforeObjectFit || 'cover';
+    afterImg.style.objectFit = project.afterObjectFit || 'cover';
+
+    // Apply Blurred Background if requested
+    if (project.blurBackground) {
+        // Before Image Wrapper
+        if (beforeImg.parentElement) {
+            beforeImg.parentElement.classList.add('has-blur-bg');
+            beforeImg.parentElement.style.setProperty('--bg-image', `url('${project.beforeImage}')`);
+        }
+        // After Image Wrapper
+        if (afterImg.parentElement) {
+            afterImg.parentElement.classList.add('has-blur-bg');
+            afterImg.parentElement.style.setProperty('--bg-image', `url('${project.afterImage}')`);
+        }
+    } else {
+        // Clean up just in case (though page reload usually handles this, keeps it robust)
+        if (beforeImg.parentElement) beforeImg.parentElement.classList.remove('has-blur-bg');
+        if (afterImg.parentElement) afterImg.parentElement.classList.remove('has-blur-bg');
+    }
+
+    // Update labels (default to "Before" and "After" if not specified)
+    const beforeText = sliderContainer.querySelector('.before-text');
+    const afterText = sliderContainer.querySelector('.after-text');
+
+    if (beforeText) beforeText.textContent = project.beforeLabel || "Before";
+    if (afterText) afterText.textContent = project.afterLabel || "After";
+
+    // Set Slider Limit (max percentage)
+    if (project.sliderLimit) {
+        sliderContainer.setAttribute('data-max-limit', project.sliderLimit);
+    } else {
+        sliderContainer.removeAttribute('data-max-limit');
+    }
+
     // Initialize slider after images load
     setTimeout(() => {
         try {
@@ -95,9 +154,9 @@ function loadProjectData(projectId) {
     generateGallery(project.galleryImages);
 }
 
-    
-    // Function to generate gallery items
-    function generateGallery(images) {
+
+// Function to generate gallery items
+function generateGallery(images) {
     const galleryContainer = document.getElementById('dynamic-gallery');
     const tabsContainer = document.getElementById('gallery-tabs');
 
@@ -150,17 +209,17 @@ function loadProjectData(projectId) {
     initializeFullscreenViewer(); // Re-init fullscreen
 }
 
-    
-    // ======================
-    // GALLERY FUNCTIONALITY CATEGORYYY
-    // ======================
-    
-    function initializeGallery() {
+
+// ======================
+// GALLERY FUNCTIONALITY CATEGORYYY
+// ======================
+
+function initializeGallery() {
     const galleryTabs = document.querySelectorAll('.gallery-tab');
     const galleryItems = document.querySelectorAll('.gallery-item');
 
     galleryTabs.forEach(tab => {
-        tab.addEventListener('click', function() {
+        tab.addEventListener('click', function () {
 
             // Remove active highlight from all tabs
             galleryTabs.forEach(t => t.classList.remove('active'));
@@ -177,196 +236,217 @@ function loadProjectData(projectId) {
                     item.style.display = 'none';
                 }
             });
+
+            // Update visible images list
+            visibleGalleryImages = Array.from(galleryItems).filter(item => item.style.display !== 'none');
         });
     });
 }
 
- 
-    
-    // ======================
-    // NAVBAR FUNCTIONALITY
-    // ======================
-    
-    function initializeNavbar() {
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (navbar && window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else if (navbar) {
-                navbar.classList.remove('scrolled');
-            }
-        });
-    }
-    
-    // ======================
-    // INITIALIZE PAGE
-    // ======================
-    
-    document.addEventListener('DOMContentLoaded', function() {
-        // Get project ID from URL (e.g., project-details.html?3)
-        const projectId = getUrlParameter();
-        
-        // Load the project data
-        loadProjectData(projectId);
-        
-        // Initialize components
-        initializeNavbar();
-        
-        
-        // Error handling for missing images
-        document.addEventListener('error', function(e) {
-            if (e.target.tagName === 'IMG') {
-                console.error('Image failed to load:', e.target.src);
-                // Show a placeholder instead of hiding
-                e.target.style.backgroundColor = '#f5f5f5';
-                e.target.style.padding = '20px';
-                e.target.innerHTML = '<i class="fas fa-image fa-3x" style="color:#ccc;"></i>';
-            }
-        }, true);
-    });
-    
-    // Fallback for direct access (no project ID in URL)
-    window.addEventListener('load', function() {
-        const projectId = getUrlParameter();
-        if (!projectId || projectId === '1') {
-            // Already handled by default in getUrlParameter()
+
+
+// ======================
+// NAVBAR FUNCTIONALITY
+// ======================
+
+function initializeNavbar() {
+    window.addEventListener('scroll', function () {
+        const navbar = document.querySelector('.navbar');
+        if (navbar && window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else if (navbar) {
+            navbar.classList.remove('scrolled');
         }
     });
+}
+
+// ======================
+// INITIALIZE PAGE
+// ======================
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Get project ID from URL (e.g., project-details.html?3)
+    const projectId = getUrlParameter();
+
+    // Load the project data
+    loadProjectData(projectId);
+
+    // Initialize components
+    initializeNavbar();
+
+
+    // Error handling for missing images
+    document.addEventListener('error', function (e) {
+        if (e.target.tagName === 'IMG') {
+            console.error('Image failed to load:', e.target.src);
+            // Show a placeholder instead of hiding
+            e.target.style.backgroundColor = '#f5f5f5';
+            e.target.style.padding = '20px';
+            e.target.innerHTML = '<i class="fas fa-image fa-3x" style="color:#ccc;"></i>';
+        }
+    }, true);
+});
+
+// Fallback for direct access (no project ID in URL)
+window.addEventListener('load', function () {
+    const projectId = getUrlParameter();
+    if (!projectId || projectId === '1') {
+        // Already handled by default in getUrlParameter()
+    }
+});
 
 
 
 
 // Before/After Slider
-        class BeforeAfterSlider {
-            constructor(container) {
-                this.container = container;
-                this.sliderHandle = container.querySelector('.slider-handle');
-                this.sliderLine = container.querySelector('.slider-line');
-                this.beforeImage = container.querySelector('.before-image');
-                this.afterImage = container.querySelector('.after-image');
-                
-                this.isDragging = false;
-                
-                // Initialize the slider
-                this.initializeSlider();
-                this.setupEventListeners();
-            }
-            
-            // Function to initialize the slider at the center position
-            initializeSlider() {
-                // Set slider handle and line at center with a transition for initialization
-                this.sliderHandle.style.transition = "left 0.3s ease";
-                this.sliderLine.style.transition = "left 0.3s ease";
+class BeforeAfterSlider {
+    constructor(container) {
+        this.container = container;
+        this.sliderHandle = container.querySelector('.slider-handle');
+        this.sliderLine = container.querySelector('.slider-line');
+        this.beforeImage = container.querySelector('.before-image');
+        this.afterImage = container.querySelector('.after-image');
 
-                this.sliderHandle.style.left = "50%";
-                this.sliderLine.style.left = "50%";
+        // Read limit from data attribute (default 100)
+        this.maxLimit = parseInt(container.getAttribute('data-max-limit')) || 100;
 
-                // Set both images' clip-path to 50% (center)
-                this.beforeImage.style.clipPath = "inset(0 50% 0 0)";
-                this.afterImage.style.clipPath = "inset(0 0 0 50%)";
-            }
+        this.isDragging = false;
 
-            // Function to move the slider based on user interaction
-            moveSlider(clientX) {
-                const containerRect = this.container.getBoundingClientRect();
-                let offsetX = clientX - containerRect.left;
+        // Initialize the slider
+        this.initializeSlider();
+        this.setupEventListeners();
+    }
 
-                // Limit the slider movement within the full container width (0% to 100%)
-                if (offsetX < 0) offsetX = 0;
-                if (offsetX > containerRect.width) offsetX = containerRect.width;
+    // Function to initialize the slider at the center position
+    initializeSlider() {
+        // Set slider handle and line at center with a transition for initialization
+        this.sliderHandle.style.transition = "left 0.3s ease";
+        this.sliderLine.style.transition = "left 0.3s ease";
 
-                const percentage = Math.round((offsetX / containerRect.width) * 100);
+        // If a limit is set, start at the limit (right edge of the valid area)
+        // Otherwise start at 50%
+        const initialPos = this.maxLimit < 100 ? this.maxLimit : 50;
 
-                // Update the slider handle position and image clipping
-                this.sliderHandle.style.left = `${percentage}%`;
-                this.sliderLine.style.left = `${percentage}%`;
+        this.sliderHandle.style.left = `${initialPos}%`;
+        this.sliderLine.style.left = `${initialPos}%`;
 
-                // Adjust the clip-path for both images
-                this.beforeImage.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
-                this.afterImage.style.clipPath = `inset(0 0 0 ${percentage}%)`;
-            }
+        // Set both images' clip-path
+        this.beforeImage.style.clipPath = `inset(0 ${100 - initialPos}% 0 0)`;
+        this.afterImage.style.clipPath = `inset(0 0 0 ${initialPos}%)`;
+    }
 
-            // Event handlers
-            startDragging = (event) => {
-                // Prevent default behavior to avoid text selection
-                event.preventDefault();
-                
-                this.isDragging = true;
+    // Function to move the slider based on user interaction
+    moveSlider(clientX) {
+        const containerRect = this.container.getBoundingClientRect();
+        let offsetX = clientX - containerRect.left;
 
-                // Remove transitions while dragging for instant feedback
-                this.sliderHandle.style.transition = "none";
-                this.sliderLine.style.transition = "none";
-                
-                // Move slider to the click position immediately
-                const clientX = event.type.includes('touch') ? event.touches[0].clientX : event.clientX;
-                this.moveSlider(clientX);
-            };
+        // Limit the slider movement within the full container width (0% to 100%)
+        if (offsetX < 0) offsetX = 0;
+        if (offsetX > containerRect.width) offsetX = containerRect.width;
 
-            stopDragging = () => {
-                this.isDragging = false;
+        let percentage = Math.round((offsetX / containerRect.width) * 100);
 
-                // Reapply transitions after dragging ends
-                this.sliderHandle.style.transition = "left 0.3s ease";
-                this.sliderLine.style.transition = "left 0.3s ease";
-            };
+        // Enforce Max Limit
+        if (percentage > this.maxLimit) percentage = this.maxLimit;
 
-            handleMouseMove = (event) => {
-                if (this.isDragging) {
-                    this.moveSlider(event.clientX);
-                }
-            };
+        // Update the slider handle position and image clipping
+        this.sliderHandle.style.left = `${percentage}%`;
+        this.sliderLine.style.left = `${percentage}%`;
 
-            handleTouchMove = (event) => {
-                if (this.isDragging) {
-                    this.moveSlider(event.touches[0].clientX);
-                }
-            };
+        // Adjust the clip-path for both images
+        this.beforeImage.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
+        this.afterImage.style.clipPath = `inset(0 0 0 ${percentage}%)`;
+    }
 
-            // Setup all event listeners for this slider
-            setupEventListeners() {
-                // Make the entire container draggable
-                this.container.addEventListener("mousedown", this.startDragging);
-                this.container.addEventListener("touchstart", this.startDragging);
+    // Event handlers
+    startDragging = (event) => {
+        // Prevent default behavior to avoid text selection
+        event.preventDefault();
 
-                // Use document instead of window to handle edge cases better
-                document.addEventListener("mousemove", this.handleMouseMove);
-                document.addEventListener("mouseup", this.stopDragging);
-                document.addEventListener("touchmove", this.handleTouchMove);
-                document.addEventListener("touchend", this.stopDragging);
-            }
+        this.isDragging = true;
+
+        // Remove transitions while dragging for instant feedback
+        this.sliderHandle.style.transition = "none";
+        this.sliderLine.style.transition = "none";
+
+        // Move slider to the click position immediately
+        const clientX = event.type.includes('touch') ? event.touches[0].clientX : event.clientX;
+        this.moveSlider(clientX);
+    };
+
+    stopDragging = () => {
+        this.isDragging = false;
+
+        // Reapply transitions after dragging ends
+        this.sliderHandle.style.transition = "left 0.3s ease";
+        this.sliderLine.style.transition = "left 0.3s ease";
+    };
+
+    handleMouseMove = (event) => {
+        if (this.isDragging) {
+            this.moveSlider(event.clientX);
         }
+    };
 
-        // Initialize when page loads
-        document.addEventListener('DOMContentLoaded', function() {
-            // Initialize the main slider
-            const mainSlider = new BeforeAfterSlider(document.getElementById('mainSlider'));
-            
-            // Initialize gallery modal
-            const galleryItems = document.querySelectorAll('.gallery-item');
-            const modalImage = document.getElementById('modalImage');
-            const modalCaption = document.getElementById('modalCaption');
-            
-            galleryItems.forEach(item => {
-                item.addEventListener('click', function() {
-                    const imgSrc = this.getAttribute('data-img');
-                    const caption = this.getAttribute('data-caption');
-                    
-                    modalImage.src = imgSrc;
-                    modalCaption.textContent = caption;
-                });
-            });
+    handleTouchMove = (event) => {
+        if (this.isDragging) {
+            this.moveSlider(event.touches[0].clientX);
+        }
+    };
 
-            
-            
+    // Setup all event listeners for this slider
+    setupEventListeners() {
+        // Make the entire container draggable
+        this.container.addEventListener("mousedown", this.startDragging);
+        this.container.addEventListener("touchstart", this.startDragging);
 
+        // Use document instead of window to handle edge cases better
+        document.addEventListener("mousemove", this.handleMouseMove);
+        document.addEventListener("mouseup", this.stopDragging);
+        document.addEventListener("touchmove", this.handleTouchMove);
+        document.addEventListener("touchend", this.stopDragging);
+    }
+}
+
+// Initialize when page loads
+document.addEventListener('DOMContentLoaded', function () {
+    // Initialize the main slider
+    const mainSlider = new BeforeAfterSlider(document.getElementById('mainSlider'));
+
+    // Initialize gallery modal
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const modalImage = document.getElementById('modalImage');
+    const modalCaption = document.getElementById('modalCaption');
+
+    galleryItems.forEach(item => {
+        item.addEventListener('click', function () {
+            const imgSrc = this.getAttribute('data-img');
+            const caption = this.getAttribute('data-caption');
+
+            modalImage.src = imgSrc;
+            modalCaption.textContent = caption;
         });
-        // ======== FULLSCREEN VIEWER LOGIC =========
-let currentIndex = 0;
-let galleryImages = [];
+    });
+
+
+
+
+});
+// ======== FULLSCREEN VIEWER LOGIC =========
+let isInitialized = false;
 
 // Initialize fullscreen viewer after gallery is generated
 function initializeFullscreenViewer() {
-    galleryImages = Array.from(document.querySelectorAll('.gallery-item'));
+    if (isInitialized) return; // Prevent re-initialization
+    isInitialized = true;
+
+    // Use all items for initial setup
+    const allGalleryItems = Array.from(document.querySelectorAll('.gallery-item'));
+
+    // Initially, all are visible
+    if (visibleGalleryImages.length === 0) {
+        visibleGalleryImages = [...allGalleryItems];
+    }
 
     const viewer = document.getElementById('fullscreenViewer');
     const viewerImg = document.getElementById('viewerImage');
@@ -375,25 +455,32 @@ function initializeFullscreenViewer() {
     const btnNext = document.querySelector('.right-arrow');
     const btnPrev = document.querySelector('.left-arrow');
 
-    // Open viewer
-    galleryImages.forEach((item, index) => {
+    // Open viewer - add listener to ALL items
+    allGalleryItems.forEach((item) => {
         item.addEventListener('click', () => {
-            currentIndex = index;
-            viewer.style.display = "flex";
-            viewerImg.src = item.getAttribute('data-img');
+            // Find index in the CURRENTLY VISIBLE list
+            const index = visibleGalleryImages.indexOf(item);
+
+            if (index !== -1) {
+                currentIndex = index;
+                viewer.style.display = "flex";
+                viewerImg.src = visibleGalleryImages[currentIndex].getAttribute('data-img');
+            }
         });
     });
 
     // Next image
     btnNext.addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % galleryImages.length;
-        viewerImg.src = galleryImages[currentIndex].getAttribute('data-img');
+        if (visibleGalleryImages.length === 0) return;
+        currentIndex = (currentIndex + 1) % visibleGalleryImages.length;
+        viewerImg.src = visibleGalleryImages[currentIndex].getAttribute('data-img');
     });
 
     // Previous image
     btnPrev.addEventListener('click', () => {
-        currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
-        viewerImg.src = galleryImages[currentIndex].getAttribute('data-img');
+        if (visibleGalleryImages.length === 0) return;
+        currentIndex = (currentIndex - 1 + visibleGalleryImages.length) % visibleGalleryImages.length;
+        viewerImg.src = visibleGalleryImages[currentIndex].getAttribute('data-img');
     });
 
     // Close viewer
