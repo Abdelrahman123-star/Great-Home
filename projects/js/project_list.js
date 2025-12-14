@@ -237,7 +237,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "Projects/3D_Projects/Dr_Reham_Gamal/1.jpeg",
         "Projects/3D_Projects/Eng_Samah_Elkady/1.jpeg",
         "Projects/3D_Projects/Mr_Amr_Elsayed/2.webp",
-        "Projects/3D_Projects/Mr_Mohamed_Elkammah/1.jpg"
+        "Projects/3D_Projects/Mr_Mohamed_Elkammah/1.webp"
     ];
 
 
