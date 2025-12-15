@@ -87,10 +87,11 @@
     <!-- PDF Viewer Section -->
     <section class="pdf-viewer-section">
         <div class="container">
-            <div class="pdf-viewer-wrapper">
-                <!-- Embed PDF directly -->
-                <iframe src="Abdalla_Taher.pdf" loading="lazy" width="100%" height="900px"
-                    style="border:none; border-radius:20px; box-shadow:0 15px 40px rgba(0,0,0,0.1);"></iframe>
+            <div class="pdf-viewer-wrapper" style="min-height: 50vh;">
+                <!-- PDF.js container -->
+                <div id="pdf-viewer-container" data-pdf-url="Abdalla_Taher.pdf">
+                    <!-- Canvas pages will be injected here by render-pdf.js -->
+                </div>
             </div>
         </div>
     </section>
@@ -109,7 +110,6 @@
                 <li><a href="../../index.html#Experience">Experience</a></li>
                 <li><a href="../../index.html#contact">Contact</a></li>
             </ul>
-            </ul>
             <div class="copyright">
                 <p>&copy; 2025 Great Home. All Rights Reserved.</p>
             </div>
@@ -117,7 +117,8 @@
     </footer>
 
     <script src="../../js/common.js" defer></script>
-
+    <script src="../js/abdalla_taher_pdf_data.js"></script>
+    <script src="../js/render-pdf.js" defer></script>
 </body>
 
 </html>

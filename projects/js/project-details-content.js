@@ -11,6 +11,8 @@ const projectsData = {
         dates: "2020 - 2022",
         size: "480 Sq ft",
         category: "Residential",
+        beforeLabel: "Site",
+        afterLabel: "Render",
         sliderHeight: "600px",
         sliderWidth: "45%",
         sliderLimit: 100,
