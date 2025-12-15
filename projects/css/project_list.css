@@ -744,42 +744,99 @@ h6 {
 
 @media (max-width: 576px) {
     .luxury-header-2 {
-        padding: 120px 0 80px;
+        padding: 80px 0 40px;
+        /* Even tighter padding */
         min-height: auto;
     }
 
+    /* Hide the decorative sidebar on mobile to save space */
+    .luxury-sidebar {
+        display: none;
+    }
+
+    .header-wrapper {
+        gap: 20px;
+    }
+
     .page-title {
-        font-size: 2.8rem;
-        margin-bottom: 40px;
+        font-size: 2.2rem;
+        /* Compact title */
+        margin-bottom: 20px;
+        line-height: 1.2;
+        text-align: center;
+    }
+
+    .luxury-quote {
+        padding-top: 10px;
+        margin-bottom: 30px;
+        text-align: center;
+        padding-left: 0;
     }
 
     .section-title {
-        font-size: 2.3rem;
-        margin-bottom: 50px;
+        font-size: 2.2rem;
+        margin-bottom: 40px;
+    }
+
+    /* Filters: Better Touch Targets */
+    .project-filters {
+        gap: 8px;
+        margin-bottom: 40px;
+    }
+
+    .filter-btn {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+        flex-grow: 1;
+        text-align: center;
     }
 
     .projects-grid {
         grid-template-columns: 1fr;
-        gap: 25px;
+        gap: 30px;
+        padding: 0 10px;
+        min-width: 0;
     }
 
     .luxury-stats {
         flex-direction: column;
-        gap: 30px;
+        gap: 15px;
+        /* Tighter stats */
+        padding-top: 20px;
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
     }
 
     .stat-divider {
-        width: 100px;
-        height: 1px;
+        display: none;
+        /* remove dividers in vertical stack */
     }
 
+    .stat-item {
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+        /* subtle separator */
+        width: 100%;
+    }
+
+    .stat-item:last-child {
+        border-bottom: none;
+    }
+
+
+
     .contact-cta {
-        padding: 80px 0;
+        padding: 60px 0;
+    }
+
+    .contact-cta h3 {
+        font-size: 2rem;
     }
 
     .btn-lg {
-        padding: 15px 35px;
-        font-size: 1.1rem;
+        padding: 14px 30px;
+        font-size: 1rem;
+        width: 100%;
+        /* Full width button on mobile */
     }
 }
 

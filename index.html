@@ -67,7 +67,9 @@
             </div>
         </div>
         <div class="scroll-indicator">
-            <i class="fas fa-chevron-down"></i>
+            <a href="#about">
+                <i class="fas fa-chevron-down"></i>
+            </a>
         </div>
     </section>
     <!-- About Section -->
@@ -143,7 +145,7 @@
                 <div class="item"
                     style="background: url('projects/Projects/Completed_Projects/Palm Hills/Site/3.jpg');">
                     <div class="content">
-                        <div class="name">Palm Hills</div>
+                        <div class="name">Palm Hills 707</div>
                         <div class="description">A high-end finishing project for a three-story luxury villa in Palm
                             Hills, New Cairo. Executed with premium materials, bespoke detailing, and top-tier
                             craftsmanship to deliver an exceptional, elegant, and refined living environment that
@@ -178,7 +180,7 @@
                 <div class="item"
                     style="background: url('projects/Projects/Completed_Projects/La_Viesta/Render/11.webp');">
                     <div class="content">
-                        <div class="name">La Viesta</div>
+                        <div class="name">La Vista 6</div>
                         <div class="description">A high-end finishing project for a spacious two-story villa in Ain
                             Sokhna, executed with premium materials and meticulous craftsmanship. The project features
                             elegant wooden parquet flooring and refined detailing throughout, delivering a warm,
@@ -277,9 +279,10 @@
                         <p>Focused on Construction Management and Planning.</p>
                     </div>
                 </div>
-
-
             </div>
+
+
+        </div>
         </div>
     </section>
     <!-- Contact Section -->
@@ -330,24 +333,7 @@
             </div>
         </div>
     </section>
-    <!-- FOOTER -->
-    <!-- <footer class="custom-footer">
-        <div class="footer-top">
-            <a href="#">
-                <img src="imgs/logo/GH-Logo-Vertical2.png" alt="Logo" class="footer-logo">
-            </a>
-            <nav class="footer-nav">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#Experience">Experience</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </div>
-        <div class="footer-bottom">
-            <p>©2025 Great Home. All rights reserved</p>
-        </div>
-    </footer> -->
+
     <footer>
         <div class="container">
             <a href="#">
@@ -367,20 +353,7 @@
         </div>
     </footer>
 
-    <!-- <footer>
-        <div class="container">
-            <ul class="footer-links">
-                <li><a href="../index.html#home">Home</a></li>
-                <li><a href="../index.html#about">About</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="../index.html#Experience">Experience</a></li>
-                <li><a href="../index.html#contact">Contact</a></li>
-            </ul>
-            <div class="copyright">
-                <p>&copy; 2025 Great Home. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer> -->
+
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="projects/js/project-details-content.js"></script>
@@ -390,16 +363,62 @@
             const track = document.getElementById('carouselTrack');
             if (!track) return;
 
-            // Define the static Ahmed Gamal 2D project card
-            const ahmedGamalCard = document.createElement('div');
-            ahmedGamalCard.className = 'project-card';
-            ahmedGamalCard.innerHTML = `
-                <div class="img-box">
-                    <img src="imgs/AhmedGamal.png" alt="Ahmed Gamal 2D" loading="lazy" decoding="async">
-                    <a class="view-btn" href="projects/2D_Projects/Ahmed_Gamal.html">View Details</a>
+            // Helper to create card with New Split Design (Image Top, Name Bottom)
+            function createCard(title, thumb, id) {
+                const card = document.createElement('div');
+                card.className = 'project-card item'; // Main container
+
+                // 1. Image Wrapper (Top) - Contains Image & Hover Overlay
+                const fullImgPath = thumb.startsWith('http') ? thumb : `projects/${thumb}`;
+                const bgPath = thumb.includes('/') ? thumb : `imgs/${thumb}`;
+                const finalPath = thumb.includes('AhmedGamal') ? 'imgs/AhmedGamal.png' : `projects/${thumb}`;
+
+                const imageWrapper = document.createElement('div');
+                imageWrapper.className = 'image-wrapper';
+                imageWrapper.style.background = `url('${finalPath}')`;
+                imageWrapper.style.backgroundSize = 'cover';
+                imageWrapper.style.backgroundPosition = 'center';
+
+                // Hover Overlay with "See More" Button
+                imageWrapper.innerHTML = `
+                    <div class="hover-overlay">
+                        <button><a href="projects/project-details.html?${id}" target="_blank">See More</a></button>
+                    </div>
+                `;
+
+                // 2. Info Wrapper (Bottom) - Process Name
+                const infoWrapper = document.createElement('div');
+                infoWrapper.className = 'info-wrapper';
+                infoWrapper.innerHTML = `<div class="name">${title}</div>`;
+
+                // Assemble
+                card.appendChild(imageWrapper);
+                card.appendChild(infoWrapper);
+
+                return card;
+            }
+
+            // 1. Static Ahmed Gamal Card
+            const agCard = document.createElement('div');
+            agCard.className = 'project-card item';
+
+            const agImage = document.createElement('div');
+            agImage.className = 'image-wrapper';
+            agImage.style.background = "url('imgs/AhmedGamal.png')";
+            agImage.style.backgroundSize = 'cover';
+            agImage.style.backgroundPosition = 'center';
+            agImage.innerHTML = `
+                <div class="hover-overlay">
+                    <button><a href="projects/2D_Projects/Ahmed_Gamal.html" target="_blank">See More</a></button>
                 </div>
-                <h3>Ahmed Gamal 2D</h3>
             `;
+
+            const agInfo = document.createElement('div');
+            agInfo.className = 'info-wrapper';
+            agInfo.innerHTML = `<div class="name">Eng. Ahmed Gamal</div>`;
+
+            agCard.appendChild(agImage);
+            agCard.appendChild(agInfo);
 
             // Dynamically load projects from projectsData
             let ahmedGamalInserted = false;
@@ -415,21 +434,11 @@
 
                     // Insert Ahmed Gamal card after the first 6 projects
                     if (renderedCount === 6 && !ahmedGamalInserted) {
-                        track.appendChild(ahmedGamalCard);
+                        track.appendChild(agCard);
                         ahmedGamalInserted = true;
                     }
 
-                    const fullImgPath = `projects/${thumbSrc}`;
-
-                    const card = document.createElement('div');
-                    card.className = 'project-card';
-                    card.innerHTML = `
-                        <div class="img-box">
-                            <img src="${fullImgPath}" alt="${project.name}" loading="lazy" decoding="async">
-                            <a class="view-btn" href="projects/project-details.html?${id}">View Details</a>
-                        </div>
-                        <h3>${project.name}</h3>
-                    `;
+                    const card = createCard(project.name, thumbSrc, id);
                     track.appendChild(card);
                     renderedCount++;
                 });
@@ -437,9 +446,9 @@
                 console.error("projectsData is not defined.");
             }
 
-            // If not yet inserted (e.g. fewer than 6 projects), append at the end
+            // If not yet inserted
             if (!ahmedGamalInserted) {
-                track.appendChild(ahmedGamalCard);
+                track.appendChild(agCard);
             }
         })();
     </script>

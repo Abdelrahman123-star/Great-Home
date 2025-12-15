@@ -52,7 +52,7 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            background: url("../download.png") center center / cover no-repeat;
+            background: url("../download2.png") center center / cover no-repeat;
 
         }
 
@@ -144,6 +144,8 @@
                 text-align: center;
                 margin-left: 0;
                 margin-right: 0;
+                width: 100%;
+                padding: 0 15px;
             }
 
             .hero .overlay {
@@ -161,12 +163,23 @@
                 background-color: rgb(41, 41, 41);
             }
 
+            .scroll-indicator {
+                background-color: rgb(41, 41, 41);
+            }
+
+            .logo-nav {
+                height: 50px;
+                /* Adjust logo size */
+                width: auto;
+            }
         }
 
         /* MOBILE */
         @media (max-width: 576px) {
             .hero-title {
-                font-size: 2.1rem;
+                font-size: 1.8rem;
+                /* Slightly smaller for better fit */
+                padding: 0 10px;
             }
 
             .hero .overlay {
@@ -452,17 +465,136 @@
         }
 
         /* track */
+        /* track - Native Scroll for Mobile/Desktop similar to Work Sample */
         .carousel-track {
             display: flex;
-            gap: var(--gap);
+            gap: 20px;
+            /* overflow-x: auto;  REMOVED for Desktop (JS handles it) */
+            /* padding-bottom: 20px; REMOVED */
+            /* scroll-behavior: smooth; REMOVED */
+            padding: 10px 0;
+            /* -webkit-overflow-scrolling: touch; REMOVED */
+            /* scroll-snap-type: x mandatory; REMOVED */
+
+            position: relative;
+            /* Ensure positioning for JS transform */
+            width: max-content;
             will-change: transform;
-            touch-action: pan-y;
+        }
+
+        /* Hide scrollbar but keep functionality */
+        .carousel-track::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .carousel-track::-webkit-scrollbar-thumb {
+            background: #ccc;
+            border-radius: 4px;
+        }
+
+        /* Project Card matching Work Sample (.item) style */
+        .project-card.item {
+            min-width: 300px;
+            height: 400px;
+            /* Fixed height like Work Sample */
+            border-radius: 20px;
+            background-size: cover !important;
+            background-position: center !important;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+            scroll-snap-align: center;
+            flex-shrink: 0;
+        }
+
+        /* =========================================
+           New Project Card Design (Image Top / Info Bottom) 
+           ========================================= */
+
+        /* 1. Image Wrapper */
+        .project-card.item .image-wrapper {
+            position: relative;
+            width: 100%;
+            height: 280px;
+            /* Dominant image area */
+            background-size: cover !important;
+            background-position: center !important;
+            overflow: hidden;
+        }
+
+        /* Hover Overlay (Darken + Button) */
+        .project-card.item .hover-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            /* Hidden by default */
+            transition: opacity 0.3s ease;
+        }
+
+        /* Show overlay on hover */
+        .project-card.item .image-wrapper:hover .hover-overlay {
+            opacity: 1;
+        }
+
+        /* 2. Info Wrapper (Bottom) */
+        .project-card.item .info-wrapper {
+            background: #fff;
+            padding: 15px;
+            text-align: center;
+            border-top: 1px solid #f0f0f0;
+            height: 120px;
+            /* Remaining height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .project-card.item .name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #333;
+            text-transform: uppercase;
+            line-height: 1.4;
+        }
+
+        /* Button Styling */
+        .project-card.item button {
+            padding: 10px 24px;
+            border: none;
+            cursor: pointer;
+            border-radius: 30px;
+            background: #fff;
+            color: #000;
+            font-weight: 600;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transform: translateY(10px);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card.item .image-wrapper:hover button {
+            transform: translateY(0);
+        }
+
+        .project-card.item button a {
+            text-decoration: none;
+            color: inherit;
         }
 
         /* card */
+        /* card */
         .project-card {
-            min-width: calc((100% - (var(--gap) * 2)) / 3);
-            /* 3 cards visible */
+            /* Default: 3 items (Desktop > 900px) */
+            min-width: calc((100% - 40px) / 3);
+
             background: #fff;
             border-radius: var(--card-radius);
             overflow: hidden;
@@ -471,8 +603,16 @@
             transition: transform 300ms cubic-bezier(.2, .9, .2, 1), box-shadow 300ms;
             user-select: none;
             content-visibility: auto;
-            contain-intrinsic-size: 350px;
         }
+
+        /* Tablet Breakpoint for Projects (Matches JS logic: <= 900px -> 2 items) */
+        @media (max-width: 900px) {
+            .project-card {
+                min-width: calc((100% - 20px) / 2);
+            }
+        }
+
+
 
         /* 3D depth hover effect */
         .project-card:hover {
@@ -610,21 +750,47 @@
             /* 2 visible on medium screens */
         }
 
-        @media (max-width: 520px) {
+        @media (max-width: 576px) {
             :root {
-                --img-height: 180px;
+                --img-height: 200px;
             }
 
             .project-card {
-                min-width: calc(100%);
+                min-width: 100%;
+                /* Show 1 card fully */
+                margin-right: 0;
+                /* Remove potential margin causing overflow */
             }
 
-            /* 1 visible on small screens */
             .arrow {
                 display: none;
+                /* Hide arrows on mobile, swipe is better */
             }
 
-            /* arrows hide on small screen (swipe primary) */
+            .carousel-viewport {
+                padding: 10px;
+                /* Reduce padding on mobile */
+            }
+
+            .carousel-dots {
+                display: none;
+                /* Hide dots on mobile as requested */
+            }
+
+            .mobile-counter {
+                display: block;
+                text-align: center;
+                margin-top: 10px;
+                font-weight: 600;
+                color: var(--text-light);
+                font-size: 0.9rem;
+                background: rgba(0, 0, 0, 0.05);
+                padding: 4px 12px;
+                border-radius: 20px;
+                width: fit-content;
+                margin-left: auto;
+                margin-right: auto;
+            }
         }
 
         /* Buttons */
@@ -786,31 +952,32 @@
 
         /* Responsive Styles for Timeline */
         @media (max-width: 991.98px) {
+
+            /* HIDE TIMELINE GRAPHICS ON MOBILE (User Request) */
             .exp-timeline::after {
-                left: 31px;
+                display: none;
             }
 
-            .exp-timeline-item {
+            /* Reset ALL items to full width stack */
+            .exp-timeline-item,
+            .exp-left,
+            .exp-right {
                 width: 100%;
-                padding-left: 70px;
-                padding-right: 25px;
+                left: 0 !important;
+                right: auto !important;
+                padding-left: 0;
+                padding-right: 0;
+                margin-bottom: 20px;
             }
 
             .exp-timeline-item::after {
-                left: 18px;
-                /* Center all circles on mobile */
-                right: auto;
+                /* Dot */
+                display: none;
             }
 
             .exp-timeline-item::before {
-                left: 60px;
-                border: medium solid white;
-                border-width: 10px 10px 10px 0;
-                border-color: transparent white transparent transparent;
-            }
-
-            .exp-right {
-                left: 0%;
+                /* Arrow */
+                display: none;
             }
         }
 
@@ -939,6 +1106,9 @@
         .contact-card p {
             color: #666;
             margin: 0;
+            /* Ensure long emails wrap on mobile */
+            word-break: break-word;
+            overflow-wrap: anywhere;
         }
 
 
@@ -963,11 +1133,7 @@
             /* green accent like Colorlib */
         }
 
-        .footer-logo {
-            width: 350px;
-            height: auto;
-            margin-bottom: 20px;
-        }
+
 
         .footer-nav {
             margin-bottom: 20px;
@@ -994,7 +1160,7 @@
 
             .exp-timeline-item {
                 width: 100%;
-                padding-left: 70px;
+                padding-left: 25px;
                 padding-right: 25px;
             }
 
@@ -1478,5 +1644,168 @@
 
             .content .description {
                 font-size: 14px;
+            }
+        }
+
+        /* Mobile specific adjustments for Image Slider */
+        @media (max-width: 900px) {
+            .Image_Slider {
+                padding: 40px 0;
+            }
+
+            .container2 {
+                width: 95%;
+                height: auto;
+                background: transparent;
+                box-shadow: none;
+                overflow-x: auto;
+                overflow-y: hidden;
+                display: flex;
+                gap: 20px;
+                padding-bottom: 20px;
+                /* Space for scrollbar */
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .container2 .slide {
+                display: contents;
+                /* Allow items to be direct children of scrolling container if possible, or just style this to be flex container */
+                /* Actually structural change might be needed if .slide wraps them. Let's check structure. */
+                /* Structure is container2 > slide > item */
+            }
+
+            .container2 .slide {
+                display: flex;
+                gap: 20px;
+                width: max-content;
+                /* Allow width to expand */
+            }
+
+            /* Reset all items to be relative cards in a row */
+            .container2 .slide .item,
+            .slide .item:nth-child(n) {
+                position: relative;
+                top: 0;
+                left: 0;
+                transform: none;
+                width: 280px;
+                /* Fixed width for cards */
+                height: 400px;
+                flex-shrink: 0;
+                margin: 0;
+                opacity: 1;
+                border-radius: 20px;
+                scroll-snap-align: center;
+                background-size: cover !important;
+                background-position: center !important;
+                z-index: 1;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            }
+
+            .item .content {
+                display: block;
+                top: auto;
+                bottom: 20px;
+                left: 10px;
+                right: 10px;
+                width: auto;
+                transform: none;
+                padding: 15px;
+                background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5));
+                text-align: left;
+                border-radius: 12px;
+            }
+
+            .content .name {
+                font-size: 1.2rem;
+                margin-bottom: 5px;
+                opacity: 1;
+                animation: none;
+                text-shadow: 1px 1px 2px black;
+            }
+
+            .content .description {
+                display: none;
+            }
+
+            .content button {
+                padding: 6px 16px;
+                font-size: 0.8rem;
+                margin-top: 8px;
+                opacity: 1;
+                animation: none;
+            }
+
+            .button {
+                display: none;
+            }
+        }
+
+        /* =========================================
+   Mobile Refinements for Projects Section
+   (Overrides previous media queries)
+   ========================================= */
+        @media (max-width: 576px) {
+            :root {
+                --img-height: 200px;
+            }
+
+            /* Adjust to item style */
+            .project-card.item {
+                min-width: 85%;
+                height: 400px;
+                /* Match new split design (280+120) */
+                margin-right: 0;
+                /* Ensure specific overrides */
+                background-size: cover !important;
+                background-position: center !important;
+            }
+
+            .carousel-track {
+                display: flex;
+                gap: 20px;
+                overflow-x: auto;
+                padding: 10px 20px;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+                /* Remove transform transition interference */
+                transition: none !important;
+                transform: none !important;
+                /* Reset width for mobile scroll */
+                width: 100% !important;
+            }
+
+            .carousel-viewport {
+                padding: 0;
+                overflow: visible;
+                box-shadow: none;
+                /* Cleaner look */
+            }
+
+            /* Hide arrows/dots */
+            .arrow,
+            .carousel-dots {
+                display: none !important;
+            }
+
+            .mobile-counter {
+                display: block;
+                margin-top: 15px;
+                text-align: center;
+                color: #888;
+            }
+
+            /* Make button visible on tap (hover state) rather than always */
+            .project-card.item .hover-overlay {
+                /* opacity: 1 !important;  <-- REMOVED per user request */
+                background: rgba(0, 0, 0, 0.4);
+            }
+
+            .project-card.item .image-wrapper button {
+                transform: translateY(0);
+                /* Ensure button is in place */
+                padding: 12px 24px;
+                /* Larger touch target */
             }
         }

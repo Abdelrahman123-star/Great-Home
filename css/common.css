@@ -163,7 +163,7 @@ footer::before {
 }
 
 .footer-logo {
-    width: 350px;
+    width: 20em;
     height: auto;
     margin: 0 auto 20px auto;
     display: block;

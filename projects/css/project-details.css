@@ -16,6 +16,7 @@
     }
 
     body {
+
         font-family: 'Inter', sans-serif;
         color: var(--text);
         line-height: 1.6;
@@ -38,6 +39,8 @@
 
     /* Hero Section */
     .project-hero {
+        padding: 1em;
+
         position: relative;
         min-height: 70vh;
         display: flex;
@@ -92,6 +95,7 @@
     }
 
     .section-title {
+
         margin-bottom: 40px;
         position: relative;
         padding-bottom: 15px;
@@ -551,7 +555,27 @@
             height: 300px;
         }
 
-        .gallery-grid {
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        @media (max-width: 576px) {
+            .project-title {
+                font-size: 2rem;
+            }
+
+            /* Force 2 columns on mobile for "Grid Photos" look */
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+
+            /* Adjust aspect ratio if needed, or keep 4/3 */
+            .gallery-item {
+                border-radius: 8px;
+                /* slightly sharper corners for small grid */
+            }
+
+            /* Fix Before/After Slider: Override inline JS width (30%) on mobile */
+            #mainSlider {
+                width: 100% !important;
+                margin: 0 0 30px 0 !important;
+            }
         }
     }
