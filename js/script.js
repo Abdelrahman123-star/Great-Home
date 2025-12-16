@@ -416,126 +416,87 @@ function initNavbarScroll() {
 
 
 
-    // 1:1 Touch Tracking
+    // Unified drag / swipe handling (PC mouse + mobile touch)
     let isDragging = false;
-    let startPos = 0;
-    let currentTranslate = 0;
-    let prevTranslate = 0;
-    let animationID;
-    let currentIndex = 0;
+    let dragStartX = 0;
+    let dragStartTranslate = 0;
+    const dragThreshold = 60; // px needed to change slide
 
-    track.addEventListener('touchstart', touchStart);
-    track.addEventListener('touchend', touchEnd);
-    track.addEventListener('touchmove', touchMove);
-
-    function touchStart(index) {
-      return function (event) {
-        // Stop autoplay on interact
-        stopAutoplay();
-        isDragging = true;
-        startPos = getPositionX(event);
-        // Get current transform value
-        const style = window.getComputedStyle(track);
-        const matrix = new WebKitCSSMatrix(style.transform);
-        prevTranslate = matrix.m41;
-
-        animationID = requestAnimationFrame(animation);
-        track.style.transition = 'none'; // Disable transition for direct 1:1 movement
-      }
+    function getPointerX(e) {
+      if (e.touches && e.touches.length) return e.touches[0].clientX;
+      if (e.changedTouches && e.changedTouches.length) return e.changedTouches[0].clientX;
+      return e.clientX;
     }
 
-    function touchEnd() {
-      isDragging = false;
-      cancelAnimationFrame(animationID);
+    function dragStart(e) {
+      // Only left mouse button
+      if (e.type === 'mousedown' && e.button !== 0) return;
 
-      const movedBy = currentTranslate - prevTranslate;
-
-      // Determine threshold to change slide (e.g. 100px)
-      if (movedBy < -50) {
-        moveToNext();
-      } else if (movedBy > 50) {
-        moveToPrev();
-      } else {
-        // Snap back if didn't move enough
-        track.style.transition = 'transform 0.4s cubic-bezier(.2,.9,.2,1)';
-        const originalCount = cards.filter(card => !card.classList.contains('clone')).length;
-        const pages = originalCount - (visibleCount - 1);
-        // clamp index
-        slideToIndex(index);
-      }
-      resetAutoplay();
-    }
-
-    function touchMove(event) {
-      if (isDragging) {
-        const currentPosition = getPositionX(event);
-        currentTranslate = prevTranslate + currentPosition - startPos;
-      }
-    }
-
-    function getPositionX(event) {
-      return event.touches[0].clientX;
-    }
-
-    function animation() {
-      if (isDragging) {
-        // Limit dragging (optional rubber banding could go here)
-        track.style.transform = `translateX(${currentTranslate}px)`;
-        requestAnimationFrame(animation);
-      }
-    }
-
-    // Attach proper listeners (overwriting previous ones if any, but since we are replacing the block...)
-    // Note: The previous simplified block is gone. We need to initialize.
-    track.removeEventListener('touchstart', touchStart); // clean up if needed
-    // Re-attach:
-    track.onmousedown = touchStart(index);
-    track.ontouchstart = touchStart(index);
-
-    track.onmouseup = touchEnd;
-    track.onmouseleave = () => { if (isDragging) touchEnd() };
-    track.ontouchend = touchEnd;
-
-    track.onmousemove = touchMove;
-    track.ontouchmove = touchMove;
-
-    // Correct Touch Start to be cleaner without closures if possible, or keep it simple
-    track.addEventListener('touchstart', (e) => {
       stopAutoplay();
       isDragging = true;
-      startPos = e.touches[0].clientX;
-      const style = window.getComputedStyle(track);
-      const matrix = new WebKitCSSMatrix(style.transform);
-      prevTranslate = matrix.m41;
-      currentTranslate = prevTranslate; // Initialize
+      dragStartX = getPointerX(e);
+      // Start from the current logical slide position
+      dragStartTranslate = positions[index] ?? 0;
+
       track.style.transition = 'none';
-      requestAnimationFrame(animation);
-    }, { passive: true });
+      track.classList.add('is-dragging');
 
-    track.addEventListener('touchmove', (e) => {
-      if (isDragging) {
-        const currentPosition = e.touches[0].clientX;
-        currentTranslate = prevTranslate + currentPosition - startPos;
+      // For mouse events, capture on window to allow leaving the track
+      if (e.type === 'mousedown') {
+        e.preventDefault();
+        window.addEventListener('mousemove', dragMove);
+        window.addEventListener('mouseup', dragEnd);
       }
-    }, { passive: true });
+    }
 
-    track.addEventListener('touchend', () => {
+    function dragMove(e) {
+      if (!isDragging) return;
+      const currentX = getPointerX(e);
+      const delta = currentX - dragStartX;
+      const nextTranslate = dragStartTranslate + delta;
+      track.style.transform = `translateX(${nextTranslate}px)`;
+    }
+
+    function dragEnd(e) {
+      if (!isDragging) return;
       isDragging = false;
-      const movedBy = currentTranslate - prevTranslate;
+      track.classList.remove('is-dragging');
 
-      // Re-enable transition for the snap
+      const endX = getPointerX(e);
+      const delta = endX - dragStartX;
+
       track.style.transition = 'transform 0.4s cubic-bezier(.2,.9,.2,1)';
 
-      if (movedBy < -50) {
-        moveToNext();
-      } else if (movedBy > 50) {
-        moveToPrev();
+      // If swipe is too small, just snap back to current slide
+      if (Math.abs(delta) < dragThreshold) {
+        slideToIndex(index);
       } else {
+        // How many full card widths did we move?
+        const originalCount = cards.filter(card => !card.classList.contains('clone')).length;
+        const pages = originalCount - (visibleCount - 1);
+
+        const direction = delta < 0 ? 1 : -1; // left = next (+), right = prev (-)
+        const stepSize = cardWidth || 1; // avoid divide-by-zero
+        const slidesMoved = Math.max(1, Math.round(Math.abs(delta) / stepSize));
+
+        index = (index + direction * slidesMoved + pages) % pages;
         slideToIndex(index);
       }
-      resetAutoplay();
-    });
 
+      resetAutoplay();
+
+      // Clean up mouse listeners
+      window.removeEventListener('mousemove', dragMove);
+      window.removeEventListener('mouseup', dragEnd);
+    }
+
+    // Mouse (PC)
+    track.addEventListener('mousedown', dragStart);
+
+    // Touch (mobile)
+    track.addEventListener('touchstart', dragStart, { passive: true });
+    track.addEventListener('touchmove', dragMove, { passive: true });
+    track.addEventListener('touchend', dragEnd);
   }
 
   // Initialize
@@ -606,3 +567,5 @@ const sliderInit = () => {
 
 // Initialize slider when DOM is ready
 document.addEventListener('DOMContentLoaded', sliderInit);
+
+

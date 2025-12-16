@@ -118,7 +118,7 @@
         .scroll-indicator {
             position: absolute;
             bottom: 1.5rem;
-            left: 48%;
+            left: 50%;
             transform: translateX(-50%);
             z-index: 3;
             animation: bounce 2s infinite;
@@ -462,6 +462,11 @@
             background: white;
             padding: 18px;
             box-shadow: 0 8px 24px rgba(10, 10, 15, 0.06);
+            cursor: grab;
+        }
+
+        .carousel-viewport:active {
+            cursor: grabbing;
         }
 
         /* track */
@@ -480,6 +485,16 @@
             /* Ensure positioning for JS transform */
             width: max-content;
             will-change: transform;
+        }
+
+        /* Visual feedback while dragging */
+        .carousel-track.is-dragging {
+            cursor: grabbing;
+        }
+
+        .carousel-track.is-dragging .project-card {
+            transform: scale(0.97);
+            box-shadow: 0 14px 32px rgba(0, 0, 0, 0.18);
         }
 
         /* Hide scrollbar but keep functionality */
@@ -604,6 +619,7 @@
             user-select: none;
             content-visibility: auto;
         }
+
 
         /* Tablet Breakpoint for Projects (Matches JS logic: <= 900px -> 2 items) */
         @media (max-width: 900px) {
@@ -1111,6 +1127,17 @@
             overflow-wrap: anywhere;
         }
 
+        .wa-link p {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .wa-icon {
+            color: #25D366;
+            /* WhatsApp green */
+            font-size: 14px;
+        }
 
         /* FOOTER STYLES */
         .custom-footer {
@@ -1762,7 +1789,10 @@
                 background-position: center !important;
             }
 
+
+
             .carousel-track {
+
                 display: flex;
                 gap: 20px;
                 overflow-x: auto;
