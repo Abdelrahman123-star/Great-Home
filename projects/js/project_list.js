@@ -226,7 +226,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "Projects/Completed_Projects/Ola Ali/29.jpg",
         "Projects/Completed_Projects/Mrs_Aliaa_Elhadidi/3.webp",
         "Projects/Completed_Projects/Mine/Mine/1.jpg",
-        "Projects/Completed_Projects/Eng_Mohamed_Wasfy/1.jpg",
+        "Projects/Completed_Projects/Eng_Mohamed_Wasfy/1.webp",
         "Projects/Completed_Projects/Eng. Ahmed Mohsen/4.webp",
         "Projects/Completed_Projects/Eng. Essam/1.jpg",
         "Projects/Completed_Projects/Ola/1.jpg",
