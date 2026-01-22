@@ -7,8 +7,7 @@
     --text: #2d3748;
     --text-light: #718096;
     --gold: #d4af37;
-    --gold: #727272;
-    --gold-dark: #8e8e8e;
+    --gold-dark: #b8860b;
     --marble-bg: #f5f5f5;
     --marble-light: #f0f0f0;
     --marble-dark: #e5e5e5;
@@ -421,19 +420,67 @@ h6 {
     position: absolute;
     top: 25px;
     right: 25px;
-    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
-    color: white;
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--dark);
     padding: 8px 22px;
     border-radius: 25px;
     font-size: 0.8rem;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
-    transition: all 0.3s ease;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 2;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Specific Category Styles */
+.project-category.cat-completed-projects {
+    background: linear-gradient(135deg, #1a202c, #2d3748);
+    color: #d4af37;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3), 0 0 10px rgba(212, 175, 55, 0.1);
+    font-weight: 800;
+}
+
+.project-category.cat-on-going-projects {
+    background: linear-gradient(135deg, #3182ce, #2c5282);
+    color: white;
+    box-shadow: 0 8px 20px rgba(49, 130, 206, 0.3);
+}
+
+.project-category.cat-2d-projects {
+    background: linear-gradient(135deg, #00b5ad, #008080);
+    color: white;
+    box-shadow: 0 8px 20px rgba(0, 181, 173, 0.3);
+}
+
+.project-category.cat-3d-projects {
+    background: linear-gradient(135deg, #9f7aea, #6b46c1);
+    color: white;
+    box-shadow: 0 8px 20px rgba(159, 122, 234, 0.3);
+}
+
+.project-card:hover .project-category {
+    transform: translateY(-5px) scale(1.05);
+}
+
+.project-card:hover .project-category.cat-completed-projects {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(212, 175, 55, 0.3);
+    background: linear-gradient(135deg, #000, #1a202c);
+}
+
+.project-card:hover .project-category.cat-on-going-projects {
+    box-shadow: 0 12px 30px rgba(49, 130, 206, 0.5);
+}
+
+.project-card:hover .project-category.cat-2d-projects {
+    box-shadow: 0 12px 30px rgba(0, 181, 173, 0.5);
+}
+
+.project-card:hover .project-category.cat-3d-projects {
+    box-shadow: 0 12px 30px rgba(159, 122, 234, 0.5);
 }
 
 .project-category:hover {
@@ -492,7 +539,7 @@ h6 {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    color: var(--gold);
+    color: var(--secondary);
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease;

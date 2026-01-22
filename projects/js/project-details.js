@@ -85,7 +85,9 @@ function loadProjectData(projectId) {
     afterImg.src = project.afterImage;
 
     // Apply custom slider styles (Height)
-    if (project.sliderHeight) {
+    if (window.innerWidth <= 768 && project.sliderHeight_mob) {
+        sliderContainer.style.height = project.sliderHeight_mob;
+    } else if (project.sliderHeight) {
         sliderContainer.style.height = project.sliderHeight;
     } else {
         sliderContainer.style.height = ''; // Revert to CSS default (500px)

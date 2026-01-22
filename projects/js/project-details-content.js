@@ -121,7 +121,7 @@ const projectsData = {
     },
 
     // ===== PROJECT 3: baba =====
-    "13": {
+    "14": {
         name: "Eng. Hesham Zayed",
         location: "El Shorouk City",
         dates: "2021 - 2025",
@@ -157,7 +157,7 @@ const projectsData = {
     },
 
     // ===== PROJECT 4: Dr. Nadia =====
-    "17": {
+    "18": {
         name: "Dr. Nadia Taleb",
         location: "Nasr City",
         dates: "2023 - 2024",
@@ -238,7 +238,7 @@ const projectsData = {
     },
 
     // ===== PROJECT 6: Eng. Essam =====
-    "11": {
+    "12": {
         name: "Eng. Essam Abd-Elaziz",
         location: "Elshorouq City",
         dates: "2025 - 2025",
@@ -280,7 +280,7 @@ const projectsData = {
     },
 
     // ===== PROJECT 7: Gegy =====
-    "18": {
+    "20": {
         name: "Mrs. Gehan Omar",
         location: "Elshorouq City",
         dates: "2025 - 2025",
@@ -393,7 +393,7 @@ const projectsData = {
     },
 
     // ===== PROJECT 10: Ola =====
-    "12": {
+    "13": {
         name: "Dr. Ola Gamal",
         location: "El-Shorouk City",
         dates: "2024 - 2025",
@@ -483,7 +483,7 @@ const projectsData = {
     },
 
     // ===== PROJECT 12: Ola Hala =====
-    "19": {
+    "21": {
         name: "Dr. Ola Gamal 2",
         location: "Elshorouq City",
         dates: "2025 - 2025",
@@ -514,7 +514,7 @@ const projectsData = {
     },
 
     // ===== PROJECT 13: Ola Mohamed Waheed =====
-    "15": {
+    "16": {
         name: "Eng. Mohamed Waheed",
         location: "El-Shorouk City",
         dates: "2024 - 2025",
@@ -669,7 +669,7 @@ const projectsData = {
     },
 
     // ===== PROJECT 15: Sara Raga2y =====
-    "14": {
+    "15": {
         name: "Mr. Abdalla Taher",
         location: "6th October City",
         dates: "2024 - 2025",
@@ -690,7 +690,7 @@ const projectsData = {
     },
 
     // ===== PROJECT 16: Achrafieh =====
-    "16": {
+    "17": {
         name: "Mr. Mazen Ali",
         location: "5th Settlement",
         dates: "2021 - 2022",
@@ -723,7 +723,7 @@ const projectsData = {
         ]
     },
 
-    "20": {
+    "22": {
         name: "Benta House 70-3 Mountain View New Cairo",
         location: "Mountain View - New Cairo",
         dates: "2025 - Now",
@@ -740,7 +740,7 @@ const projectsData = {
 
         ]
     },
-    "21": {
+    "23": {
         name: "Stone Residence 40- 3",
         location: "Stone Residence 40- 3",
         dates: "2025 - Now",
@@ -767,7 +767,7 @@ const projectsData = {
     },
 
     // ===== PROJECT 19: Binotte Bakery =====
-    "25": {
+    "27": {
         name: "Binotte Bakery",
         location: "5th Settlement",
         dates: "2022 - 2022",
@@ -787,7 +787,7 @@ const projectsData = {
     },
 
     // ===== PROJECT 20: Dr. Reham Gamal =====
-    "26": {
+    "28": {
         name: "Dr. Reham Gamal",
         location: "5th Settlement",
         dates: "2025 - 2025",
@@ -854,7 +854,7 @@ const projectsData = {
     },
 
     // ===== PROJECT 21: Eng. Samah Elkady =====
-    "27": {
+    "29": {
         name: "Eng. Samah Elkady",
         location: "5th Settlement",
         dates: "2023 - 2023",
@@ -880,7 +880,7 @@ const projectsData = {
     },
 
     // ===== PROJECT 22: Mr. Amr Elsayed =====
-    "28": {
+    "30": {
         name: "Mr. Amr Elsayed",
         location: "5th Settlement",
         dates: "2025 - 2025",
@@ -923,7 +923,7 @@ const projectsData = {
     },
 
     // ===== PROJECT 23: Mr. Mohamed Elkammah =====
-    "29": {
+    "31": {
         name: "Mr. Mohamed Elkammah",
         location: "5th Settlement",
         dates: "2025 - 2025",
@@ -1042,10 +1042,10 @@ const projectsData = {
         beforeImage: "Projects/Completed_Projects/Mrs_Aliaa_Elhadidi/2.webp",
         afterImage: "Projects/Completed_Projects/Mrs_Aliaa_Elhadidi/3.webp",
         galleryImages: [
-            { src: "Projects/Completed_Projects/Mrs_Aliaa_Elhadidi/1.webp", category: "Site" },
             { src: "Projects/Completed_Projects/Mrs_Aliaa_Elhadidi/2.webp", category: "Site" },
-            { src: "Projects/Completed_Projects/Mrs_Aliaa_Elhadidi/3.webp", category: "Site" },
             { src: "Projects/Completed_Projects/Mrs_Aliaa_Elhadidi/5.webp", category: "Site" },
+            { src: "Projects/Completed_Projects/Mrs_Aliaa_Elhadidi/3.webp", category: "Site" },
+            { src: "Projects/Completed_Projects/Mrs_Aliaa_Elhadidi/1.webp", category: "Site" },
             { src: "Projects/Completed_Projects/Mrs_Aliaa_Elhadidi/6.webp", category: "Site" },
             { src: "Projects/Completed_Projects/Mrs_Aliaa_Elhadidi/7.webp", category: "Site" },
             { src: "Projects/Completed_Projects/Mrs_Aliaa_Elhadidi/8.webp", category: "Site" },
@@ -1059,9 +1059,9 @@ const projectsData = {
             { src: "Projects/Completed_Projects/Mrs_Aliaa_Elhadidi/17.webp", category: "Site" },
             { src: "Projects/Completed_Projects/Mrs_Aliaa_Elhadidi/19.webp", category: "Site" },
             { src: "Projects/Completed_Projects/Mrs_Aliaa_Elhadidi/20.webp", category: "Site" },
-            { src: "Projects/Completed_Projects/Mrs_Aliaa_Elhadidi/21.webp", category: "Site" },
-            { src: "Projects/Completed_Projects/Mrs_Aliaa_Elhadidi/22.webp", category: "Site" },
-            { src: "Projects/Completed_Projects/Mrs_Aliaa_Elhadidi/23.webp", category: "Site" },
+            { src: "Projects/Completed_Projects/Mrs_Aliaa_Elhadidi/21.jpg", category: "Site" },
+            { src: "Projects/Completed_Projects/Mrs_Aliaa_Elhadidi/22.jpg", category: "Site" },
+            { src: "Projects/Completed_Projects/Mrs_Aliaa_Elhadidi/23.jpg", category: "Site" },
             { src: "Projects/Completed_Projects/Mrs_Aliaa_Elhadidi/24.webp", category: "Site" },
             { src: "Projects/Completed_Projects/Mrs_Aliaa_Elhadidi/25.webp", category: "Site" },
             { src: "Projects/Completed_Projects/Mrs_Aliaa_Elhadidi/26.webp", category: "Site" },
@@ -1073,7 +1073,7 @@ const projectsData = {
     },
 
 
-    "10": {
+    "11": {
         name: "Eng. Ahmed Mohsen",
         location: "Zahraa Nasr City",
         dates: "2025 - 2025",
@@ -1107,6 +1107,77 @@ const projectsData = {
         ]
 
     },
+    "10": {
+        name: "Eng.Mohamed Wasfy",
+        location: "El-Moqattam",
+        dates: "2025 - 2026",
+        size: "120 Sq ft",
+        category: "Residential",
+        sliderHeight: "550px",
+        sliderHeight_mob: "200px",
+        sliderLimit: 100,
+        description: "An apartment finishing project at Next Point Compound, emphasizing high-quality workmanship, refined details, and practical design solutions. The project reflects a balanced approach between functionality and aesthetics, creating a comfortable, elegant, and well-executed living space.",
+        beforeImage: "Projects/Completed_Projects/Eng_Mohamed_Wasfy/0.jpg",
+        afterImage: "Projects/Completed_Projects/Eng_Mohamed_Wasfy/1.jpg",
+        galleryImages: [
+            { src: "Projects/Completed_Projects/Eng_Mohamed_Wasfy/1.jpg", category: "Site" },
+            { src: "Projects/Completed_Projects/Eng_Mohamed_Wasfy/2.jpg", category: "Site" },
+            { src: "Projects/Completed_Projects/Eng_Mohamed_Wasfy/3.jpg", category: "Site" },
+            { src: "Projects/Completed_Projects/Eng_Mohamed_Wasfy/4.jpg", category: "Site" },
+            { src: "Projects/Completed_Projects/Eng_Mohamed_Wasfy/5.jpg", category: "Site" },
+            { src: "Projects/Completed_Projects/Eng_Mohamed_Wasfy/6.jpg", category: "Site" },
+            { src: "Projects/Completed_Projects/Eng_Mohamed_Wasfy/7.jpg", category: "Site" },
+            { src: "Projects/Completed_Projects/Eng_Mohamed_Wasfy/8.jpg", category: "Site" },
+            { src: "Projects/Completed_Projects/Eng_Mohamed_Wasfy/9.jpg", category: "Site" },
+            { src: "Projects/Completed_Projects/Eng_Mohamed_Wasfy/10.jpg", category: "Site" },
+            { src: "Projects/Completed_Projects/Eng_Mohamed_Wasfy/11.jpg", category: "Site" },
+            { src: "Projects/Completed_Projects/Eng_Mohamed_Wasfy/12.jpg", category: "Site" },
+            { src: "Projects/Completed_Projects/Eng_Mohamed_Wasfy/13.jpg", category: "Site" },
+            { src: "Projects/Completed_Projects/Eng_Mohamed_Wasfy/14.jpg", category: "Site" },
+            { src: "Projects/Completed_Projects/Eng_Mohamed_Wasfy/15.jpg", category: "Site" },
+            { src: "Projects/Completed_Projects/Eng_Mohamed_Wasfy/16.jpg", category: "Site" },
+            { src: "Projects/Completed_Projects/Eng_Mohamed_Wasfy/17.jpg", category: "Site" },
+            { src: "Projects/Completed_Projects/Eng_Mohamed_Wasfy/18.jpg", category: "Site" },
+            { src: "Projects/Completed_Projects/Eng_Mohamed_Wasfy/19.jpg", category: "Site" },
+            { src: "Projects/Completed_Projects/Eng_Mohamed_Wasfy/20.jpg", category: "Site" },
+            { src: "Projects/Completed_Projects/Eng_Mohamed_Wasfy/21.jpg", category: "Site" },
+            { src: "Projects/Completed_Projects/Eng_Mohamed_Wasfy/22.jpg", category: "Site" },
+
+        ]
+
+    },
 
 
+    "19": {
+        name: "Dr.Ola Gamal 3",
+        location: "El-Shorouk City",
+        dates: "2025 - 2026",
+        size: "230 Sq ft",
+        category: "Residential",
+        description: "A budget-friendly finishing project for an apartment prepared with essential materials and simple, functional execution. Designed to offer a clean and practical living space suitable for rental purposes at an affordable price.",
+        galleryImages: [
+            { src: "Projects/Completed_Projects/Dr_Ola_Gamal_3/1.jpg", category: "Site" },
+            { src: "Projects/Completed_Projects/Dr_Ola_Gamal_3/2.jpg", category: "Site" },
+            { src: "Projects/Completed_Projects/Dr_Ola_Gamal_3/3.jpg", category: "Site" },
+            { src: "Projects/Completed_Projects/Dr_Ola_Gamal_3/4.jpg", category: "Site" },
+            { src: "Projects/Completed_Projects/Dr_Ola_Gamal_3/5.jpg", category: "Site" },
+            { src: "Projects/Completed_Projects/Dr_Ola_Gamal_3/6.jpg", category: "Site" },
+            { src: "Projects/Completed_Projects/Dr_Ola_Gamal_3/7.jpg", category: "Site" },
+            { src: "Projects/Completed_Projects/Dr_Ola_Gamal_3/8.jpg", category: "Site" },
+            { src: "Projects/Completed_Projects/Dr_Ola_Gamal_3/9.jpg", category: "Site" },
+            { src: "Projects/Completed_Projects/Dr_Ola_Gamal_3/10.jpg", category: "Site" },
+            { src: "Projects/Completed_Projects/Dr_Ola_Gamal_3/11.jpg", category: "Site" },
+            { src: "Projects/Completed_Projects/Dr_Ola_Gamal_3/12.jpg", category: "Site" },
+            { src: "Projects/Completed_Projects/Dr_Ola_Gamal_3/13.jpg", category: "Site" },
+            { src: "Projects/Completed_Projects/Dr_Ola_Gamal_3/14.jpg", category: "Site" },
+            { src: "Projects/Completed_Projects/Dr_Ola_Gamal_3/15.jpg", category: "Site" },
+            { src: "Projects/Completed_Projects/Dr_Ola_Gamal_3/16.jpg", category: "Site" },
+            { src: "Projects/Completed_Projects/Dr_Ola_Gamal_3/17.jpg", category: "Site" },
+            { src: "Projects/Completed_Projects/Dr_Ola_Gamal_3/18.jpg", category: "Site" },
+            { src: "Projects/Completed_Projects/Dr_Ola_Gamal_3/19.jpg", category: "Site" },
+            { src: "Projects/Completed_Projects/Dr_Ola_Gamal_3/20.jpg", category: "Site" },
+
+        ]
+
+    },
 };

@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "A high-end finished apartment in El-Shorouk City. Featuring premium materials and meticulous detailing, this project highlights modern elegance and sophisticated living, with work completed to the highest standards.",
         "A full interior finishing project for a modern apartment in Nasr City, completed with high-quality materials and precise execution to match the client’s approved design and deliver a comfortable, stylish living space.",
         "A complete interior finishing project for an apartment in El Shorouk City, executed with high-quality materials and careful attention to detail to achieve a modern, comfortable, and aesthetically balanced living space.",
+        "An apartment finishing project at Next Point Compound, emphasizing high-quality workmanship, refined details, and practical design solutions. The project reflects a balanced approach between functionality and aesthetics, creating a comfortable, elegant, and well-executed living space.",
         "A high-end finished apartment. Featuring premium materials and meticulous detailing, this project highlights modern elegance and sophisticated living, with work completed to the highest standards.",
         "A medium-level finishing project for an apartment in Elshorouq City, delivered with practical material selections and clean, efficient execution to provide a comfortable and well-organized living space that meets the client’s needs and budget.",
         "A high-end finished apartment in El-Shorouk City. Featuring premium materials and meticulous detailing, this project highlights modern elegance and sophisticated living, with work completed to the highest standards.",
@@ -50,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "El-Shorouk City",
         "Nasr City",
         "El Shorouk City",
+        "El-Moqattam",
         "Zahraa Nasr City",
         "El-Shorouq City",
         "El-Shorouk City",
@@ -84,6 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "2024 - 2025",
         "2022 - 2024",
         "2021 - 2025",
+        "2025 - 2026",
         "2025 - 2025",
         "2025 - 2025",
         "2024 - 2025",
@@ -92,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "2024 - 2025",
         "2021 - 2022",
         "2023 - 2024",
-        "2025 - 2025",
+        "2025 - 2026",
         "2025 - 2025",
         "2025 - Now",
         "2025 - Now",
@@ -118,6 +121,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "220 Sq ft",
         "210 Sq ft",
         "120 Sq ft",
+        "120 Sq ft",
         "230 Sq ft",
         "220 Sq ft",
         "210 Sq ft",
@@ -125,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "220 Sq ft",
         "170 Sq ft",
         "180 Sq ft",
-        "190 Sq ft",
+        "230 Sq ft",
         "190 Sq ft",
         "390 Sq ft",
         "180 Sq ft",
@@ -150,6 +154,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "Eng. Ali Waheed",
         "Mrs. Aliaa Elhadidi",
         "Eng. Ahmed Hesham",
+        "Eng. Mohamed Wasfy",
         "Eng. Ahmed Mohsen",
         "Eng. Essam Abd-Elaziz",
         "Dr. Ola Gamal",
@@ -158,6 +163,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "Eng. Mohamed Waheed",
         "Mr. Mazen Ali",
         "Dr. Nadia Taleb",
+        "Dr. Ola Gamal 3",
         "Mrs. Gehan Omar",
         "Dr. Ola Gamal 2",
         "Benta House 70-3 Mountain View New Cairo",
@@ -176,6 +182,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // array of the categories.
     const categoriesName = [
+        "Completed_Projects",
+        "Completed_Projects",
         "Completed_Projects",
         "Completed_Projects",
         "Completed_Projects",
@@ -218,6 +226,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "Projects/Completed_Projects/Ola Ali/29.jpg",
         "Projects/Completed_Projects/Mrs_Aliaa_Elhadidi/3.webp",
         "Projects/Completed_Projects/Mine/Mine/1.jpg",
+        "Projects/Completed_Projects/Eng_Mohamed_Wasfy/1.jpg",
         "Projects/Completed_Projects/Eng. Ahmed Mohsen/4.webp",
         "Projects/Completed_Projects/Eng. Essam/1.jpg",
         "Projects/Completed_Projects/Ola/1.jpg",
@@ -226,6 +235,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "Projects/Completed_Projects/Ola Mohamed Waheed/1.jpg",
         "Projects/Completed_Projects/Achrafieh/1.jpeg",
         "Projects/Completed_Projects/Dr. Nadia/1.jpg",
+        "Projects/Completed_Projects/Dr_Ola_Gamal_3/1.jpg",
         "Projects/Completed_Projects/Gegy/1.jpg",
         "Projects/Completed_Projects/Ola Hala/5.jpg",
         "Projects/On_Going_Projects/Mountain_View/1.jpeg",
@@ -295,7 +305,7 @@ document.addEventListener('DOMContentLoaded', function () {
         projectCard.innerHTML = `
     <div class="project-image" onclick="window.location.href='${projectLink}'" style="cursor: pointer;">
         <img src="${imageId}" alt="${name}" loading="lazy" decoding="async">
-        <div class="project-category">${categoryDisplay}</div>
+        <div class="project-category cat-${categoryFinal.toLowerCase().replace('_', '-')}">${categoryDisplay}</div>
     </div>
     <div class="project-content">
         <h3 class="project-title" onclick="window.location.href='${projectLink}'" style="cursor: pointer;">${name}</h3>
