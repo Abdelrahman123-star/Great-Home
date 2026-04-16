@@ -3,8 +3,55 @@
 // ======================
 
 const projectsData = {
+    // ===== PROJECT: Eng. Mohamed El-Alfy =====
+    "11": {
+        name: "Eng. Mohamed El-Alfy",
+        location: "Al-Maqsad Compound, New Administrative Capital",
+        dates: "2025 - 2026",
+        size: "260 Sq ft",
+        category: "Residential",
+        description: "A complete apartment project at Al Maqsad Compound, New Administrative Capital, delivered with a focus on premium finishes, precise detailing, and modern design standards. The project reflects a harmonious blend of functionality and elegance, creating a refined and comfortable living environment.",
+        galleryImages: [
+            { src: "Projects/Completed_Projects/Eng. Mohamed El-Alfy/1.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng. Mohamed El-Alfy/3.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng. Mohamed El-Alfy/4.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng. Mohamed El-Alfy/5.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng. Mohamed El-Alfy/6.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng. Mohamed El-Alfy/7.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng. Mohamed El-Alfy/8.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng. Mohamed El-Alfy/9.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng. Mohamed El-Alfy/10.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng. Mohamed El-Alfy/11.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng. Mohamed El-Alfy/12.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng. Mohamed El-Alfy/13.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng. Mohamed El-Alfy/14.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng. Mohamed El-Alfy/15.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng. Mohamed El-Alfy/16.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng. Mohamed El-Alfy/17.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng. Mohamed El-Alfy/18.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng. Mohamed El-Alfy/19.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng. Mohamed El-Alfy/20.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng. Mohamed El-Alfy/21.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng. Mohamed El-Alfy/22.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng. Mohamed El-Alfy/23.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng. Mohamed El-Alfy/24.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng. Mohamed El-Alfy/25.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng. Mohamed El-Alfy/26.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng. Mohamed El-Alfy/27.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng. Mohamed El-Alfy/28.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng. Mohamed El-Alfy/29.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng. Mohamed El-Alfy/30.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng. Mohamed El-Alfy/31.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng. Mohamed El-Alfy/32.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng. Mohamed El-Alfy/33.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng. Mohamed El-Alfy/34.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng. Mohamed El-Alfy/35.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng. Mohamed El-Alfy/36.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng. Mohamed El-Alfy/37.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng. Mohamed El-Alfy/38.webp", category: "Completion" }
+        ]
+    },
 
-    // ===== PROJECT 1: 306 Adress East =====
     "4": {
         name: "306 Adress East",
         location: "Address East Compound, New Cairo",
@@ -17,64 +64,63 @@ const projectsData = {
         sliderWidth: "45%",
         sliderLimit: 100,
         description: "A complete finishing Modern Villa 5th settlement New Cairo for a two-story residential villa, executed using premium marble and high-quality materials. All works were carried out in strict accordance with the approved design, ensuring exceptional detailing and a refined final appearance.",
-        beforeImage: "Projects/Completed_Projects/Adress/Master/Site/6.jpeg",
-        afterImage: "Projects/Completed_Projects/Adress/Master/Render/after.jpg",
+        beforeImage: "Projects/Completed_Projects/Adress/Master/Site/6.webp",
+        afterImage: "Projects/Completed_Projects/Adress/Master/Render/after.webp",
         galleryImages: [
 
-            { src: "Projects/Completed_Projects/Adress/1.jfif", category: "site" },
-            { src: "Projects/Completed_Projects/Adress/1.jpeg", category: "site" },
-            { src: "Projects/Completed_Projects/Adress/3.jfif", category: "site" },
-            { src: "Projects/Completed_Projects/Adress/4.jfif", category: "site" },
-            { src: "Projects/Completed_Projects/Adress/5.jpeg", category: "site" },
-            { src: "Projects/Completed_Projects/Adress/6.jpeg", category: "site" },
-            { src: "Projects/Completed_Projects/Adress/7.jfif", category: "site" },
-            { src: "Projects/Completed_Projects/Adress/8.jfif", category: "site" },
-            { src: "Projects/Completed_Projects/Adress/9.jpeg", category: "site" },
-            { src: "Projects/Completed_Projects/Adress/10.jfif", category: "site" },
-            { src: "Projects/Completed_Projects/Adress/11.jfif", category: "site" },
-            { src: "Projects/Completed_Projects/Adress/12.jfif", category: "site" },
-            { src: "Projects/Completed_Projects/Adress/13.jfif", category: "site" },
-            { src: "Projects/Completed_Projects/Adress/14.jfif", category: "site" },
-            { src: "Projects/Completed_Projects/Adress/15.jfif", category: "site" },
-            { src: "Projects/Completed_Projects/Adress/16.jpeg", category: "site" },
-            { src: "Projects/Completed_Projects/Adress/17.jfif", category: "site" },
-            { src: "Projects/Completed_Projects/Adress/18.jfif", category: "site" },
+            { src: "Projects/Completed_Projects/Adress/1.webp", category: "site" },
+            { src: "Projects/Completed_Projects/Adress/1.webp", category: "site" },
+            { src: "Projects/Completed_Projects/Adress/3.webp", category: "site" },
+            { src: "Projects/Completed_Projects/Adress/4.webp", category: "site" },
+            { src: "Projects/Completed_Projects/Adress/5.webp", category: "site" },
+            { src: "Projects/Completed_Projects/Adress/6.webp", category: "site" },
+            { src: "Projects/Completed_Projects/Adress/7.webp", category: "site" },
+            { src: "Projects/Completed_Projects/Adress/8.webp", category: "site" },
+            { src: "Projects/Completed_Projects/Adress/9.webp", category: "site" },
+            { src: "Projects/Completed_Projects/Adress/10.webp", category: "site" },
+            { src: "Projects/Completed_Projects/Adress/11.webp", category: "site" },
+            { src: "Projects/Completed_Projects/Adress/12.webp", category: "site" },
+            { src: "Projects/Completed_Projects/Adress/13.webp", category: "site" },
+            { src: "Projects/Completed_Projects/Adress/14.webp", category: "site" },
+            { src: "Projects/Completed_Projects/Adress/15.webp", category: "site" },
+            { src: "Projects/Completed_Projects/Adress/16.webp", category: "site" },
+            { src: "Projects/Completed_Projects/Adress/17.webp", category: "site" },
+            { src: "Projects/Completed_Projects/Adress/18.webp", category: "site" },
 
-            { src: "Projects/Completed_Projects/Adress/Guest/Site/1.jfif", category: "Guest Toilet" },
-            { src: "Projects/Completed_Projects/Adress/Guest/Site/2.jfif", category: "Guest Toilet" },
-            { src: "Projects/Completed_Projects/Adress/Guest/Site/3.jpeg", category: "Guest Toilet" },
-            { src: "Projects/Completed_Projects/Adress/Guest/Render/1.jpg", category: "Guest Toilet" },
-            { src: "Projects/Completed_Projects/Adress/Guest/Render/2.jpg", category: "Guest Toilet" },
-            { src: "Projects/Completed_Projects/Adress/Guest/Render/3.jpg", category: "Guest Toilet" },
-            { src: "Projects/Completed_Projects/Adress/Guest/Render/4.jpg", category: "Guest Toilet" },
+            { src: "Projects/Completed_Projects/Adress/Guest/Site/1.webp", category: "Guest Toilet" },
+            { src: "Projects/Completed_Projects/Adress/Guest/Site/2.webp", category: "Guest Toilet" },
+            { src: "Projects/Completed_Projects/Adress/Guest/Site/3.webp", category: "Guest Toilet" },
+            { src: "Projects/Completed_Projects/Adress/Guest/Render/1.webp", category: "Guest Toilet" },
+            { src: "Projects/Completed_Projects/Adress/Guest/Render/2.webp", category: "Guest Toilet" },
+            { src: "Projects/Completed_Projects/Adress/Guest/Render/3.webp", category: "Guest Toilet" },
+            { src: "Projects/Completed_Projects/Adress/Guest/Render/4.webp", category: "Guest Toilet" },
 
 
-            { src: "Projects/Completed_Projects/Adress/Kids/Site/1.jpeg", category: "Kids Toilet" },
-            { src: "Projects/Completed_Projects/Adress/Kids/Site/2.jpg", category: "Kids Toilet" },
-            { src: "Projects/Completed_Projects/Adress/Kids/Site/3.jpg", category: "Kids Toilet" },
-            { src: "Projects/Completed_Projects/Adress/Kids/Site/4.jpg", category: "Kids Toilet" },
-            { src: "Projects/Completed_Projects/Adress/Kids/Site/5.jpeg", category: "Kids Toilet" },
-            { src: "Projects/Completed_Projects/Adress/Kids/Render/5.jpg", category: "Kids Toilet" },
-            { src: "Projects/Completed_Projects/Adress/Kids/Render/7.jpg", category: "Kids Toilet" },
-            { src: "Projects/Completed_Projects/Adress/Kids/Render/8.jpg", category: "Kids Toilet" },
+            { src: "Projects/Completed_Projects/Adress/Kids/Site/1.webp", category: "Kids Toilet" },
+            { src: "Projects/Completed_Projects/Adress/Kids/Site/2.webp", category: "Kids Toilet" },
+            { src: "Projects/Completed_Projects/Adress/Kids/Site/3.webp", category: "Kids Toilet" },
+            { src: "Projects/Completed_Projects/Adress/Kids/Site/4.webp", category: "Kids Toilet" },
+            { src: "Projects/Completed_Projects/Adress/Kids/Site/5.webp", category: "Kids Toilet" },
+            { src: "Projects/Completed_Projects/Adress/Kids/Render/5.webp", category: "Kids Toilet" },
+            { src: "Projects/Completed_Projects/Adress/Kids/Render/7.webp", category: "Kids Toilet" },
+            { src: "Projects/Completed_Projects/Adress/Kids/Render/8.webp", category: "Kids Toilet" },
 
-            { src: "Projects/Completed_Projects/Adress/Master/Site/1.jpg", category: "Master Toilet" },
-            { src: "Projects/Completed_Projects/Adress/Master/Site/2.jpeg", category: "Master Toilet" },
-            { src: "Projects/Completed_Projects/Adress/Master/Site/3.jpeg", category: "Master Toilet" },
-            { src: "Projects/Completed_Projects/Adress/Master/Site/4.jpg", category: "Master Toilet" },
-            { src: "Projects/Completed_Projects/Adress/Master/Site/5.jpg", category: "Master Toilet" },
-            { src: "Projects/Completed_Projects/Adress/Master/Site/6.jpeg", category: "Master Toilet" },
-            { src: "Projects/Completed_Projects/Adress/Master/Site/7.jpg", category: "Master Toilet" },
-            { src: "Projects/Completed_Projects/Adress/Master/Render/1.jpg", category: "Master Toilet" },
-            { src: "Projects/Completed_Projects/Adress/Master/Render/2.jpg", category: "Master Toilet" },
-            { src: "Projects/Completed_Projects/Adress/Master/Render/3.jpg", category: "Master Toilet" },
-            { src: "Projects/Completed_Projects/Adress/Master/Render/4.jpg", category: "Master Toilet" },
-            { src: "Projects/Completed_Projects/Adress/Master/Render/5.jpg", category: "Master Toilet" },
+            { src: "Projects/Completed_Projects/Adress/Master/Site/1.webp", category: "Master Toilet" },
+            { src: "Projects/Completed_Projects/Adress/Master/Site/2.webp", category: "Master Toilet" },
+            { src: "Projects/Completed_Projects/Adress/Master/Site/3.webp", category: "Master Toilet" },
+            { src: "Projects/Completed_Projects/Adress/Master/Site/4.webp", category: "Master Toilet" },
+            { src: "Projects/Completed_Projects/Adress/Master/Site/5.webp", category: "Master Toilet" },
+            { src: "Projects/Completed_Projects/Adress/Master/Site/6.webp", category: "Master Toilet" },
+            { src: "Projects/Completed_Projects/Adress/Master/Site/7.webp", category: "Master Toilet" },
+            { src: "Projects/Completed_Projects/Adress/Master/Render/1.webp", category: "Master Toilet" },
+            { src: "Projects/Completed_Projects/Adress/Master/Render/2.webp", category: "Master Toilet" },
+            { src: "Projects/Completed_Projects/Adress/Master/Render/3.webp", category: "Master Toilet" },
+            { src: "Projects/Completed_Projects/Adress/Master/Render/4.webp", category: "Master Toilet" },
+            { src: "Projects/Completed_Projects/Adress/Master/Render/5.webp", category: "Master Toilet" },
 
         ]
     },
 
-    // ===== PROJECT 2: Ashraf =====
     "5": {
         name: "Eng. Ashraf Hamed",
         location: "Madinaty",
@@ -120,8 +166,7 @@ const projectsData = {
         ]
     },
 
-    // ===== PROJECT 3: baba =====
-    "14": {
+    "15": {
         name: "Eng. Hesham Zayed",
         location: "El Shorouk City",
         dates: "2021 - 2025",
@@ -156,8 +201,7 @@ const projectsData = {
         ]
     },
 
-    // ===== PROJECT 4: Dr. Nadia =====
-    "18": {
+    "19": {
         name: "Dr. Nadia Taleb",
         location: "Nasr City",
         dates: "2023 - 2024",
@@ -192,7 +236,6 @@ const projectsData = {
         ]
     },
 
-    // ===== PROJECT 5: East Town (Sodic) =====
     "3": {
         name: "18A7 East Town (Sodic)",
         location: "SODIC - New Cairo",
@@ -237,8 +280,7 @@ const projectsData = {
         ]
     },
 
-    // ===== PROJECT 6: Eng. Essam =====
-    "12": {
+    "13": {
         name: "Eng. Essam Abd-Elaziz",
         location: "Elshorouq City",
         dates: "2025 - 2025",
@@ -279,8 +321,7 @@ const projectsData = {
         ]
     },
 
-    // ===== PROJECT 7: Gegy =====
-    "20": {
+    "21": {
         name: "Mrs. Gehan Omar",
         location: "Elshorouq City",
         dates: "2025 - 2025",
@@ -393,7 +434,7 @@ const projectsData = {
     },
 
     // ===== PROJECT 10: Ola =====
-    "13": {
+    "14": {
         name: "Dr. Ola Gamal",
         location: "El-Shorouk City",
         dates: "2024 - 2025",
@@ -447,43 +488,43 @@ const projectsData = {
         sliderLimit: 100,
 
         description: "A high-end finished apartment in El-Shorouk City. Featuring premium materials and meticulous detailing, this project highlights modern elegance and sophisticated living, with work completed to the highest standards.",
-        beforeImage: "Projects/Completed_Projects/Ola Ali/before.jpg",
-        afterImage: "Projects/Completed_Projects/Ola Ali/29.jpg",
+        beforeImage: "Projects/Completed_Projects/Ola Ali/before.webp",
+        afterImage: "Projects/Completed_Projects/Ola Ali/29.webp",
         galleryImages: [
-            { src: "Projects/Completed_Projects/Ola Ali/1.jpg", category: "Completion" },
-            { src: "Projects/Completed_Projects/Ola Ali/2.jpg", category: "Completion" },
-            { src: "Projects/Completed_Projects/Ola Ali/3.jpg", category: "Completion" },
-            { src: "Projects/Completed_Projects/Ola Ali/4.jpg", category: "Completion" },
-            { src: "Projects/Completed_Projects/Ola Ali/5.jpg", category: "Completion" },
-            { src: "Projects/Completed_Projects/Ola Ali/6.jpg", category: "Completion" },
-            { src: "Projects/Completed_Projects/Ola Ali/7.jpg", category: "Completion" },
-            { src: "Projects/Completed_Projects/Ola Ali/8.jpg", category: "Completion" },
-            { src: "Projects/Completed_Projects/Ola Ali/9.jpg", category: "Completion" },
-            { src: "Projects/Completed_Projects/Ola Ali/10.jpg", category: "Completion" },
-            { src: "Projects/Completed_Projects/Ola Ali/11.jpg", category: "Completion" },
-            { src: "Projects/Completed_Projects/Ola Ali/12.jpg", category: "Completion" },
-            { src: "Projects/Completed_Projects/Ola Ali/13.jpg", category: "Completion" },
-            { src: "Projects/Completed_Projects/Ola Ali/14.jpg", category: "Completion" },
-            { src: "Projects/Completed_Projects/Ola Ali/15.jpg", category: "Completion" },
-            { src: "Projects/Completed_Projects/Ola Ali/16.jpg", category: "Completion" },
-            { src: "Projects/Completed_Projects/Ola Ali/17.jpg", category: "Completion" },
-            { src: "Projects/Completed_Projects/Ola Ali/18.jpg", category: "Completion" },
-            { src: "Projects/Completed_Projects/Ola Ali/19.jpg", category: "Completion" },
-            { src: "Projects/Completed_Projects/Ola Ali/20.jpg", category: "Completion" },
-            { src: "Projects/Completed_Projects/Ola Ali/21.jpg", category: "Completion" },
-            { src: "Projects/Completed_Projects/Ola Ali/22.jpg", category: "Completion" },
-            { src: "Projects/Completed_Projects/Ola Ali/23.jpg", category: "Completion" },
-            { src: "Projects/Completed_Projects/Ola Ali/24.jpg", category: "Completion" },
-            { src: "Projects/Completed_Projects/Ola Ali/25.jpg", category: "Completion" },
-            { src: "Projects/Completed_Projects/Ola Ali/26.jpg", category: "Completion" },
-            { src: "Projects/Completed_Projects/Ola Ali/27.jpg", category: "Completion" },
-            { src: "Projects/Completed_Projects/Ola Ali/28.jpg", category: "Completion" },
-            { src: "Projects/Completed_Projects/Ola Ali/29.jpg", category: "Completion" }
+            { src: "Projects/Completed_Projects/Ola Ali/1.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Ola Ali/2.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Ola Ali/3.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Ola Ali/4.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Ola Ali/5.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Ola Ali/6.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Ola Ali/7.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Ola Ali/8.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Ola Ali/9.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Ola Ali/10.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Ola Ali/11.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Ola Ali/12.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Ola Ali/13.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Ola Ali/14.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Ola Ali/15.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Ola Ali/16.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Ola Ali/17.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Ola Ali/18.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Ola Ali/19.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Ola Ali/20.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Ola Ali/21.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Ola Ali/22.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Ola Ali/23.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Ola Ali/24.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Ola Ali/25.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Ola Ali/26.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Ola Ali/27.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Ola Ali/28.webp", category: "Completion" },
+            { src: "Projects/Completed_Projects/Ola Ali/29.webp", category: "Completion" }
         ]
     },
 
     // ===== PROJECT 12: Ola Hala =====
-    "21": {
+    "22": {
         name: "Dr. Ola Gamal 2",
         location: "Elshorouq City",
         dates: "2025 - 2025",
@@ -514,7 +555,7 @@ const projectsData = {
     },
 
     // ===== PROJECT 13: Ola Mohamed Waheed =====
-    "16": {
+    "17": {
         name: "Eng. Mohamed Waheed",
         location: "El-Shorouk City",
         dates: "2024 - 2025",
@@ -569,107 +610,107 @@ const projectsData = {
         beforeLabel: "Design",
         afterLabel: "Site",
         description: "A high-end finishing project for a three-story luxury villa in Palm Hills, New Cairo. Executed with premium materials, bespoke detailing, and top-tier craftsmanship to deliver an exceptional, elegant, and refined living environment that reflects the highest standards of design and quality.",
-        beforeImage: "Projects/Completed_Projects/Palm Hills/Render/after.jpg",
-        afterImage: "Projects/Completed_Projects/Palm Hills/Site/8.jpg",
+        beforeImage: "Projects/Completed_Projects/Palm Hills/Render/after.webp",
+        afterImage: "Projects/Completed_Projects/Palm Hills/Site/8.webp",
         designImage: "", // Placeholder - PLEASE UPDATE THIS PATH
 
         galleryImages: [
-            { src: "Projects/Completed_Projects/Palm Hills/Render/1.jpg", category: "Render" },
-            { src: "Projects/Completed_Projects/Palm Hills/Render/2.jpg", category: "Render" },
-            { src: "Projects/Completed_Projects/Palm Hills/Render/3.jpg", category: "Render" },
-            { src: "Projects/Completed_Projects/Palm Hills/Render/4.jpg", category: "Render" },
-            { src: "Projects/Completed_Projects/Palm Hills/Render/5.jpg", category: "Render" },
-            { src: "Projects/Completed_Projects/Palm Hills/Render/6.jpg", category: "Render" },
-            { src: "Projects/Completed_Projects/Palm Hills/Render/7.jpg", category: "Render" },
-            { src: "Projects/Completed_Projects/Palm Hills/Render/8.jpg", category: "Render" },
-            { src: "Projects/Completed_Projects/Palm Hills/Render/9.jpg", category: "Render" },
-            { src: "Projects/Completed_Projects/Palm Hills/Render/10.jpg", category: "Render" },
-            { src: "Projects/Completed_Projects/Palm Hills/Render/11.jpg", category: "Render" },
-            { src: "Projects/Completed_Projects/Palm Hills/Render/12.jpg", category: "Render" },
-            { src: "Projects/Completed_Projects/Palm Hills/Render/13.jpg", category: "Render" },
-            { src: "Projects/Completed_Projects/Palm Hills/Render/14.jpg", category: "Render" },
-            { src: "Projects/Completed_Projects/Palm Hills/Render/15.jpg", category: "Render" },
-            { src: "Projects/Completed_Projects/Palm Hills/Render/16.jpg", category: "Render" },
-            { src: "Projects/Completed_Projects/Palm Hills/Render/17.jpg", category: "Render" },
-            { src: "Projects/Completed_Projects/Palm Hills/Render/18.jpg", category: "Render" },
-            { src: "Projects/Completed_Projects/Palm Hills/Render/19.jpg", category: "Render" },
-            { src: "Projects/Completed_Projects/Palm Hills/Render/20.jpg", category: "Render" },
-            { src: "Projects/Completed_Projects/Palm Hills/Render/21.jpg", category: "Render" },
-            { src: "Projects/Completed_Projects/Palm Hills/Render/22.jpg", category: "Render" },
-            { src: "Projects/Completed_Projects/Palm Hills/Render/23.jpg", category: "Render" },
-            { src: "Projects/Completed_Projects/Palm Hills/Render/24.jpg", category: "Render" },
-            { src: "Projects/Completed_Projects/Palm Hills/Render/25.jpg", category: "Render" },
-            { src: "Projects/Completed_Projects/Palm Hills/Render/26.jpg", category: "Render" },
-            { src: "Projects/Completed_Projects/Palm Hills/Render/27.jpg", category: "Render" },
+            { src: "Projects/Completed_Projects/Palm Hills/Render/1.webp", category: "Render" },
+            { src: "Projects/Completed_Projects/Palm Hills/Render/2.webp", category: "Render" },
+            { src: "Projects/Completed_Projects/Palm Hills/Render/3.webp", category: "Render" },
+            { src: "Projects/Completed_Projects/Palm Hills/Render/4.webp", category: "Render" },
+            { src: "Projects/Completed_Projects/Palm Hills/Render/5.webp", category: "Render" },
+            { src: "Projects/Completed_Projects/Palm Hills/Render/6.webp", category: "Render" },
+            { src: "Projects/Completed_Projects/Palm Hills/Render/7.webp", category: "Render" },
+            { src: "Projects/Completed_Projects/Palm Hills/Render/8.webp", category: "Render" },
+            { src: "Projects/Completed_Projects/Palm Hills/Render/9.webp", category: "Render" },
+            { src: "Projects/Completed_Projects/Palm Hills/Render/10.webp", category: "Render" },
+            { src: "Projects/Completed_Projects/Palm Hills/Render/11.webp", category: "Render" },
+            { src: "Projects/Completed_Projects/Palm Hills/Render/12.webp", category: "Render" },
+            { src: "Projects/Completed_Projects/Palm Hills/Render/13.webp", category: "Render" },
+            { src: "Projects/Completed_Projects/Palm Hills/Render/14.webp", category: "Render" },
+            { src: "Projects/Completed_Projects/Palm Hills/Render/15.webp", category: "Render" },
+            { src: "Projects/Completed_Projects/Palm Hills/Render/16.webp", category: "Render" },
+            { src: "Projects/Completed_Projects/Palm Hills/Render/17.webp", category: "Render" },
+            { src: "Projects/Completed_Projects/Palm Hills/Render/18.webp", category: "Render" },
+            { src: "Projects/Completed_Projects/Palm Hills/Render/19.webp", category: "Render" },
+            { src: "Projects/Completed_Projects/Palm Hills/Render/20.webp", category: "Render" },
+            { src: "Projects/Completed_Projects/Palm Hills/Render/21.webp", category: "Render" },
+            { src: "Projects/Completed_Projects/Palm Hills/Render/22.webp", category: "Render" },
+            { src: "Projects/Completed_Projects/Palm Hills/Render/23.webp", category: "Render" },
+            { src: "Projects/Completed_Projects/Palm Hills/Render/24.webp", category: "Render" },
+            { src: "Projects/Completed_Projects/Palm Hills/Render/25.webp", category: "Render" },
+            { src: "Projects/Completed_Projects/Palm Hills/Render/26.webp", category: "Render" },
+            { src: "Projects/Completed_Projects/Palm Hills/Render/27.webp", category: "Render" },
 
 
-            { src: "Projects/Completed_Projects/Palm Hills/Site/1.jpg", category: "Site" },
-            { src: "Projects/Completed_Projects/Palm Hills/Site/2.jpg", category: "Site" },
-            { src: "Projects/Completed_Projects/Palm Hills/Site/4.jpg", category: "Site" },
-            { src: "Projects/Completed_Projects/Palm Hills/Site/5.jpg", category: "Site" },
-            { src: "Projects/Completed_Projects/Palm Hills/Site/6.jpg", category: "Site" },
-            { src: "Projects/Completed_Projects/Palm Hills/Site/7.jpg", category: "Site" },
-            { src: "Projects/Completed_Projects/Palm Hills/Site/8.jpg", category: "Site" },
-            { src: "Projects/Completed_Projects/Palm Hills/Site/9.jpg", category: "Site" },
-            { src: "Projects/Completed_Projects/Palm Hills/Site/10.jpg", category: "Site" },
-            { src: "Projects/Completed_Projects/Palm Hills/Site/11.jpg", category: "Site" },
-            { src: "Projects/Completed_Projects/Palm Hills/Site/12.jpg", category: "Site" },
-            { src: "Projects/Completed_Projects/Palm Hills/Site/13.jpg", category: "Site" },
-            { src: "Projects/Completed_Projects/Palm Hills/Site/14.jpg", category: "Site" },
-            { src: "Projects/Completed_Projects/Palm Hills/Site/15.jpg", category: "Site" },
-            { src: "Projects/Completed_Projects/Palm Hills/Site/16.jpg", category: "Site" },
-            { src: "Projects/Completed_Projects/Palm Hills/Site/17.jpg", category: "Site" },
-            { src: "Projects/Completed_Projects/Palm Hills/Site/18.jpg", category: "Site" },
-            { src: "Projects/Completed_Projects/Palm Hills/Site/19.jpg", category: "Site" },
-            { src: "Projects/Completed_Projects/Palm Hills/Site/20.jpg", category: "Site" },
-            { src: "Projects/Completed_Projects/Palm Hills/Site/21.jpg", category: "Site" },
-            { src: "Projects/Completed_Projects/Palm Hills/Site/22.jpg", category: "Site" },
-            { src: "Projects/Completed_Projects/Palm Hills/Site/23.jpg", category: "Site" },
-            { src: "Projects/Completed_Projects/Palm Hills/Site/24.jpg", category: "Site" },
-            { src: "Projects/Completed_Projects/Palm Hills/Site/25.jpg", category: "Site" },
-            { src: "Projects/Completed_Projects/Palm Hills/Site/26.jpg", category: "Site" },
-            { src: "Projects/Completed_Projects/Palm Hills/Site/27.jpg", category: "Site" },
-            { src: "Projects/Completed_Projects/Palm Hills/Site/28.jpg", category: "Site" },
+            { src: "Projects/Completed_Projects/Palm Hills/Site/1.webp", category: "Site" },
+            { src: "Projects/Completed_Projects/Palm Hills/Site/2.webp", category: "Site" },
+            { src: "Projects/Completed_Projects/Palm Hills/Site/4.webp", category: "Site" },
+            { src: "Projects/Completed_Projects/Palm Hills/Site/5.webp", category: "Site" },
+            { src: "Projects/Completed_Projects/Palm Hills/Site/6.webp", category: "Site" },
+            { src: "Projects/Completed_Projects/Palm Hills/Site/7.webp", category: "Site" },
+            { src: "Projects/Completed_Projects/Palm Hills/Site/8.webp", category: "Site" },
+            { src: "Projects/Completed_Projects/Palm Hills/Site/9.webp", category: "Site" },
+            { src: "Projects/Completed_Projects/Palm Hills/Site/10.webp", category: "Site" },
+            { src: "Projects/Completed_Projects/Palm Hills/Site/11.webp", category: "Site" },
+            { src: "Projects/Completed_Projects/Palm Hills/Site/12.webp", category: "Site" },
+            { src: "Projects/Completed_Projects/Palm Hills/Site/13.webp", category: "Site" },
+            { src: "Projects/Completed_Projects/Palm Hills/Site/14.webp", category: "Site" },
+            { src: "Projects/Completed_Projects/Palm Hills/Site/15.webp", category: "Site" },
+            { src: "Projects/Completed_Projects/Palm Hills/Site/16.webp", category: "Site" },
+            { src: "Projects/Completed_Projects/Palm Hills/Site/17.webp", category: "Site" },
+            { src: "Projects/Completed_Projects/Palm Hills/Site/18.webp", category: "Site" },
+            { src: "Projects/Completed_Projects/Palm Hills/Site/19.webp", category: "Site" },
+            { src: "Projects/Completed_Projects/Palm Hills/Site/20.webp", category: "Site" },
+            { src: "Projects/Completed_Projects/Palm Hills/Site/21.webp", category: "Site" },
+            { src: "Projects/Completed_Projects/Palm Hills/Site/22.webp", category: "Site" },
+            { src: "Projects/Completed_Projects/Palm Hills/Site/23.webp", category: "Site" },
+            { src: "Projects/Completed_Projects/Palm Hills/Site/24.webp", category: "Site" },
+            { src: "Projects/Completed_Projects/Palm Hills/Site/25.webp", category: "Site" },
+            { src: "Projects/Completed_Projects/Palm Hills/Site/26.webp", category: "Site" },
+            { src: "Projects/Completed_Projects/Palm Hills/Site/27.webp", category: "Site" },
+            { src: "Projects/Completed_Projects/Palm Hills/Site/28.webp", category: "Site" },
 
 
 
 
-            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Guest/1.jpg", category: "Guest Toilet" },
-            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Guest/2.jpg", category: "Guest Toilet" },
-            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Guest/3.jpg", category: "Guest Toilet" },
-            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Guest/4.jpg", category: "Guest Toilet" },
-            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Guest/5.jpg", category: "Guest Toilet" },
-            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Guest/6.jpg", category: "Guest Toilet" },
+            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Guest/1.webp", category: "Guest Toilet" },
+            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Guest/2.webp", category: "Guest Toilet" },
+            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Guest/3.webp", category: "Guest Toilet" },
+            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Guest/4.webp", category: "Guest Toilet" },
+            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Guest/5.webp", category: "Guest Toilet" },
+            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Guest/6.webp", category: "Guest Toilet" },
 
-            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Master/1.jpg", category: "Master Toilet" },
-            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Master/2.jpg", category: "Master Toilet" },
-            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Master/3.jpg", category: "Master Toilet" },
-            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Master/4.jpg", category: "Master Toilet" },
-            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Master/5.jpg", category: "Master Toilet" },
-            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Master/6.jpg", category: "Master Toilet" },
-            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Master/7.jfif", category: "Master Toilet" },
-            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Master/8.jfif", category: "Master Toilet" },
-            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Master/9.jpg", category: "Master Toilet" },
-            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Master/10.jfif", category: "Master Toilet" },
+            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Master/1.webp", category: "Master Toilet" },
+            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Master/2.webp", category: "Master Toilet" },
+            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Master/3.webp", category: "Master Toilet" },
+            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Master/4.webp", category: "Master Toilet" },
+            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Master/5.webp", category: "Master Toilet" },
+            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Master/6.webp", category: "Master Toilet" },
+            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Master/7.webp", category: "Master Toilet" },
+            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Master/8.webp", category: "Master Toilet" },
+            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Master/9.webp", category: "Master Toilet" },
+            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Master/10.webp", category: "Master Toilet" },
 
-            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Kids/1.jpg", category: "Kids Toilet" },
-            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Kids/2.jpg", category: "Kids Toilet" },
-            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Kids/3.jpg", category: "Kids Toilet" },
-            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Kids/4.jpg", category: "Kids Toilet" },
-            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Kids/5.jpg", category: "Kids Toilet" },
-            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Kids/6.jpg", category: "Kids Toilet" },
-            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Kids/7.jpg", category: "Kids Toilet" },
-            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Kids/8.jpg", category: "Kids Toilet" },
-            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Kids/9.jfif", category: "Kids Toilet" },
-            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Kids/10.jfif", category: "Kids Toilet" },
+            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Kids/1.webp", category: "Kids Toilet" },
+            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Kids/2.webp", category: "Kids Toilet" },
+            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Kids/3.webp", category: "Kids Toilet" },
+            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Kids/4.webp", category: "Kids Toilet" },
+            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Kids/5.webp", category: "Kids Toilet" },
+            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Kids/6.webp", category: "Kids Toilet" },
+            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Kids/7.webp", category: "Kids Toilet" },
+            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Kids/8.webp", category: "Kids Toilet" },
+            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Kids/9.webp", category: "Kids Toilet" },
+            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Kids/10.webp", category: "Kids Toilet" },
             { src: "Projects/Completed_Projects/Palm Hills/Toilets/Kids/11.webp", category: "Kids Toilet" },
-            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Kids/12.jfif", category: "Kids Toilet" },
+            { src: "Projects/Completed_Projects/Palm Hills/Toilets/Kids/12.webp", category: "Kids Toilet" },
 
         ]
     },
 
     // ===== PROJECT 15: Sara Raga2y =====
-    "15": {
+    "16": {
         name: "Mr. Abdalla Taher",
         location: "6th October City",
         dates: "2024 - 2025",
@@ -690,7 +731,7 @@ const projectsData = {
     },
 
     // ===== PROJECT 16: Achrafieh =====
-    "17": {
+    "18": {
         name: "Mr. Mazen Ali",
         location: "5th Settlement",
         dates: "2021 - 2022",
@@ -723,7 +764,7 @@ const projectsData = {
         ]
     },
 
-    "22": {
+    "23": {
         name: "Benta House 70-3 Mountain View New Cairo",
         location: "Mountain View - New Cairo",
         dates: "2025 - Now",
@@ -740,7 +781,7 @@ const projectsData = {
 
         ]
     },
-    "23": {
+    "24": {
         name: "Stone Residence 40- 3",
         location: "Stone Residence 40- 3",
         dates: "2025 - Now",
@@ -767,7 +808,7 @@ const projectsData = {
     },
 
     // ===== PROJECT 19: Binotte Bakery =====
-    "27": {
+    "28": {
         name: "Binotte Bakery",
         location: "5th Settlement",
         dates: "2022 - 2022",
@@ -787,7 +828,7 @@ const projectsData = {
     },
 
     // ===== PROJECT 20: Dr. Reham Gamal =====
-    "28": {
+    "29": {
         name: "Dr. Reham Gamal",
         location: "5th Settlement",
         dates: "2025 - 2025",
@@ -854,7 +895,7 @@ const projectsData = {
     },
 
     // ===== PROJECT 21: Eng. Samah Elkady =====
-    "29": {
+    "30": {
         name: "Eng. Samah Elkady",
         location: "5th Settlement",
         dates: "2023 - 2023",
@@ -880,7 +921,7 @@ const projectsData = {
     },
 
     // ===== PROJECT 22: Mr. Amr Elsayed =====
-    "30": {
+    "31": {
         name: "Mr. Amr Elsayed",
         location: "5th Settlement",
         dates: "2025 - 2025",
@@ -923,7 +964,7 @@ const projectsData = {
     },
 
     // ===== PROJECT 23: Mr. Mohamed Elkammah =====
-    "31": {
+    "32": {
         name: "Mr. Mohamed Elkammah",
         location: "5th Settlement",
         dates: "2025 - 2025",
@@ -989,29 +1030,29 @@ const projectsData = {
         size: "475 Sq ft",
         category: "Residential",
         description: "A high-end finishing project for a spacious two-story villa in Ain Sokhna, executed with premium materials and meticulous craftsmanship. The project features elegant wooden parquet flooring and refined detailing throughout, delivering a warm, luxurious, and distinguished living experience by the sea.",
-        beforeImage: "Projects/Completed_Projects/La_Viesta/Site/10.jfif",
+        beforeImage: "Projects/Completed_Projects/La_Viesta/Site/10.webp",
         afterImage: "Projects/Completed_Projects/La_Viesta/Render/9.webp",
         beforeLabel: "Site",
         afterLabel: "Render",
         galleryImages: [
-            { src: "Projects/Completed_Projects/La_Viesta/Site/2.jfif", category: "Site" },
-            { src: "Projects/Completed_Projects/La_Viesta/Site/3.jfif", category: "Site" },
-            { src: "Projects/Completed_Projects/La_Viesta/Site/4.jfif", category: "Site" },
-            { src: "Projects/Completed_Projects/La_Viesta/Site/5.jfif", category: "Site" },
-            { src: "Projects/Completed_Projects/La_Viesta/Site/6.jfif", category: "Site" },
-            { src: "Projects/Completed_Projects/La_Viesta/Site/7.jfif", category: "Site" },
-            { src: "Projects/Completed_Projects/La_Viesta/Site/8.jfif", category: "Site" },
-            { src: "Projects/Completed_Projects/La_Viesta/Site/9.jfif", category: "Site" },
-            { src: "Projects/Completed_Projects/La_Viesta/Site/10.jfif", category: "Site" },
-            { src: "Projects/Completed_Projects/La_Viesta/Site/11.jfif", category: "Site" },
-            { src: "Projects/Completed_Projects/La_Viesta/Site/12.jfif", category: "Site" },
-            { src: "Projects/Completed_Projects/La_Viesta/Site/13.jfif", category: "Site" },
-            { src: "Projects/Completed_Projects/La_Viesta/Site/14.jfif", category: "Site" },
-            { src: "Projects/Completed_Projects/La_Viesta/Site/15.jfif", category: "Site" },
-            { src: "Projects/Completed_Projects/La_Viesta/Site/16.jfif", category: "Site" },
-            { src: "Projects/Completed_Projects/La_Viesta/Site/17.jfif", category: "Site" },
-            { src: "Projects/Completed_Projects/La_Viesta/Site/18.jfif", category: "Site" },
-            { src: "Projects/Completed_Projects/La_Viesta/Site/19.jfif", category: "Site" },
+            { src: "Projects/Completed_Projects/La_Viesta/Site/2.webp", category: "Site" },
+            { src: "Projects/Completed_Projects/La_Viesta/Site/3.webp", category: "Site" },
+            { src: "Projects/Completed_Projects/La_Viesta/Site/4.webp", category: "Site" },
+            { src: "Projects/Completed_Projects/La_Viesta/Site/5.webp", category: "Site" },
+            { src: "Projects/Completed_Projects/La_Viesta/Site/6.webp", category: "Site" },
+            { src: "Projects/Completed_Projects/La_Viesta/Site/7.webp", category: "Site" },
+            { src: "Projects/Completed_Projects/La_Viesta/Site/8.webp", category: "Site" },
+            { src: "Projects/Completed_Projects/La_Viesta/Site/9.webp", category: "Site" },
+            { src: "Projects/Completed_Projects/La_Viesta/Site/10.webp", category: "Site" },
+            { src: "Projects/Completed_Projects/La_Viesta/Site/11.webp", category: "Site" },
+            { src: "Projects/Completed_Projects/La_Viesta/Site/12.webp", category: "Site" },
+            { src: "Projects/Completed_Projects/La_Viesta/Site/13.webp", category: "Site" },
+            { src: "Projects/Completed_Projects/La_Viesta/Site/14.webp", category: "Site" },
+            { src: "Projects/Completed_Projects/La_Viesta/Site/15.webp", category: "Site" },
+            { src: "Projects/Completed_Projects/La_Viesta/Site/16.webp", category: "Site" },
+            { src: "Projects/Completed_Projects/La_Viesta/Site/17.webp", category: "Site" },
+            { src: "Projects/Completed_Projects/La_Viesta/Site/18.webp", category: "Site" },
+            { src: "Projects/Completed_Projects/La_Viesta/Site/19.webp", category: "Site" },
             { src: "Projects/Completed_Projects/La_Viesta/Render/1.webp", category: "Render" },
             { src: "Projects/Completed_Projects/La_Viesta/Render/2.webp", category: "Render" },
             { src: "Projects/Completed_Projects/La_Viesta/Render/3.webp", category: "Render" },
@@ -1073,7 +1114,7 @@ const projectsData = {
     },
 
 
-    "11": {
+    "12": {
         name: "Eng. Ahmed Mohsen",
         location: "Zahraa Nasr City",
         dates: "2025 - 2025",
@@ -1148,7 +1189,7 @@ const projectsData = {
     },
 
 
-    "19": {
+    "20": {
         name: "Dr.Ola Gamal 3",
         location: "El-Shorouk City",
         dates: "2025 - 2026",

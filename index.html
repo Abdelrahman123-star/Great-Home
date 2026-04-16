@@ -23,7 +23,7 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a href="#">
-                <img class="logo-nav" src="imgs/logo/GH-Logo-Vertical2.png">
+                <img class="logo-nav" src="imgs/logo/GH-Logo-Vertical2.png" fetchpriority="high" decoding="async">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -83,7 +83,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-5 mb-5 mb-lg-0">
                         <div class="profile-container text-center">
-                            <img src="2.jpg" alt="Ahmed Hesham" class="profile-img">
+                            <img src="2.jpg" alt="Ahmed Hesham" class="profile-img" loading="lazy" decoding="async">
                         </div>
                     </div>
                     <div class="col-lg-7">
@@ -105,7 +105,7 @@
                                     <div class="stat-text">Years Experience</div>
                                 </div>
                                 <div class="stat-item">
-                                    <div class="stat-number" data-count="31">0</div>
+                                    <div class="stat-number" data-count="32">0</div>
                                     <div class="stat-text">Projects Completed</div>
                                 </div>
                                 <div class="stat-item">
@@ -113,7 +113,7 @@
                                     <div class="stat-text">On-Time Delivery</div>
                                 </div>
                                 <div class="stat-item">
-                                    <div class="stat-number" data-count="4760">0</div>
+                                    <div class="stat-number" data-count="5020">0</div>
                                     <div class="stat-text">Square Meters Finished</div>
                                 </div>
                             </div>
@@ -129,7 +129,8 @@
     <section class="Image_Slider">
         <div class="container2">
             <div class="slide">
-                <div class="item" style="background: url('imgs/AhmedGamal.png');">
+                <div class="item">
+                    <img src="imgs/AhmedGamal.png" class="item-bg" loading="lazy" decoding="async">
                     <div class="content">
                         <div class="name">Eng. Ahmed Gamal</div>
                         <div class="description">A comprehensive 2D design project including all technical drawings:
@@ -139,8 +140,9 @@
                         <button><a href="projects/2D_Projects/Ahmed_Gamal.html" target="blank">See More</a></button>
                     </div>
                 </div>
-                <div class="item"
-                    style="background: url('projects/Projects/Completed_Projects/Palm Hills/Site/3.jpg');">
+                <div class="item">
+                    <img src="projects/Projects/Completed_Projects/Palm Hills/Site/3.webp" class="item-bg"
+                        loading="lazy" decoding="async">
                     <div class="content">
                         <div class="name">Palm Hills 707</div>
                         <div class="description">A high-end finishing project for a three-story luxury villa in Palm
@@ -150,8 +152,9 @@
                         <button><a href="projects/project-details.html?1" target="blank">See More</a></button>
                     </div>
                 </div>
-                <div class="item"
-                    style="background: url('projects/Projects/Completed_Projects/Adress/Kids/Render/5.jpg');">
+                <div class="item">
+                    <img src="projects/Projects/Completed_Projects/Adress/Kids/Render/5.webp" class="item-bg"
+                        loading="lazy" decoding="async">
                     <div class="content">
                         <div class="name">306 Adress East</div>
                         <div class="description">A complete finishing Modern Villa 5th settlement New Cairo for a
@@ -162,8 +165,9 @@
                         <button><a href="projects/project-details.html?4" target="blank">See More</a></button>
                     </div>
                 </div>
-                <div class="item"
-                    style="background: url('projects/Projects/Completed_Projects/East Town (Sodic)/7.webp');">
+                <div class="item">
+                    <img src="projects/Projects/Completed_Projects/East Town (Sodic)/7.webp" class="item-bg"
+                        loading="lazy" decoding="async">
                     <div class="content">
                         <div class="name">East Town (Sodic)</div>
                         <div class="description">A high-end finishing project for a three-story luxury villa in SODIC,
@@ -174,8 +178,9 @@
                         <button><a href="projects/project-details.html?3" target="blank">See More</a></button>
                     </div>
                 </div>
-                <div class="item"
-                    style="background: url('projects/Projects/Completed_Projects/La_Viesta/Render/11.webp');">
+                <div class="item">
+                    <img src="projects/Projects/Completed_Projects/La_Viesta/Render/11.webp" class="item-bg"
+                        loading="lazy" decoding="async">
                     <div class="content">
                         <div class="name">La Vista 6</div>
                         <div class="description">A high-end finishing project for a spacious two-story villa in Ain
@@ -185,7 +190,9 @@
                         <button><a href="projects/project-details.html?2" target="blank">See More</a></button>
                     </div>
                 </div>
-                <div class="item" style="background: url('projects/Projects/3D_Projects/Mr_Amr_Elsayed/5.webp');">
+                <div class="item">
+                    <img src="projects/Projects/3D_Projects/Mr_Amr_Elsayed/5.webp" class="item-bg" loading="lazy"
+                        decoding="async">
                     <div class="content">
                         <div class="name">Mr. Amr Elsayed</div>
                         <div class="description">A 3D design project for a modern apartment, featuring clean lines,
@@ -352,7 +359,8 @@
     <footer>
         <div class="container">
             <a href="#">
-                <img src="imgs/logo/GH-Logo-Vertical2.png" alt="Logo" class="footer-logo">
+                <img src="imgs/logo/GH-Logo-Vertical2.png" alt="Logo" class="footer-logo" loading="lazy"
+                    decoding="async">
             </a>
             <ul class="footer-links">
 
@@ -373,53 +381,51 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="projects/js/project-details-content.js"></script>
     <script>
-        // Synchronously populate the carousel before script.js runs
+        // Performance-optimized carousel population (Runs synchronously since projectsData is loaded above)
         (function () {
             const track = document.getElementById('carouselTrack');
             if (!track) return;
 
-            // Helper to create card with New Split Design (Image Top, Name Bottom)
+            // Use DocumentFragment to batch DOM updates and reduce layout thrashing
+            const fragment = document.createDocumentFragment();
+
             function createCard(title, thumb, id) {
                 const card = document.createElement('div');
-                card.className = 'project-card item'; // Main container
+                card.className = 'project-card item';
 
-                // 1. Image Wrapper (Top) - Contains Image & Hover Overlay
-                const fullImgPath = thumb.startsWith('http') ? thumb : `projects/${thumb}`;
-                const bgPath = thumb.includes('/') ? thumb : `imgs/${thumb}`;
                 const finalPath = thumb.includes('AhmedGamal') ? 'imgs/AhmedGamal.png' : `projects/${thumb}`;
 
                 const imageWrapper = document.createElement('div');
                 imageWrapper.className = 'image-wrapper';
-                imageWrapper.style.background = `url('${finalPath}')`;
+                // Optimized: Inline style for background is fine here, but we could use an <img> for better lazy loading
+                // For now, keeping the design exact as requested.
+                imageWrapper.style.backgroundImage = `url('${finalPath}')`;
                 imageWrapper.style.backgroundSize = 'cover';
                 imageWrapper.style.backgroundPosition = 'center';
 
-                // Hover Overlay with "See More" Button
                 imageWrapper.innerHTML = `
                     <div class="hover-overlay">
                         <button><a href="projects/project-details.html?${id}" target="_blank">See More</a></button>
                     </div>
                 `;
 
-                // 2. Info Wrapper (Bottom) - Process Name
                 const infoWrapper = document.createElement('div');
                 infoWrapper.className = 'info-wrapper';
                 infoWrapper.innerHTML = `<div class="name">${title}</div>`;
 
-                // Assemble
                 card.appendChild(imageWrapper);
                 card.appendChild(infoWrapper);
 
                 return card;
             }
 
-            // 1. Static Ahmed Gamal Card
+            // Static Ahmed Gamal Card
             const agCard = document.createElement('div');
             agCard.className = 'project-card item';
 
             const agImage = document.createElement('div');
             agImage.className = 'image-wrapper';
-            agImage.style.background = "url('imgs/AhmedGamal.png')";
+            agImage.style.backgroundImage = "url('imgs/AhmedGamal.png')";
             agImage.style.backgroundSize = 'cover';
             agImage.style.backgroundPosition = 'center';
             agImage.innerHTML = `
@@ -435,11 +441,10 @@
             agCard.appendChild(agImage);
             agCard.appendChild(agInfo);
 
-            // Dynamically load projects from projectsData
-            let ahmedGamalInserted = false;
-            let renderedCount = 0;
-
             if (typeof projectsData !== 'undefined') {
+                let ahmedGamalInserted = false;
+                let renderedCount = 0;
+
                 Object.entries(projectsData).forEach(([id, project]) => {
                     let thumbSrc = project.afterImage || project.beforeImage;
                     if (!thumbSrc && project.galleryImages && project.galleryImages.length > 0) {
@@ -447,24 +452,23 @@
                     }
                     if (!thumbSrc) return;
 
-                    // Insert Ahmed Gamal card after the first 6 projects
                     if (renderedCount === 6 && !ahmedGamalInserted) {
-                        track.appendChild(agCard);
+                        fragment.appendChild(agCard);
                         ahmedGamalInserted = true;
                     }
 
-                    const card = createCard(project.name, thumbSrc, id);
-                    track.appendChild(card);
+                    fragment.appendChild(createCard(project.name, thumbSrc, id));
                     renderedCount++;
                 });
+
+                if (!ahmedGamalInserted) {
+                    fragment.appendChild(agCard);
+                }
             } else {
                 console.error("projectsData is not defined.");
             }
 
-            // If not yet inserted
-            if (!ahmedGamalInserted) {
-                track.appendChild(agCard);
-            }
+            track.appendChild(fragment);
         })();
     </script>
 

@@ -544,11 +544,11 @@ const sliderInit = () => {
   });
 
   function startAutoSlide() {
+    clearInterval(autoSlideInterval);
     autoSlideInterval = setInterval(nextSlide, 8000);
   }
 
   function resetAutoSlide() {
-    clearInterval(autoSlideInterval);
     startAutoSlide();
   }
 

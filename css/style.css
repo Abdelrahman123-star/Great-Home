@@ -53,7 +53,8 @@
             justify-content: center;
             overflow: hidden;
             background: url("../download2.png") center center / cover no-repeat;
-
+            will-change: transform;
+            /* Hint for parallax if applied to section */
         }
 
         /* Dark overlay (hidden on PC) */
@@ -277,6 +278,8 @@
             padding: 100px 0;
             position: relative;
             overflow: hidden;
+            content-visibility: auto;
+            contain-intrinsic-size: 1px 1000px;
         }
 
         .parallax-bg {
@@ -428,6 +431,13 @@
 
 
 
+
+        .exp-edu-section,
+        .projects,
+        .contact-section {
+            content-visibility: auto;
+            contain-intrinsic-size: 1px 1000px;
+        }
 
         /* Projects Section */
 
@@ -1441,11 +1451,19 @@
             transform: translateY(-50%);
             border-radius: 20px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-            background-position: center center !important;
-            background-size: cover !important;
-            background-repeat: no-repeat !important;
             transition: .5s;
             overflow: hidden;
+        }
+
+        .container2 .slide .item img.item-bg {
+
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+            /* Changed from -1 to ensure visibility above parent background */
+            /* Ensure smooth transition like the background-image */
+            transition: 0.5s;
         }
 
         /* FULL SCREEN BACKGROUND FOR ACTIVE SLIDES */
@@ -1457,9 +1475,6 @@
             border-radius: 0;
             width: 100%;
             height: 100%;
-            background-size: cover !important;
-            background-position: center !important;
-            background-repeat: no-repeat !important;
         }
 
         /* Ensure images cover properly for different sizes */
@@ -1723,11 +1738,21 @@
                 margin: 0;
                 opacity: 1;
                 border-radius: 20px;
-                scroll-snap-align: center;
-                background-size: cover !important;
-                background-position: center !important;
                 z-index: 1;
                 box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+                scroll-snap-align: center;
+                overflow: hidden;
+            }
+
+            .container2 .slide .item img.item-bg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: 1;
+                /* Changed from -1 to ensure visibility */
             }
 
             .item .content {
