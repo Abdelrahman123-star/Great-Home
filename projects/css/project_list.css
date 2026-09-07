@@ -219,8 +219,27 @@ h6 {
 }
 
 .logo-nav {
-    height: 3.4em;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1.5px solid rgba(168, 135, 79, 0.55);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-nav:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 14px rgba(168, 135, 79, 0.4);
+}
+
+.footer-logo {
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1.5px solid rgba(168, 135, 79, 0.55);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .navbar-nav .nav-link {
