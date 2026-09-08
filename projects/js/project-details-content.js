@@ -10,7 +10,6 @@ const projectsData = {
         dates: "2025 - 2026",
         size: "260 Sq ft",
         category: "Residential",
-        description: "A complete apartment project at Al Maqsad Compound, New Administrative Capital, delivered with a focus on premium finishes, precise detailing, and modern design standards. The project reflects a harmonious blend of functionality and elegance, creating a refined and comfortable living environment.",
         galleryImages: [
             { src: "Projects/Completed_Projects/Eng. Mohamed El-Alfy/1.webp", category: "Completion" },
             { src: "Projects/Completed_Projects/Eng. Mohamed El-Alfy/3.webp", category: "Completion" },
@@ -63,7 +62,6 @@ const projectsData = {
         sliderHeight: "600px",
         sliderWidth: "45%",
         sliderLimit: 100,
-        description: "A complete finishing Modern Villa 5th settlement New Cairo for a two-story residential villa, executed using premium marble and high-quality materials. All works were carried out in strict accordance with the approved design, ensuring exceptional detailing and a refined final appearance.",
         beforeImage: "Projects/Completed_Projects/Adress/Master/Site/6.webp",
         afterImage: "Projects/Completed_Projects/Adress/Master/Render/after.webp",
         galleryImages: [
@@ -127,7 +125,6 @@ const projectsData = {
         dates: "2023 - 2024",
         size: "560 Sq ft",
         category: "Residential",
-        description: "A comprehensive finishing project for a three-story villa in Madinaty, completed with premium materials and meticulous craftsmanship to reflect the client's vision and deliver a refined, elegant living experience.",
 
         galleryImages: [
             { src: "Projects/Completed_Projects/Ashraf/1.jpeg", category: "Completion" },
@@ -172,7 +169,6 @@ const projectsData = {
         dates: "2021 - 2025",
         size: "210 Sq ft",
         category: "Residential",
-        description: "A complete interior finishing project for an apartment in El Shorouk City, executed with high-quality materials and careful attention to detail to achieve a modern, comfortable, and aesthetically balanced living space.",
         galleryImages: [
             { src: "Projects/Completed_Projects/baba/1.jpg", category: "Completion" },
             { src: "Projects/Completed_Projects/baba/3.jpg", category: "Completion" },
@@ -210,7 +206,6 @@ const projectsData = {
         sliderHeight: "600px",
         sliderWidth: "50%",
         sliderLimit: 100,
-        description: "A medium-level finishing project for an apartment in Nasr City, delivered with practical material selections and clean, efficient execution to provide a comfortable and well-organized living space that meets the client's needs and budget.",
         beforeImage: "Projects/Completed_Projects/Dr. Nadia/3.jpg",
         afterImage: "Projects/Completed_Projects/Dr. Nadia/11.jpg",
         galleryImages: [
@@ -242,7 +237,6 @@ const projectsData = {
         dates: "2022 - 2023",
         size: "540 Sq ft",
         category: "Residential",
-        description: "A high-end finishing project for a three-story luxury villa in SODIC, New Cairo. Executed with premium materials, bespoke detailing, and top-tier craftsmanship to deliver an exceptional, elegant, and refined living environment that reflects the highest standards of design and quality.",
         galleryImages: [
             { src: "Projects/Completed_Projects/East Town (Sodic)/1.webp", category: "Completion" },
             { src: "Projects/Completed_Projects/East Town (Sodic)/2.webp", category: "Completion" },
@@ -286,7 +280,6 @@ const projectsData = {
         dates: "2025 - 2025",
         size: "230 Sq ft",
         category: "Residential",
-        description: "A medium-level finishing project for an apartment in Elshorouq City, delivered with practical material selections and clean, efficient execution to provide a comfortable and well-organized living space that meets the client's needs and budget.",
         beforeImage: "Projects/Completed_Projects/Eng. Essam/before2.jpg",
         afterImage: "Projects/Completed_Projects/Eng. Essam/6.jpg",
         sliderHeight: "600px",
@@ -327,7 +320,6 @@ const projectsData = {
         dates: "2025 - 2025",
         size: "190 Sq ft",
         category: "Residential",
-        description: "A budget-friendly finishing project for an apartment prepared with essential materials and simple, functional execution. Designed to offer a clean and practical living space suitable for rental purposes at an affordable price.",
 
         galleryImages: [
             { src: "Projects/Completed_Projects/Gegy/1.jpg", category: "Completion" },
@@ -360,7 +352,6 @@ const projectsData = {
         dates: "2021 - 2025",
         size: "210 Sq ft",
         category: "Residential",
-        description: "A complete interior finishing project for an apartment in El Shorouk City, executed with high-quality materials and careful attention to detail to achieve a modern, comfortable, and aesthetically balanced living space.",
 
         galleryImages: [
             { src: "Projects/Completed_Projects/Mine/Mine/1.jpg", category: "Completion" },
@@ -397,7 +388,6 @@ const projectsData = {
         sliderWidth: "40%",
         sliderLimit: 100,
 
-        description: "A complete finishing Modern Villa for a two-story residential villa, executed using premium marble and high-quality materials. All works were carried out in strict accordance with the approved design, ensuring exceptional detailing and a refined final appearance.",
         beforeImage: "Projects/Completed_Projects/Mostafa/before2.jpg",
         afterImage: "Projects/Completed_Projects/Mostafa/30.jpg",
         galleryImages: [
@@ -444,7 +434,6 @@ const projectsData = {
         sliderWidth: "35%",
         sliderLimit: 100,
 
-        description: "A high-end finished apartment in El-Shorouk City. Featuring premium materials and meticulous detailing, this project highlights modern elegance and sophisticated living, with work completed to the highest standards.",
         beforeImage: "Projects/Completed_Projects/Ola/before2.jpg",
         afterImage: "Projects/Completed_Projects/Ola/20.jpg",
         galleryImages: [
@@ -487,7 +476,6 @@ const projectsData = {
         sliderWidth: "60%",
         sliderLimit: 100,
 
-        description: "A high-end finished apartment in El-Shorouk City. Featuring premium materials and meticulous detailing, this project highlights modern elegance and sophisticated living, with work completed to the highest standards.",
         beforeImage: "Projects/Completed_Projects/Ola Ali/before.webp",
         afterImage: "Projects/Completed_Projects/Ola Ali/29.webp",
         galleryImages: [
@@ -533,7 +521,6 @@ const projectsData = {
         sliderWidth: "40%",
         sliderLimit: 100,
         category: "Residential",
-        description: "A budget-friendly finishing project for an apartment prepared with essential materials and simple, functional execution. Designed to offer a clean and practical living space suitable for rental purposes at an affordable price.",
         beforeImage: "Projects/Completed_Projects/Ola Hala/before.jpg",
         afterImage: "Projects/Completed_Projects/Ola Hala/4.jpg",
         galleryImages: [
@@ -561,7 +548,6 @@ const projectsData = {
         dates: "2024 - 2025",
         size: "220 Sq ft",
         category: "Residential",
-        description: "A high-end finished apartment in El-Shorouk City. Featuring premium materials and meticulous detailing, this project highlights modern elegance and sophisticated living, with work completed to the highest standards.",
         beforeImage: "Projects/Completed_Projects/Ola Mohamed Waheed/before.jpg",
         afterImage: "Projects/Completed_Projects/Ola Mohamed Waheed/14.jpg",
         galleryImages: [
@@ -609,7 +595,6 @@ const projectsData = {
         sliderLimit: 100,
         beforeLabel: "Design",
         afterLabel: "Site",
-        description: "A high-end finishing project for a three-story luxury villa in Palm Hills, New Cairo. Executed with premium materials, bespoke detailing, and top-tier craftsmanship to deliver an exceptional, elegant, and refined living environment that reflects the highest standards of design and quality.",
         beforeImage: "Projects/Completed_Projects/Palm Hills/Render/after.webp",
         afterImage: "Projects/Completed_Projects/Palm Hills/Site/8.webp",
         designImage: "", // Placeholder - PLEASE UPDATE THIS PATH
@@ -716,7 +701,6 @@ const projectsData = {
         dates: "2024 - 2025",
         size: "90 Sq ft",
         category: "Residential",
-        description: "A compact yet stylish apartment, combining elegance and luxury in a small space. Thoughtful design and premium finishes create a chic, comfortable living environment.",
         galleryImages: [
             { src: "Projects/Completed_Projects/Sara Raga2y/1.jpeg", category: "Completion" },
             { src: "Projects/Completed_Projects/Sara Raga2y/4.jpeg", category: "Completion" },
@@ -740,7 +724,6 @@ const projectsData = {
         sliderHeight: "600px",
         sliderWidth: "100%",
         sliderLimit: 100,
-        description: "A complete interior finishing project for an apartment in El Ashrafeyya Coumpound, executed with high-quality materials and careful attention to detail to achieve a modern, comfortable, and aesthetically balanced living space.",
         beforeImage: "Projects/Completed_Projects/Achrafieh/7.jpeg",
         afterImage: "Projects/Completed_Projects/Achrafieh/1.jpeg",
         galleryImages: [
@@ -770,7 +753,6 @@ const projectsData = {
         dates: "2025 - Now",
         size: "390 Sq ft",
         category: "Residential",
-        description: "An ongoing project in Mountain View, New Cairo. This three-story villa showcases high-quality finishes, elegant design, and meticulous craftsmanship, with work still in progress to achieve modern luxury living.",
         galleryImages: [
             { src: "Projects/On_Going_Projects/Mountain_View/1.jpeg", category: "Completion" },
             { src: "Projects/On_Going_Projects/Mountain_View/2.jpeg", category: "Completion" },
@@ -787,7 +769,6 @@ const projectsData = {
         dates: "2025 - Now",
         size: "180 Sq ft",
         category: "Residential",
-        description: "An ongoing project at Stone Residence, Mokattam. This apartment combines modern design and quality finishes, with work still in progress, promising a stylish and sophisticated living space upon completion.",
 
         galleryImages: [
             { src: "Projects/On_Going_Projects/Stone_Residence/1.jpeg", category: "Completion" },
@@ -814,7 +795,6 @@ const projectsData = {
         dates: "2022 - 2022",
         size: "70 Sq ft",
         category: "Commercial",
-        description: "Description needed for Binotte Bakery project",
         galleryImages: [
             { src: "Projects/3D_Projects/Binotte_Bakery/1.jpg", category: "3D_Render" },
             { src: "Projects/3D_Projects/Binotte_Bakery/2.jpg", category: "3D_Render" },
@@ -834,7 +814,6 @@ const projectsData = {
         dates: "2025 - 2025",
         size: "260 Sq ft",
         category: "Residential",
-        description: "Description needed for Dr. Reham Gamal project",
         galleryImages: [
             { src: "Projects/3D_Projects/Dr_Reham_Gamal/1.jpeg", category: "3D_Render" },
             { src: "Projects/3D_Projects/Dr_Reham_Gamal/2.jpeg", category: "3D_Render" },
@@ -901,7 +880,6 @@ const projectsData = {
         dates: "2023 - 2023",
         size: "260 Sq ft",
         category: "Residential",
-        description: "Description needed for Eng. Samah Elkady project",
         galleryImages: [
             { src: "Projects/3D_Projects/Eng_Samah_Elkady/1.jpeg", category: "3D_Render" },
             { src: "Projects/3D_Projects/Eng_Samah_Elkady/2.jpeg", category: "3D_Render" },
@@ -927,7 +905,6 @@ const projectsData = {
         dates: "2025 - 2025",
         size: "260 Sq ft",
         category: "Residential",
-        description: "Description needed for Mr. Amr Elsayed project",
         galleryImages: [
             { src: "Projects/3D_Projects/Mr_Amr_Elsayed/2.webp", category: "3D_Render" },
             { src: "Projects/3D_Projects/Mr_Amr_Elsayed/3.webp", category: "3D_Render" },
@@ -970,7 +947,6 @@ const projectsData = {
         dates: "2025 - 2025",
         size: "175 Sq ft",
         category: "Residential",
-        description: "Description needed for Mr. Mohamed Elkammah project",
         galleryImages: [
             { src: "Projects/3D_Projects/Mr_Mohamed_Elkammah/1.webp", category: "Render" },
             { src: "Projects/3D_Projects/Mr_Mohamed_Elkammah/2.webp", category: "Render" },
@@ -1029,7 +1005,6 @@ const projectsData = {
         dates: "2021 - 2023",
         size: "475 Sq ft",
         category: "Residential",
-        description: "A high-end finishing project for a spacious two-story villa in Ain Sokhna, executed with premium materials and meticulous craftsmanship. The project features elegant wooden parquet flooring and refined detailing throughout, delivering a warm, luxurious, and distinguished living experience by the sea.",
         beforeImage: "Projects/Completed_Projects/La_Viesta/Site/10.webp",
         afterImage: "Projects/Completed_Projects/La_Viesta/Render/9.webp",
         beforeLabel: "Site",
@@ -1079,7 +1054,6 @@ const projectsData = {
         dates: "2022 - 2024",
         size: "220 Sq ft",
         category: "Residential",
-        description: "A full interior finishing project for a modern apartment in Nasr City, completed with high-quality materials and precise execution to match the client’s approved design and deliver a comfortable, stylish living space.",
         beforeImage: "Projects/Completed_Projects/Mrs_Aliaa_Elhadidi/2.webp",
         afterImage: "Projects/Completed_Projects/Mrs_Aliaa_Elhadidi/3.webp",
         galleryImages: [
@@ -1123,7 +1097,6 @@ const projectsData = {
         sliderHeight: "600px",
         sliderWidth: "30%",
         sliderLimit: 100,
-        description: "A high-end finished apartment. Featuring premium materials and meticulous detailing, this project highlights modern elegance and sophisticated living, with work completed to the highest standards.",
         beforeImage: "Projects/Completed_Projects/Eng. Ahmed Mohsen/before.jpg",
         afterImage: "Projects/Completed_Projects/Eng. Ahmed Mohsen/12.webp",
         galleryImages: [
@@ -1157,7 +1130,6 @@ const projectsData = {
         sliderHeight: "550px",
         sliderHeight_mob: "200px",
         sliderLimit: 100,
-        description: "An apartment finishing project at Next Point Compound, emphasizing high-quality workmanship, refined details, and practical design solutions. The project reflects a balanced approach between functionality and aesthetics, creating a comfortable, elegant, and well-executed living space.",
         beforeImage: "Projects/Completed_Projects/Eng_Mohamed_Wasfy/0.webp",
         afterImage: "Projects/Completed_Projects/Eng_Mohamed_Wasfy/1.webp",
         galleryImages: [
@@ -1195,7 +1167,6 @@ const projectsData = {
         dates: "2025 - 2026",
         size: "230 Sq ft",
         category: "Residential",
-        description: "A budget-friendly finishing project for an apartment prepared with essential materials and simple, functional execution. Designed to offer a clean and practical living space suitable for rental purposes at an affordable price.",
         galleryImages: [
             { src: "Projects/Completed_Projects/Dr_Ola_Gamal_3/1.jpg", category: "Site" },
             { src: "Projects/Completed_Projects/Dr_Ola_Gamal_3/2.jpg", category: "Site" },

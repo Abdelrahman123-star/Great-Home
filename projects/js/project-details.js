@@ -51,7 +51,6 @@ function loadProjectData(projectId) {
     document.title = `${project.name} - Civil Engineering Portfolio`;
 
     document.getElementById('dynamic-project-title').textContent = project.name;
-    document.getElementById('dynamic-project-description').textContent = project.description;
     document.getElementById('dynamic-location').textContent = project.location;
     document.getElementById('dynamic-dates').textContent = project.dates;
     document.getElementById('dynamic-size').textContent = project.size;

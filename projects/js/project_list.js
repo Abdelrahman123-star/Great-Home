@@ -7,40 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
 
-    const descriptions = [
-        "A high-end finishing project for a three-story luxury villa in Palm Hills, New Cairo. Executed with premium materials, bespoke detailing, and top-tier craftsmanship to deliver an exceptional, elegant, and refined living environment that reflects the highest standards of design and quality.",
-        "A high-end finishing project for a spacious two-story villa in Ain Sokhna, executed with premium materials and meticulous craftsmanship. The project features elegant wooden parquet flooring and refined detailing throughout, delivering a warm, luxurious, and distinguished living experience by the sea.",
-        "A high-end finishing project for a three-story luxury villa in SODIC, New Cairo. Executed with premium materials, bespoke detailing, and top-tier craftsmanship to deliver an exceptional, elegant, and refined living environment that reflects the highest standards of design and quality.",
-        "A complete finishing Modern Villa 5th settlement New Cairo for a two-story residential villa, executed using premium marble and high-quality materials. All works were carried out in strict accordance with the approved design, ensuring exceptional detailing and a refined final appearance.",
-        "A comprehensive finishing project for a three-story villa in Madinaty, completed with premium materials and meticulous craftsmanship to reflect the client’s vision and deliver a refined, elegant living experience.",
-        "A complete finishing Modern Villa for a two-story residential villa, executed using premium marble and high-quality materials. All works were carried out in strict accordance with the approved design, ensuring exceptional detailing and a refined final appearance.",
-        "A high-end finished apartment in El-Shorouk City. Featuring premium materials and meticulous detailing, this project highlights modern elegance and sophisticated living, with work completed to the highest standards.",
-        "A full interior finishing project for a modern apartment in Nasr City, completed with high-quality materials and precise execution to match the client’s approved design and deliver a comfortable, stylish living space.",
-        "A complete interior finishing project for an apartment in El Shorouk City, executed with high-quality materials and careful attention to detail to achieve a modern, comfortable, and aesthetically balanced living space.",
-        "An apartment finishing project at Next Point Compound, emphasizing high-quality workmanship, refined details, and practical design solutions. The project reflects a balanced approach between functionality and aesthetics, creating a comfortable, elegant, and well-executed living space.",
-        "A complete apartment project at Al Maqsad Compound, New Administrative Capital, delivered with a focus on premium finishes, precise detailing, and modern design standards. The project reflects a harmonious blend of functionality and elegance, creating a refined and comfortable living environment.",
-        "A high-end finished apartment. Featuring premium materials and meticulous detailing, this project highlights modern elegance and sophisticated living, with work completed to the highest standards.",
-        "A medium-level finishing project for an apartment in Elshorouq City, delivered with practical material selections and clean, efficient execution to provide a comfortable and well-organized living space that meets the client’s needs and budget.",
-        "A high-end finished apartment in El-Shorouk City. Featuring premium materials and meticulous detailing, this project highlights modern elegance and sophisticated living, with work completed to the highest standards.",
-        "A complete interior finishing project for an apartment in El Shorouk City, executed with high-quality materials and careful attention to detail to achieve a modern, comfortable, and aesthetically balanced living space.",
-        "A compact yet stylish apartment, combining elegance and luxury in a small space. Thoughtful design and premium finishes create a chic, comfortable living environment.",
-        "A high-end finished apartment in El-Shorouk City. Featuring premium materials and meticulous detailing, this project highlights modern elegance and sophisticated living, with work completed to the highest standards.",
-        "A complete interior finishing project for an apartment in El Ashrafeyya Coumpound, executed with high-quality materials and careful attention to detail to achieve a modern, comfortable, and aesthetically balanced living space.",
-        "A medium-level finishing project for an apartment in Nasr City, delivered with practical material selections and clean, efficient execution to provide a comfortable and well-organized living space that meets the client’s needs and budget.",
-        "A budget-friendly finishing project for an apartment prepared with essential materials and simple, functional execution. Designed to offer a clean and practical living space suitable for rental purposes at an affordable price.",
-        "A budget-friendly finishing project for an apartment prepared with essential materials and simple, functional execution. Designed to offer a clean and practical living space suitable for rental purposes at an affordable price.",
-        "A budget-friendly finishing project for an apartment prepared with essential materials and simple, functional execution. Designed to offer a clean and practical living space suitable for rental purposes at an affordable price.",
-        "An ongoing project in Mountain View, New Cairo. This three-story villa showcases high-quality finishes, elegant design, and meticulous craftsmanship, with work still in progress to achieve modern luxury living.",
-        "An ongoing project at Stone Residence, Mokattam. This apartment combines modern design and quality finishes, with work still in progress, promising a stylish and sophisticated living space upon completion.",
-        "A comprehensive 2D design project including all technical drawings: plumbing, electrical layouts, ceiling details, lighting distribution, Air Conditioning planning, and more—delivering a fully coordinated and detailed project package.",
-        "A comprehensive 2D design project including all technical drawings: plumbing, electrical layouts, ceiling details, lighting distribution, Air Conditioning planning, and more—delivering a fully coordinated and detailed project package.",
-        "A comprehensive 2D design project including all technical drawings: plumbing, electrical layouts, ceiling details, lighting distribution, Air Conditioning planning, and more—delivering a fully coordinated and detailed project package.",
-        "A 3D design project for a bakery shop, created to showcase the concept’s aesthetic and functional layout. The design highlights a warm, modern atmosphere tailored to the client’s vision.",
-        "A 3D interior design concept for a modern apartment, focusing on simplicity, smart space use, and elegant contemporary elements. The design aims to create a welcoming and refined atmosphere.",
-        "A 3D design project for a semi-classic villa, presenting a refined blend of elegance and modern comfort. The concept showcases balanced detailing and a timeless interior atmosphere.",
-        "A 3D design project for a modern apartment, featuring clean lines, functional layouts, and contemporary finishes. The concept highlights a sleek, stylish, and comfortable living environment.",
-        "A 3D design project for a modern apartment, featuring clean lines, functional layouts, and contemporary finishes. The concept highlights a sleek, stylish, and comfortable living environment."
-    ];
+
 
     // Locations for variety
     const locations = [
@@ -300,9 +267,6 @@ document.addEventListener('DOMContentLoaded', function () {
         // Get size for this project
         const size = sizes[index];
 
-        // Get description for this project
-        const description = descriptions[index];
-
         // Get image ID for this project
         const imageId = imageIds[index % imageIds.length];
 
@@ -320,7 +284,6 @@ document.addEventListener('DOMContentLoaded', function () {
     </div>
     <div class="project-content">
         <h3 class="project-title" onclick="window.location.href='${projectLink}'" style="cursor: pointer;">${name}</h3>
-        <p class="project-description">${description}</p>
         <div class="project-meta">
             <div class="project-meta-item">
                 <i class="fas fa-map-marker-alt"></i>
