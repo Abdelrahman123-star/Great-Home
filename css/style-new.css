@@ -9,7 +9,7 @@
   --ivory: #F7F4EE;
   --stone: #EAE3D6;
   --stone-deep: #DCD2BE;
-  --green: #2A342C;
+  --green: #161616;
   --green-deep: #1B221C;
   --gold: #A8874F;
   --line: rgba(32, 36, 31, 0.12);
@@ -81,7 +81,7 @@ ul {
 }
 
 .eyebrow-plain {
-  font-size: 0.88rem;
+  font-size: 0.98rem;
   font-weight: 600;
   color: var(--gold);
   margin: 0 0 0.6rem;
@@ -1390,7 +1390,6 @@ section {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1.5rem;
-  background: rgba(255, 255, 255, 0.04);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   flex-wrap: wrap;
   gap: 0.75rem;
@@ -1457,7 +1456,7 @@ section {
   max-height: 560px;
   overflow: hidden;
   user-select: none;
-  touch-action: pan-y;
+  touch-action: none;
   cursor: ew-resize;
 }
 
@@ -1478,7 +1477,7 @@ section {
 .comp-img-after {
   z-index: 2;
   clip-path: inset(0 0 0 50%);
-  transition: clip-path 0.05s linear;
+  will-change: clip-path;
 }
 
 .comp-badge {
@@ -1522,7 +1521,7 @@ section {
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
   transform: translateX(-50%);
   pointer-events: none;
-  transition: left 0.05s linear;
+  will-change: left;
 }
 
 .comp-slider-handle {
@@ -1543,7 +1542,8 @@ section {
   color: var(--ink);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
   cursor: ew-resize;
-  transition: left 0.05s linear, transform 0.15s ease, box-shadow 0.15s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  will-change: left;
 }
 
 .comp-slider-handle:hover {
@@ -1558,7 +1558,6 @@ section {
 
 .comparison-caption {
   padding: 1.25rem 1.5rem;
-  background: rgba(255, 255, 255, 0.03);
   display: flex;
   align-items: center;
   justify-content: space-between;
