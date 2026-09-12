@@ -113,12 +113,22 @@
             </div>
         </div>
 
-        <!-- Dots navigation -->
-        <div class="ph-dots">
-            <button class="ph-dot ph-dot-active" data-idx="0" aria-label="Slide 1"></button>
-            <button class="ph-dot" data-idx="1" aria-label="Slide 2"></button>
-            <button class="ph-dot" data-idx="2" aria-label="Slide 3"></button>
-            <button class="ph-dot" data-idx="3" aria-label="Slide 4"></button>
+        <!-- Controls navigation (Horizontal Dots & Left/Right Arrows) -->
+        <div class="ph-controls">
+            <button class="ph-nav-btn ph-prev" id="phPrev" aria-label="Previous Slide">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+
+            <div class="ph-dots">
+                <button class="ph-dot ph-dot-active" data-idx="0" aria-label="Slide 1"></button>
+                <button class="ph-dot" data-idx="1" aria-label="Slide 2"></button>
+                <button class="ph-dot" data-idx="2" aria-label="Slide 3"></button>
+                <button class="ph-dot" data-idx="3" aria-label="Slide 4"></button>
+            </div>
+
+            <button class="ph-nav-btn ph-next" id="phNext" aria-label="Next Slide">
+                <i class="fas fa-chevron-right"></i>
+            </button>
         </div>
 
         <!-- Progress bar per slide -->
@@ -166,41 +176,95 @@
             </div>
         </div>
     </section>
-    <!-- Contact CTA -->
-    <section class="contact-cta">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <h3>Have a Project in Mind?</h3>
-                    <p>Let's discuss how we can bring your vision to life with innovative engineering solutions.</p>
-                    <a href="mailto:Ahmed Hesham <ahmed.hesham.fathy97@gmail.com>?subject=Contact from Website&body=Hello Ahmed,"
-                        class="btn btn-primary btn-lg">
-                        <i class="fas fa-envelope me-2"></i>Get In Touch
-                    </a>
-                </div>
+    <!-- ================= CONTACT ================= -->
+    <section class="contact" id="contact">
+        <div class="wrap contact-grid">
+            <div class="contact-copy">
+                <p class="eyebrow-plain">Get in touch</p>
+                <h2 class="section-title">Tell us about your space.</h2>
+                <p class="lede">Send a location, a rough size, and what stage you're at — shell, partial finishing,
+                    or a full redo. Our team replies promptly with initial technical insights.</p>
+
+                <ul class="contact-list">
+                    <li>
+                        <span class="ci-label">Location</span>
+                        <span>Cairo, Egypt</span>
+                    </li>
+                    <li>
+                        <span class="ci-label">WhatsApp</span>
+                        <a href="https://wa.me/+201116030118" target="_blank" rel="noopener">
+                            +20 111 603 0118 <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <span class="ci-label">WhatsApp</span>
+                        <a href="https://wa.me/+201028744977" target="_blank" rel="noopener">
+                            +20 102 874 4977 <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <span class="ci-label">Phone</span>
+                        <a href="tel:+491638987561">+49 163 8987561</a>
+                    </li>
+                    <li>
+                        <span class="ci-label">Email</span>
+                        <a
+                            href="mailto:ahmed.hesham.fathy97@gmail.com?subject=Consultation%20Inquiry%20%E2%80%94%20Heim%20Website&body=Hello%20Heim%20Team,">
+                            ahmed.hesham.fathy97@gmail.com
+                        </a>
+                    </li>
+                </ul>
+
+                <a href="https://wa.me/+201116030118" target="_blank" rel="noopener" class="btn btn-solid">
+                    <i class="fab fa-whatsapp"></i> Message on WhatsApp
+                </a>
+            </div>
+
+            <div class="contact-card">
+                <h3>What to include</h3>
+                <ul class="checklist">
+                    <li>Property location and type</li>
+                    <li>Approximate size in square meters</li>
+                    <li>Current stage — shell, partial finishing, or full redo</li>
+                    <li>Target timeline, if you have one</li>
+                </ul>
             </div>
         </div>
     </section>
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <a href="../index.html">
-                <img src="../imgs/logo/NewLogo.jpeg" alt="Heim Logo" class="footer-logo"
-                    style="height:44px;width:44px;border-radius:50%;object-fit:cover;">
-            </a>
-            <ul class="footer-links">
 
-                <li><a href="../index.html#home">Home</a></li>
-                <li><a href="../index.html#about">About</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="../index.html#Experience">Experience</a></li>
-                <li><a href="../index.html#contact">Contact</a></li>
-            </ul>
-            <div class="copyright">
-                <p>&copy; 2025 Heim. All Rights Reserved.</p>
-            </div>
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+        <div class="wrap footer-inner">
+            <a href="../index.html" class="brand brand-footer" aria-label="Heim Homepage">
+                <div class="brand-emblem-wrap">
+                    <img src="../imgs/logo/NewLogo.jpeg" alt="Heim Emblem" class="brand-logo">
+                </div>
+                <div class="brand-text">
+                    <span class="brand-name">HEIM</span>
+                    <span class="brand-tagline">Architecture &amp; Interiors</span>
+                </div>
+            </a>
+            <nav class="footer-nav">
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#proof">Proof</a>
+                <a href="../index.html#process">Process</a>
+                <a href="index.html">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <p class="footer-copy">© 2025 Heim. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <!-- ================= FLOATING WHATSAPP CONCIERGE WIDGET ================= -->
+    <div class="floating-wa" id="floatingWa">
+        <span class="floating-wa-tooltip">Chat with the Heim team</span>
+        <a href="https://wa.me/+201116030118?text=Hello%20Heim%20Team,%20I%20am%20interested%20in%20consulting%20on%20a%20residential%20finishing%20project."
+            target="_blank" rel="noopener" class="floating-wa-btn"
+            aria-label="Direct WhatsApp consultation with Heim team">
+            <span class="floating-wa-pulse"></span>
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
     <!-- Bootstrap JS Bundle -->
     <!-- Bootstrap & JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -217,28 +281,30 @@
             const capName = document.querySelector('.ph-caption-name');
             const capLoc = document.querySelector('.ph-caption-loc');
             const bar = document.getElementById('phProgressBar');
+            const prevBtn = document.getElementById('phPrev');
+            const nextBtn = document.getElementById('phNext');
             const DURATION = 5000; // ms per slide
 
             let current = 0;
             let timer = null;
-            let barAnim = null;
 
             function goTo(idx) {
-                slides[current].classList.remove('ph-active');
-                dots[current].classList.remove('ph-dot-active');
+                if (slides[current]) slides[current].classList.remove('ph-active');
+                if (dots[current]) dots[current].classList.remove('ph-dot-active');
                 current = (idx + slides.length) % slides.length;
-                slides[current].classList.add('ph-active');
-                dots[current].classList.add('ph-dot-active');
+                if (slides[current]) slides[current].classList.add('ph-active');
+                if (dots[current]) dots[current].classList.add('ph-dot-active');
 
                 // Update caption
                 const s = slides[current];
-                capName.textContent = s.dataset.name;
-                capLoc.textContent = s.dataset.loc;
+                if (capName && s.dataset.name) capName.textContent = s.dataset.name;
+                if (capLoc && s.dataset.loc) capLoc.textContent = s.dataset.loc;
 
                 resetBar();
             }
 
             function resetBar() {
+                if (!bar) return;
                 bar.style.transition = 'none';
                 bar.style.width = '0%';
                 // Force reflow
@@ -258,6 +324,20 @@
                     startAuto();
                 });
             });
+
+            if (prevBtn) {
+                prevBtn.addEventListener('click', () => {
+                    goTo(current - 1);
+                    startAuto();
+                });
+            }
+
+            if (nextBtn) {
+                nextBtn.addEventListener('click', () => {
+                    goTo(current + 1);
+                    startAuto();
+                });
+            }
 
             // Init
             resetBar();

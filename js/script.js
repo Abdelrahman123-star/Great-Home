@@ -14,11 +14,11 @@ window.addEventListener('scroll', function () {
   const logoNav = document.querySelector('.logo-nav');
 
   if (scrollY > 50) {
-    navbar.classList.add('scrolled');
-    logoNav.classList.add('scrolled');
+    if (navbar) navbar.classList.add('scrolled');
+    if (logoNav) logoNav.classList.add('scrolled');
   } else {
-    navbar.classList.remove('scrolled');
-    logoNav.classList.remove('scrolled');
+    if (navbar) navbar.classList.remove('scrolled');
+    if (logoNav) logoNav.classList.remove('scrolled');
   }
 }, { passive: true });
 

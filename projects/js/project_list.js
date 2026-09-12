@@ -120,10 +120,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Array of all project names
     const projectNames = [
-        "707 Palm Hills Katameya",
-        "122 La Vista 6",
-        "18A7 East Town (Sodic)",
-        "306 Adress East",
+        "Mr. Ahmed Hassan",
+        "Mr. Mohamed Ali",
+        "Eng. Omar Khaled",
+        "Mr. Karim Mostafa",
         "Eng. Ashraf Hamed",
         "Mr. Mostafa Elgarhy",
         "Eng. Ali Waheed",
@@ -142,12 +142,12 @@ document.addEventListener('DOMContentLoaded', function () {
         "Dr. Ola Gamal 3",
         "Mrs. Gehan Omar",
         "Dr. Ola Gamal 2",
-        "Benta House 70-3 Mountain View New Cairo",
-        "Stone Residence 40- 3",
+        "Mrs. Sara Mohamed",
+        "Dr. Nadia Hassan",
         "Mr. Ahmed Gamal 2D-Plan",
         "Mr. Abdalla Taher, 2D-Plan",
         "Eng. Ashraf Farag, 2D-Plan",
-        "Binotte Bakery",
+        "Mrs. Hala Mohamed",
         "Dr. Reham Gamal",
         "Eng. Samah Elkady",
         "Mr. Amr Elsayed",
@@ -362,10 +362,12 @@ document.addEventListener('DOMContentLoaded', function () {
     // Navbar scroll effect
     window.addEventListener('scroll', function () {
         const navbar = document.querySelector('.navbar');
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
+        if (navbar) {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
         }
     });
 });

@@ -208,33 +208,82 @@ h6 {
     color: rgba(168, 135, 79, 0.6);
 }
 
-/* ── Dot navigation ── */
-.ph-dots {
+/* ── Controls Container & Navigation ── */
+.ph-controls {
     position: absolute;
     z-index: 5;
     right: 64px;
     bottom: 100px;
     /* sits above the stats bar */
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    background: rgba(15, 14, 12, 0.45);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 8px 16px;
+    border-radius: 30px;
+    border: 1px solid rgba(168, 135, 79, 0.35);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.ph-nav-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(247, 244, 238, 0.1);
+    border: 1px solid rgba(168, 135, 79, 0.4);
+    color: #F7F4EE;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    padding: 0;
+}
+
+.ph-nav-btn:hover {
+    background: #d4af37;
+    border-color: #d4af37;
+    color: #0A0907;
+    transform: scale(1.1);
+    box-shadow: 0 0 14px rgba(212, 175, 55, 0.5);
+}
+
+.ph-nav-btn:active {
+    transform: scale(0.95);
+}
+
+/* Horizontal dot navigation */
+.ph-dots {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     gap: 8px;
 }
 
 .ph-dot {
-    width: 6px;
-    height: 6px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
-    background: rgba(247, 244, 238, 0.3);
+    background: rgba(247, 244, 238, 0.35);
     border: none;
     cursor: pointer;
     padding: 0;
-    transition: background 0.3s ease, transform 0.3s ease, height 0.3s ease, border-radius 0.3s ease;
+    transition: background 0.35s ease, transform 0.35s ease, width 0.35s ease, border-radius 0.35s ease;
+}
+
+.ph-dot:hover {
+    background: rgba(212, 175, 55, 0.7);
 }
 
 .ph-dot.ph-dot-active {
     background: #d4af37;
-    height: 22px;
+    width: 26px;
+    height: 8px;
     border-radius: 4px;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
 }
 
 /* ── Progress bar ── */
@@ -317,9 +366,9 @@ h6 {
         padding: 14px 32px;
     }
 
+    .ph-controls,
     .ph-dots {
-        right: 24px;
-        bottom: 88px;
+        display: none !important;
     }
 
     .ph-stat {
@@ -357,11 +406,6 @@ h6 {
 
     .ph-stat-sep {
         display: none;
-    }
-
-    .ph-dots {
-        right: 16px;
-        bottom: 80px;
     }
 }
 
