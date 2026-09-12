@@ -1017,6 +1017,136 @@ section {
 }
 
 /* =========================================================
+   Work Showcase & Gradient Fade Overlay
+   ========================================================= */
+.work-showcase-container {
+  position: relative;
+  margin-top: 2.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.work-showcase-container .project-grid {
+  margin-top: 0;
+}
+
+/* Fading cards 4, 5, 6 for a visual teaser preview effect */
+.work-showcase-container .project-card:nth-child(n+4) {
+  opacity: 0.45 !important;
+  filter: blur(0.5px) grayscale(15%);
+  transition: opacity 0.5s ease, filter 0.5s ease, transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.work-showcase-container:hover .project-card:nth-child(n+4),
+.work-showcase-container .project-card:nth-child(n+4):hover {
+  opacity: 0.8 !important;
+  filter: blur(0px) grayscale(0%);
+}
+
+.work-fade-overlay {
+  position: absolute;
+  bottom: 0;
+  left: -20px;
+  right: -20px;
+  height: 340px;
+  background: linear-gradient(180deg,
+      rgba(247, 244, 238, 0) 0%,
+      rgba(247, 244, 238, 0.65) 35%,
+      rgba(247, 244, 238, 0.95) 75%,
+      var(--ivory) 100%);
+  pointer-events: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 0.5rem;
+  z-index: 5;
+}
+
+.work-cta-wrap {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  pointer-events: auto;
+}
+
+/* =========================================================
+   Show All Projects Custom Button
+   ========================================================= */
+.btn-show-all-projects {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+  padding: 1.15rem 2.6rem;
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #FFFFFF;
+  background: linear-gradient(135deg, #1B221C 0%, #111512 100%);
+  border: 1px solid rgba(168, 135, 79, 0.45);
+  border-radius: 50px;
+  box-shadow: 0 12px 32px rgba(27, 34, 28, 0.22), 0 0 18px rgba(168, 135, 79, 0.25);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.btn-show-all-projects::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+  transition: left 0.6s ease;
+}
+
+.btn-show-all-projects:hover::before {
+  left: 100%;
+}
+
+.btn-show-all-projects:hover {
+  background: linear-gradient(135deg, var(--gold) 0%, #BFA063 100%);
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 16px 40px rgba(168, 135, 79, 0.4), 0 0 25px rgba(168, 135, 79, 0.5);
+}
+
+.btn-show-all-projects .btn-icon-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.btn-show-all-projects:hover .btn-icon-wrapper {
+  transform: translateX(4px);
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 600px) {
+  .btn-show-all-projects {
+    width: 100%;
+    max-width: 320px;
+    padding: 1rem 1.8rem;
+    font-size: 0.98rem;
+  }
+
+  .work-fade-overlay {
+    height: 420px;
+  }
+}
+
+/* =========================================================
    Contact
    ========================================================= */
 .contact {

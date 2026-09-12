@@ -4,7 +4,7 @@
 
 const projectsData = {
     // ===== PROJECT: Eng. Mohamed El-Alfy =====
-    "11": {
+    "12": {
         name: "Eng. Mohamed El-Alfy",
         location: "Al-Maqsad Compound, New Administrative Capital",
         dates: "2025 - 2026",
@@ -52,7 +52,7 @@ const projectsData = {
     },
 
     "4": {
-        name: "306 Adress East",
+        name: "Mr. Karim Mostafa",
         location: "Address East Compound, New Cairo",
         dates: "2020 - 2022",
         size: "480 Sq ft",
@@ -163,7 +163,7 @@ const projectsData = {
         ]
     },
 
-    "15": {
+    "16": {
         name: "Eng. Hesham Zayed",
         location: "El Shorouk City",
         dates: "2021 - 2025",
@@ -197,7 +197,7 @@ const projectsData = {
         ]
     },
 
-    "19": {
+    "20": {
         name: "Dr. Nadia Taleb",
         location: "Nasr City",
         dates: "2023 - 2024",
@@ -232,7 +232,7 @@ const projectsData = {
     },
 
     "3": {
-        name: "18A7 East Town (Sodic)",
+        name: "Eng. Omar Khaled",
         location: "SODIC - New Cairo",
         dates: "2022 - 2023",
         size: "540 Sq ft",
@@ -274,7 +274,7 @@ const projectsData = {
         ]
     },
 
-    "13": {
+    "14": {
         name: "Eng. Essam Abd-Elaziz",
         location: "Elshorouq City",
         dates: "2025 - 2025",
@@ -314,7 +314,7 @@ const projectsData = {
         ]
     },
 
-    "21": {
+    "22": {
         name: "Mrs. Gehan Omar",
         location: "Elshorouq City",
         dates: "2025 - 2025",
@@ -346,7 +346,7 @@ const projectsData = {
     },
 
     // ===== PROJECT 8: Mine =====
-    "9": {
+    "10": {
         name: "Eng. Ahmed Hesham",
         location: "El Shorouk City",
         dates: "2021 - 2025",
@@ -423,8 +423,46 @@ const projectsData = {
         ]
     },
 
+    "7": {
+        name: "Dr. Mohamed Ramadan",
+        location: "El-Shorouk City",
+        dates: "2024 - 2025",
+        size: "240 Sq ft",
+        category: "Residential",
+        sliderHeight: "600px",
+
+        beforeImage: "Projects/Completed_Projects/Dr-Mohamed-ramadan/0.png",
+        afterImage: "Projects/Completed_Projects/Dr-Mohamed-ramadan/2.jpg",
+
+        galleryImages: [
+            { src: "", category: "Completion" },
+            { src: "Projects/Completed_Projects/Dr-Mohamed-ramadan/2.jpg", category: "Completion" },
+            { src: "Projects/Completed_Projects/Dr-Mohamed-ramadan/3.jpg", category: "Completion" },
+            { src: "Projects/Completed_Projects/Dr-Mohamed-ramadan/4.jpg", category: "Completion" },
+            { src: "Projects/Completed_Projects/Dr-Mohamed-ramadan/5.jpg", category: "Completion" },
+            { src: "Projects/Completed_Projects/Dr-Mohamed-ramadan/6.jpg", category: "Completion" },
+            { src: "Projects/Completed_Projects/Dr-Mohamed-ramadan/7.jpg", category: "Completion" },
+            { src: "Projects/Completed_Projects/Dr-Mohamed-ramadan/8.jpg", category: "Completion" },
+            { src: "Projects/Completed_Projects/Dr-Mohamed-ramadan/9.jpg", category: "Completion" },
+            { src: "Projects/Completed_Projects/Dr-Mohamed-ramadan/10.jpg", category: "Completion" },
+            { src: "Projects/Completed_Projects/Dr-Mohamed-ramadan/11.jpg", category: "Completion" },
+            { src: "Projects/Completed_Projects/Dr-Mohamed-ramadan/12.jpg", category: "Completion" },
+            { src: "Projects/Completed_Projects/Dr-Mohamed-ramadan/13.jpg", category: "Completion" },
+            { src: "Projects/Completed_Projects/Dr-Mohamed-ramadan/14.jpg", category: "Completion" },
+            { src: "Projects/Completed_Projects/Dr-Mohamed-ramadan/15.jpg", category: "Completion" },
+            { src: "Projects/Completed_Projects/Dr-Mohamed-ramadan/16.jpg", category: "Completion" },
+            { src: "Projects/Completed_Projects/Dr-Mohamed-ramadan/17.jpg", category: "Completion" },
+            { src: "Projects/Completed_Projects/Dr-Mohamed-ramadan/18.jpg", category: "Completion" },
+            { src: "Projects/Completed_Projects/Dr-Mohamed-ramadan/19.jpg", category: "Completion" },
+            { src: "Projects/Completed_Projects/Dr-Mohamed-ramadan/20.jpg", category: "Completion" },
+            { src: "Projects/Completed_Projects/Dr-Mohamed-ramadan/21.jpg", category: "Completion" },
+            { src: "Projects/Completed_Projects/Dr-Mohamed-ramadan/22.jpg", category: "Completion" },
+            { src: "Projects/Completed_Projects/Dr-Mohamed-ramadan/23.jpg", category: "Completion" }
+        ]
+    },
+
     // ===== PROJECT 10: Ola =====
-    "14": {
+    "15": {
         name: "Dr. Ola Gamal",
         location: "El-Shorouk City",
         dates: "2024 - 2025",
@@ -466,7 +504,7 @@ const projectsData = {
     },
 
     // ===== PROJECT 11: Ola Ali =====
-    "7": {
+    "8": {
         name: "Eng. Ali Waheed",
         location: "El-Shorouk City",
         dates: "2024 - 2025",
@@ -512,7 +550,7 @@ const projectsData = {
     },
 
     // ===== PROJECT 12: Ola Hala =====
-    "22": {
+    "23": {
         name: "Dr. Ola Gamal 2",
         location: "Elshorouq City",
         dates: "2025 - 2025",
@@ -541,8 +579,47 @@ const projectsData = {
         ]
     },
 
+    "24": {
+        name: "Eng. Mohamed Ali",
+        location: "Elshorouq City",
+        dates: "2025 - 2026",
+        size: "250 Sq ft",
+        category: "Residential",
+
+        sliderHeight: "600px",
+
+        beforeImage: "Projects/Completed_Projects/Eng-Mohamed-Ali/0.png",
+        afterImage: "Projects/Completed_Projects/Eng-Mohamed-Ali/2.jpg",
+
+        galleryImages: [
+            { src: "Projects/Completed_Projects/Eng-Mohamed-Ali/1.jpg", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng-Mohamed-Ali/2.jpg", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng-Mohamed-Ali/3.jpg", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng-Mohamed-Ali/3.5.jpg", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng-Mohamed-Ali/4.jpg", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng-Mohamed-Ali/5.jpg", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng-Mohamed-Ali/6.jpg", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng-Mohamed-Ali/7.jpg", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng-Mohamed-Ali/8.jpg", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng-Mohamed-Ali/9.jpg", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng-Mohamed-Ali/10.jpg", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng-Mohamed-Ali/11.jpg", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng-Mohamed-Ali/12.jpg", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng-Mohamed-Ali/13.jpg", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng-Mohamed-Ali/14.jpg", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng-Mohamed-Ali/15.jpg", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng-Mohamed-Ali/16.jpg", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng-Mohamed-Ali/17.jpg", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng-Mohamed-Ali/18.jpg", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng-Mohamed-Ali/19.jpg", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng-Mohamed-Ali/20.jpg", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng-Mohamed-Ali/22.jpg", category: "Completion" },
+            { src: "Projects/Completed_Projects/Eng-Mohamed-Ali/23.jpg", category: "Completion" }
+        ]
+    },
+
     // ===== PROJECT 13: Ola Mohamed Waheed =====
-    "17": {
+    "18": {
         name: "Eng. Mohamed Waheed",
         location: "El-Shorouk City",
         dates: "2024 - 2025",
@@ -585,7 +662,7 @@ const projectsData = {
 
     // ===== PROJECT 14: Palm Hills =====
     "1": {
-        name: "707 Palm Hills Katameya",
+        name: "Mr. Ahmed Hassan",
         location: "Palm Hills - New Cairo",
         dates: "2021 - 2023",
         size: "550 Sq ft",
@@ -695,7 +772,7 @@ const projectsData = {
     },
 
     // ===== PROJECT 15: Sara Raga2y =====
-    "16": {
+    "17": {
         name: "Mr. Abdalla Taher",
         location: "6th October City",
         dates: "2024 - 2025",
@@ -715,7 +792,7 @@ const projectsData = {
     },
 
     // ===== PROJECT 16: Achrafieh =====
-    "18": {
+    "19": {
         name: "Mr. Mazen Ali",
         location: "5th Settlement",
         dates: "2021 - 2022",
@@ -747,8 +824,8 @@ const projectsData = {
         ]
     },
 
-    "23": {
-        name: "Benta House 70-3 Mountain View New Cairo",
+    "25": {
+        name: "Mrs. Sara Mohamed",
         location: "Mountain View - New Cairo",
         dates: "2025 - Now",
         size: "390 Sq ft",
@@ -763,8 +840,8 @@ const projectsData = {
 
         ]
     },
-    "24": {
-        name: "Stone Residence 40- 3",
+    "26": {
+        name: "Dr. Nadia Hassan",
         location: "Stone Residence 40- 3",
         dates: "2025 - Now",
         size: "180 Sq ft",
@@ -789,7 +866,7 @@ const projectsData = {
     },
 
     // ===== PROJECT 19: Binotte Bakery =====
-    "28": {
+    "30": {
         name: "Binotte Bakery",
         location: "5th Settlement",
         dates: "2022 - 2022",
@@ -808,7 +885,7 @@ const projectsData = {
     },
 
     // ===== PROJECT 20: Dr. Reham Gamal =====
-    "29": {
+    "31": {
         name: "Dr. Reham Gamal",
         location: "5th Settlement",
         dates: "2025 - 2025",
@@ -874,7 +951,7 @@ const projectsData = {
     },
 
     // ===== PROJECT 21: Eng. Samah Elkady =====
-    "30": {
+    "32": {
         name: "Eng. Samah Elkady",
         location: "5th Settlement",
         dates: "2023 - 2023",
@@ -899,7 +976,7 @@ const projectsData = {
     },
 
     // ===== PROJECT 22: Mr. Amr Elsayed =====
-    "31": {
+    "33": {
         name: "Mr. Amr Elsayed",
         location: "5th Settlement",
         dates: "2025 - 2025",
@@ -941,7 +1018,7 @@ const projectsData = {
     },
 
     // ===== PROJECT 23: Mr. Mohamed Elkammah =====
-    "32": {
+    "34": {
         name: "Mr. Mohamed Elkammah",
         location: "5th Settlement",
         dates: "2025 - 2025",
@@ -1000,8 +1077,8 @@ const projectsData = {
 
 
     "2": {
-        name: "122 La Vista 6",
-        location: "La Vista 6 - Ain Sokhna",
+        name: "Mr. Mohamed Ali",
+        location: "La Vista 6 - Ain Sokhna",
         dates: "2021 - 2023",
         size: "475 Sq ft",
         category: "Residential",
@@ -1048,7 +1125,7 @@ const projectsData = {
     },
 
 
-    "8": {
+    "9": {
         name: "Mrs. Aliaa Elhadidi",
         location: "Nasr City",
         dates: "2022 - 2024",
@@ -1088,7 +1165,7 @@ const projectsData = {
     },
 
 
-    "12": {
+    "13": {
         name: "Eng. Ahmed Mohsen",
         location: "Zahraa Nasr City",
         dates: "2025 - 2025",
@@ -1121,7 +1198,7 @@ const projectsData = {
         ]
 
     },
-    "10": {
+    "11": {
         name: "Eng.Mohamed Wasfy",
         location: "El-Moqattam",
         dates: "2025 - 2026",
@@ -1161,7 +1238,7 @@ const projectsData = {
     },
 
 
-    "20": {
+    "21": {
         name: "Dr.Ola Gamal 3",
         location: "El-Shorouk City",
         dates: "2025 - 2026",
