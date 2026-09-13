@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "Dr. Ola Gamal 3",
         "Mrs. Gehan Omar",
         "Dr. Ola Gamal 2",
-        "Eng. Mohamed Ali",
+        "Dr. Omar Ramadan",
         "Mrs. Sara Mohamed",
         "Dr. Nadia Hassan",
         "Mr. Ahmed Gamal 2D-Plan",

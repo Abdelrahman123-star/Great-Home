@@ -429,13 +429,13 @@ const projectsData = {
         dates: "2024 - 2025",
         size: "240 Sq ft",
         category: "Residential",
-        sliderHeight: "600px",
+        sliderHeight: "900px",
+        sliderWidth: "1200px",
 
         beforeImage: "Projects/Completed_Projects/Dr-Mohamed-ramadan/0.png",
         afterImage: "Projects/Completed_Projects/Dr-Mohamed-ramadan/2.jpg",
 
         galleryImages: [
-            { src: "", category: "Completion" },
             { src: "Projects/Completed_Projects/Dr-Mohamed-ramadan/2.jpg", category: "Completion" },
             { src: "Projects/Completed_Projects/Dr-Mohamed-ramadan/3.jpg", category: "Completion" },
             { src: "Projects/Completed_Projects/Dr-Mohamed-ramadan/4.jpg", category: "Completion" },
@@ -580,13 +580,14 @@ const projectsData = {
     },
 
     "24": {
-        name: "Eng. Mohamed Ali",
+        name: "Dr. Omar Ramadan",
         location: "Elshorouq City",
         dates: "2025 - 2026",
         size: "250 Sq ft",
         category: "Residential",
 
-        sliderHeight: "600px",
+        sliderHeight: "900px",
+        sliderWidth: "1200px",
 
         beforeImage: "Projects/Completed_Projects/Eng-Mohamed-Ali/0.png",
         afterImage: "Projects/Completed_Projects/Eng-Mohamed-Ali/2.jpg",

@@ -629,6 +629,8 @@ ul {
 
   .main-nav a {
     font-size: 1.3rem;
+    color: var(--ink) !important;
+    text-shadow: none !important;
   }
 
   .header-cta {
@@ -638,6 +640,10 @@ ul {
   .nav-toggle {
     display: flex;
     z-index: 1001;
+  }
+
+  .nav-toggle.is-open span {
+    background: var(--ink) !important;
   }
 
   .contact-list li {

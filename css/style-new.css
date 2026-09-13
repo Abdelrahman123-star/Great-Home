@@ -810,10 +810,13 @@ ul {
 
 .hero-panel {
   position: relative;
+  width: 100%;
 }
 
 .panel-photo {
+  width: 100%;
   aspect-ratio: 4 / 5;
+  min-height: 320px;
   border-radius: var(--radius);
   position: relative;
   display: flex;
@@ -1029,15 +1032,15 @@ section {
   margin-top: 0;
 }
 
-/* Fading cards 4, 5, 6 for a visual teaser preview effect */
-.work-showcase-container .project-card:nth-child(n+4) {
+/* Fading cards 7, 8, 9 for a visual teaser preview effect */
+.work-showcase-container .project-card:nth-child(n+7) {
   opacity: 0.45 !important;
   filter: blur(0.5px) grayscale(15%);
   transition: opacity 0.5s ease, filter 0.5s ease, transform 0.5s ease, box-shadow 0.3s ease;
 }
 
-.work-showcase-container:hover .project-card:nth-child(n+4),
-.work-showcase-container .project-card:nth-child(n+4):hover {
+.work-showcase-container:hover .project-card:nth-child(n+7),
+.work-showcase-container .project-card:nth-child(n+7):hover {
   opacity: 0.8 !important;
   filter: blur(0px) grayscale(0%);
 }
@@ -1294,8 +1297,9 @@ section {
 
   .hero-panel {
     order: -1;
+    width: 100%;
     max-width: 420px;
-    margin: 0 auto;
+    margin: 0 auto 2rem auto;
   }
 
   .about-grid {
@@ -1341,6 +1345,7 @@ section {
     transform: translateX(100%);
     transition: transform 0.3s ease;
     box-shadow: -12px 0 40px rgba(32, 36, 31, 0.15);
+    z-index: 1000;
   }
 
   .main-nav.is-open {
@@ -1349,6 +1354,8 @@ section {
 
   .main-nav a {
     font-size: 1.3rem;
+    color: var(--ink) !important;
+    text-shadow: none !important;
   }
 
   .header-cta {
@@ -1357,6 +1364,11 @@ section {
 
   .nav-toggle {
     display: flex;
+    z-index: 1001;
+  }
+
+  .nav-toggle.is-open span {
+    background: var(--ink) !important;
   }
 
   .process-grid {
