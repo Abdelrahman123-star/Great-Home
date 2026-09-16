@@ -1,0 +1,4 @@
+Contact: mailto:ahmed.hesham.fathy97@gmail.com
+Expires: 2027-12-31T23:59:00z
+Preferred-Languages: en, ar
+Canonical: https://www.heim-eg.com/.well-known/security.txt
